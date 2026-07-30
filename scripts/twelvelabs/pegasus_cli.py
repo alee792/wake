@@ -64,8 +64,6 @@ TIMELINE_SCHEMA = {
         "final_observed_seconds": {"type": "number"},
         "phase_coverage": {
             "type": "array",
-            "minItems": 8,
-            "maxItems": 8,
             "items": {
                 "type": "object",
                 "properties": {
@@ -79,8 +77,6 @@ TIMELINE_SCHEMA = {
         },
         "moments": {
             "type": "array",
-            "minItems": 1,
-            "maxItems": 14,
             "items": {
                 "type": "object",
                 "properties": {

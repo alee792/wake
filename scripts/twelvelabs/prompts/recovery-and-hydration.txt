@@ -1,0 +1,20 @@
+Investigate recovery behavior in the complete rowing video, focusing on:
+
+- Recovery 2: seconds 660-840
+- Recovery 4: seconds 1500-1680
+- The visible hydration event near seconds 666-675
+- The visible hydration event near seconds 1517-1528
+- The transitions into the next work interval after each recovery, where present
+
+Find precise start and end times for the two hydration events. Compare what the
+athlete does immediately before, during, and after each event. Determine whether
+the behavior recurs consistently or differs between the two recoveries.
+
+Also inspect the first 20 seconds after Recovery 2 ends, seconds 840-860. Report
+whether the athlete visibly re-establishes rhythm and how many strokes are needed
+before the movement appears steady.
+
+Report only directly visible actions and rowing mechanics. Do not infer
+hydration strategy, fatigue, physiology, force, power, or workout intent. Return
+a small number of precise findings with source-video seconds, counterevidence,
+confidence, and camera limitations.

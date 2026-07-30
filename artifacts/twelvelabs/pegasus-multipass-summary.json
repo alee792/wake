@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0",
+  "provider": "twelvelabs-pegasus",
+  "generationMode": "real-api",
+  "reviewMode": "pending-human-review",
+  "assetId": "6a6b961bb9dc44a9051ef6f3",
+  "strategy": {
+    "structuralPasses": 1,
+    "focusedPasses": 3,
+    "reason": "Use one full-video phase index, then spend separate requests on narrow comparison and recurrence questions."
+  },
+  "runs": [
+    {
+      "taskId": "6a6bab37eb0afeafecfa8fe5",
+      "role": "full-video phase coverage",
+      "resultPath": "artifacts/twelvelabs/runs/20260730-125119-wake-timeline-v1-6a6bab37eb0afeafecfa8fe5/result.json"
+    },
+    {
+      "taskId": "6a6bac3223f9bfaddae568ca",
+      "role": "Work 2 versus Work 4 comparison",
+      "resultPath": "artifacts/twelvelabs/runs/20260730-125530-work-2-vs-work-4-6a6bac3223f9bfaddae568ca/result.json"
+    },
+    {
+      "taskId": "6a6bac38c1ac59f5d1d083ad",
+      "role": "recovery and hydration recurrence",
+      "resultPath": "artifacts/twelvelabs/runs/20260730-125536-recovery-and-hydration-6a6bac38c1ac59f5d1d083ad/result.json"
+    },
+    {
+      "taskId": "6a6bacd0c1ac59f5d1d08d3d",
+      "role": "work restart comparison",
+      "resultPath": "artifacts/twelvelabs/runs/20260730-125808-work-restart-comparison-6a6bacd0c1ac59f5d1d08d3d/result.json"
+    }
+  ],
+  "candidateInsights": [
+    {
+      "title": "Work 3 took longer to settle",
+      "sourceStartSeconds": 840,
+      "sourceEndSeconds": 870,
+      "telemetryContext": "Start of Work 3",
+      "directObservation": "Pegasus reported a slower, less-fluid restart that stabilized after roughly four strokes; the other work starts stabilized after roughly two or three.",
+      "confidence": "medium",
+      "status": "candidate",
+      "reviewNote": "Verify stroke counts manually. Exclude the provider phrase 'core engagement' because it is not directly visible."
+    },
+    {
+      "title": "The strongest interval looked mechanically similar",
+      "sourceStartSeconds": 420,
+      "sourceEndSeconds": 1500,
+      "telemetryContext": "Work 2 averaged about 161 W; Work 4 averaged about 179 W.",
+      "directObservation": "Pegasus did not find a reliable visible mechanical difference between equivalent opening, middle, and finishing windows.",
+      "confidence": "medium",
+      "status": "candidate",
+      "reviewNote": "Represent as unresolved visual evidence, not proof that mechanics were identical."
+    },
+    {
+      "title": "Hydration behavior recurred during recovery",
+      "sourceStartSeconds": 668,
+      "sourceEndSeconds": 1527,
+      "telemetryContext": "Recovery 2 and Recovery 4",
+      "directObservation": "Pegasus found visible hydration events around 11:08 and 25:17 and reported different immediate post-event behavior.",
+      "confidence": "high",
+      "status": "timeline-marker",
+      "reviewNote": "Useful synchronization evidence; probably not a primary coaching insight."
+    }
+  ],
+  "rejectedClaims": [
+    {
+      "claim": "Core engagement lags behind leg drive.",
+      "reason": "Core engagement cannot be directly established from the fixed frontal video."
+    },
+    {
+      "claim": "The video shows identical mechanics between Work 2 and Work 4.",
+      "reason": "Absence of a detected difference should be recorded as unresolved, not identity."
+    }
+  ]
+}

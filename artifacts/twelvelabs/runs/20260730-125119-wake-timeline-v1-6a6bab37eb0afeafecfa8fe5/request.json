@@ -1,0 +1,127 @@
+{
+  "taskId": "6a6bab37eb0afeafecfa8fe5",
+  "assetId": "6a6b961bb9dc44a9051ef6f3",
+  "profile": "timeline",
+  "prompt": "Analyze the complete rowing workout from 00:00 to 28:00 and\nassemble a factual visual timeline.\n\nConcept2 telemetry defines the authoritative workout structure:\n\n- Work 1: 00:00-04:00\n- Recovery 1: 04:00-07:00\n- Work 2: 07:00-11:00\n- Recovery 2: 11:00-14:00\n- Work 3: 14:00-18:00\n- Recovery 3: 18:00-21:00\n- Work 4: 21:00-25:00\n- Recovery 4: 25:00-28:00\n\nTreat these boundaries as fixed. Do not infer or redefine the intervals from\nvideo. For every phase, describe directly visible rowing rhythm and movement,\nidentify meaningful changes, inspect transitions, record pauses or\nself-corrections, and report when no meaningful visual change is visible.\n\nFocus only on stroke-to-stroke rhythm, recovery timing, hands-away timing, body\npreparation, seat-handle sequencing, forward reach, visibly distinguishable\ncadence changes, pauses, and workout transitions.\n\nDo not analyze sweat, facial flushing, breathing, fatigue, physiology, force,\npower, or workout intent from video.\n\nReturn 8-14 timeline events spanning the complete workout. Use precise\nevidence-based timestamps. Do not manufacture an event merely to fill a phase.\nConfirm the final observed timestamp reaches at least 28:00.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "video_summary": {
+        "type": "string"
+      },
+      "final_observed_seconds": {
+        "type": "number"
+      },
+      "phase_coverage": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "phase": {
+              "type": "string",
+              "enum": [
+                "work_1",
+                "recovery_1",
+                "work_2",
+                "recovery_2",
+                "work_3",
+                "recovery_3",
+                "work_4",
+                "recovery_4"
+              ]
+            },
+            "direct_observation": {
+              "type": "string"
+            },
+            "limitations": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "phase",
+            "direct_observation",
+            "limitations"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "moments": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "phase": {
+              "type": "string",
+              "enum": [
+                "work_1",
+                "recovery_1",
+                "work_2",
+                "recovery_2",
+                "work_3",
+                "recovery_3",
+                "work_4",
+                "recovery_4"
+              ]
+            },
+            "start_seconds": {
+              "type": "number"
+            },
+            "end_seconds": {
+              "type": "number"
+            },
+            "event_type": {
+              "type": "string"
+            },
+            "direct_observation": {
+              "type": "string"
+            },
+            "change_from_previous": {
+              "type": "string"
+            },
+            "repeated_at_seconds": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            },
+            "limitations": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "phase",
+            "start_seconds",
+            "end_seconds",
+            "event_type",
+            "direct_observation",
+            "change_from_previous",
+            "repeated_at_seconds",
+            "confidence",
+            "limitations"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "video_summary",
+      "final_observed_seconds",
+      "phase_coverage",
+      "moments"
+    ],
+    "additionalProperties": false
+  },
+  "temperature": 0.2,
+  "maxTokens": 6000,
+  "startTime": null,
+  "endTime": null,
+  "createdAt": "2026-07-30T19:51:19.701633+00:00"
+}

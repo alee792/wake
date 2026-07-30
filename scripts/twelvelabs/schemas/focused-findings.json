@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "properties": {
+    "analysis_summary": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "start_seconds": {
+            "type": "number"
+          },
+          "end_seconds": {
+            "type": "number"
+          },
+          "comparison_window": {
+            "type": "string"
+          },
+          "direct_observation": {
+            "type": "string"
+          },
+          "comparison": {
+            "type": "string"
+          },
+          "interpretation_support": {
+            "type": "string",
+            "enum": [
+              "supports",
+              "weakens",
+              "unresolved"
+            ]
+          },
+          "counterevidence": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "limitations": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "start_seconds",
+          "end_seconds",
+          "comparison_window",
+          "direct_observation",
+          "comparison",
+          "interpretation_support",
+          "counterevidence",
+          "confidence",
+          "limitations"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "analysis_summary",
+    "findings"
+  ],
+  "additionalProperties": false
+}

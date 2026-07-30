@@ -1,0 +1,85 @@
+{
+  "taskId": "6a6bacd0c1ac59f5d1d08d3d",
+  "assetId": "6a6b961bb9dc44a9051ef6f3",
+  "profile": "custom",
+  "prompt": "Compare how the athlete establishes rowing rhythm at the beginning of all four\nwork intervals in the complete source video.\n\nConcept2 defines the authoritative work starts:\n\n- Work 1 starts at source second 0\n- Work 2 starts at source second 420\n- Work 3 starts at source second 840\n- Work 4 starts at source second 1260\n\nInspect these source-video windows:\n\n- 0-30\n- 420-450\n- 840-870\n- 1260-1290\n\nFor each work start, count the visible strokes from the boundary until the\nstroke-to-stroke rhythm first appears steady. Describe only directly visible\nchanges in recovery timing, hands-away timing, body preparation, seat-handle\nsequencing, forward reach, and rhythm.\n\nCompare the four starts and determine whether a slower or less-fluid restart is\nunique to Work 3 at second 840, recurs at other starts, or cannot be resolved.\nInclude counterevidence. Do not infer fatigue, physiology, power, force, or\nworkout intent.\n\nAll numeric timestamps must use seconds from the beginning of the complete source\nvideo, not clip-local time. Return one finding for each of the four work starts.\n",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "analysis_summary": {
+        "type": "string"
+      },
+      "findings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "start_seconds": {
+              "type": "number"
+            },
+            "end_seconds": {
+              "type": "number"
+            },
+            "comparison_window": {
+              "type": "string"
+            },
+            "direct_observation": {
+              "type": "string"
+            },
+            "comparison": {
+              "type": "string"
+            },
+            "interpretation_support": {
+              "type": "string",
+              "enum": [
+                "supports",
+                "weakens",
+                "unresolved"
+              ]
+            },
+            "counterevidence": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            },
+            "limitations": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "start_seconds",
+            "end_seconds",
+            "comparison_window",
+            "direct_observation",
+            "comparison",
+            "interpretation_support",
+            "counterevidence",
+            "confidence",
+            "limitations"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "analysis_summary",
+      "findings"
+    ],
+    "additionalProperties": false
+  },
+  "temperature": 0.2,
+  "maxTokens": 3500,
+  "startTime": null,
+  "endTime": null,
+  "createdAt": "2026-07-30T19:58:08.987580+00:00"
+}

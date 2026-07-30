@@ -1,0 +1,85 @@
+{
+  "taskId": "6a6bac38c1ac59f5d1d083ad",
+  "assetId": "6a6b961bb9dc44a9051ef6f3",
+  "profile": "custom",
+  "prompt": "Investigate recovery behavior in the complete rowing video, focusing on:\n\n- Recovery 2: seconds 660-840\n- Recovery 4: seconds 1500-1680\n- The visible hydration event near seconds 666-675\n- The visible hydration event near seconds 1517-1528\n- The transitions into the next work interval after each recovery, where present\n\nFind precise start and end times for the two hydration events. Compare what the\nathlete does immediately before, during, and after each event. Determine whether\nthe behavior recurs consistently or differs between the two recoveries.\n\nAlso inspect the first 20 seconds after Recovery 2 ends, seconds 840-860. Report\nwhether the athlete visibly re-establishes rhythm and how many strokes are needed\nbefore the movement appears steady.\n\nReport only directly visible actions and rowing mechanics. Do not infer\nhydration strategy, fatigue, physiology, force, power, or workout intent. Return\na small number of precise findings with source-video seconds, counterevidence,\nconfidence, and camera limitations.\n",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "analysis_summary": {
+        "type": "string"
+      },
+      "findings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "start_seconds": {
+              "type": "number"
+            },
+            "end_seconds": {
+              "type": "number"
+            },
+            "comparison_window": {
+              "type": "string"
+            },
+            "direct_observation": {
+              "type": "string"
+            },
+            "comparison": {
+              "type": "string"
+            },
+            "interpretation_support": {
+              "type": "string",
+              "enum": [
+                "supports",
+                "weakens",
+                "unresolved"
+              ]
+            },
+            "counterevidence": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            },
+            "limitations": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "start_seconds",
+            "end_seconds",
+            "comparison_window",
+            "direct_observation",
+            "comparison",
+            "interpretation_support",
+            "counterevidence",
+            "confidence",
+            "limitations"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "analysis_summary",
+      "findings"
+    ],
+    "additionalProperties": false
+  },
+  "temperature": 0.2,
+  "maxTokens": 3500,
+  "startTime": 650.0,
+  "endTime": 1680.0,
+  "createdAt": "2026-07-30T19:55:36.563576+00:00"
+}

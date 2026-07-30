@@ -1,0 +1,85 @@
+{
+  "taskId": "6a6bac3223f9bfaddae568ca",
+  "assetId": "6a6b961bb9dc44a9051ef6f3",
+  "profile": "custom",
+  "prompt": "Compare Work 2 at video seconds 420-660 with Work 4 at video seconds 1260-1500.\n\nConcept2 telemetry is authoritative:\n\n- Work 2: 932 meters, approximately 161 watts and 28.7 strokes/minute.\n- Work 4: 962 meters, approximately 179 watts and 30.2 strokes/minute.\n\nDetermine whether directly visible rowing mechanics distinguish the lowest-output\nwork interval from the strongest work interval. Compare equivalent portions:\n\n- Opening: 420-480 versus 1260-1320\n- Middle: 510-570 versus 1350-1410\n- Finish: 600-660 versus 1440-1500\n\nExamine recovery timing, hands-away timing, body preparation, seat-handle\nsequencing, forward reach, and stroke-to-stroke rhythm. Do not infer power,\nforce, fatigue, physiology, or intent from video. The supplied telemetry already\nestablishes the performance difference.\n\nReturn a small number of high-value factual findings. Each finding must cite\nprecise source-video seconds, include counterevidence, and say whether the video\nsupports, weakens, or cannot resolve a proposed visible difference. If the two\nintervals look mechanically indistinguishable, state that clearly.\n",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "analysis_summary": {
+        "type": "string"
+      },
+      "findings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "start_seconds": {
+              "type": "number"
+            },
+            "end_seconds": {
+              "type": "number"
+            },
+            "comparison_window": {
+              "type": "string"
+            },
+            "direct_observation": {
+              "type": "string"
+            },
+            "comparison": {
+              "type": "string"
+            },
+            "interpretation_support": {
+              "type": "string",
+              "enum": [
+                "supports",
+                "weakens",
+                "unresolved"
+              ]
+            },
+            "counterevidence": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            },
+            "limitations": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "start_seconds",
+            "end_seconds",
+            "comparison_window",
+            "direct_observation",
+            "comparison",
+            "interpretation_support",
+            "counterevidence",
+            "confidence",
+            "limitations"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "analysis_summary",
+      "findings"
+    ],
+    "additionalProperties": false
+  },
+  "temperature": 0.2,
+  "maxTokens": 3500,
+  "startTime": 420.0,
+  "endTime": 1500.0,
+  "createdAt": "2026-07-30T19:55:30.844393+00:00"
+}

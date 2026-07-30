@@ -1,0 +1,146 @@
+{
+  "provider": "twelvelabs-pegasus",
+  "generationMode": "real-api",
+  "model": "pegasus1.5",
+  "assetId": null,
+  "taskId": "6a6bab37eb0afeafecfa8fe5",
+  "generationId": "acf3d99b-fb17-4eb4-8058-1beb7d7fe5e3",
+  "finishReason": "stop",
+  "capturedAt": "2026-07-30T19:54:45.094408+00:00",
+  "result": {
+    "final_observed_seconds": 1695.3,
+    "moments": [
+      {
+        "change_from_previous": "Start of workout",
+        "confidence": "high",
+        "direct_observation": "Consistent, rhythmic stroke pattern with fluid leg drive, body swing, and arm pull.",
+        "end_seconds": 240.0,
+        "event_type": "steady rowing",
+        "limitations": "No visible pauses or self-corrections.",
+        "phase": "work_1",
+        "repeated_at_seconds": [],
+        "start_seconds": 0.0
+      },
+      {
+        "change_from_previous": "Transition to recovery",
+        "confidence": "high",
+        "direct_observation": "Stroke rate decreases, recovery phase becomes more relaxed.",
+        "end_seconds": 420.0,
+        "event_type": "recovery transition",
+        "limitations": "Reduced intensity visible.",
+        "phase": "recovery_1",
+        "repeated_at_seconds": [],
+        "start_seconds": 240.0
+      },
+      {
+        "change_from_previous": "Transition to work",
+        "confidence": "high",
+        "direct_observation": "Stroke rate and intensity increase, quicker leg drive and pronounced body swing.",
+        "end_seconds": 660.0,
+        "event_type": "work transition",
+        "limitations": "Shorter recovery phase.",
+        "phase": "work_2",
+        "repeated_at_seconds": [],
+        "start_seconds": 420.0
+      },
+      {
+        "change_from_previous": "Transition to recovery",
+        "confidence": "high",
+        "direct_observation": "Stroke rate decreases, recovery phase becomes more relaxed.",
+        "end_seconds": 840.0,
+        "event_type": "recovery transition",
+        "limitations": "Steady but slower pace.",
+        "phase": "recovery_2",
+        "repeated_at_seconds": [],
+        "start_seconds": 660.0
+      },
+      {
+        "change_from_previous": "Transition to work",
+        "confidence": "high",
+        "direct_observation": "Stroke rate and intensity increase, rapid leg drive and body swing.",
+        "end_seconds": 1080.0,
+        "event_type": "work transition",
+        "limitations": "Short recovery phase.",
+        "phase": "work_3",
+        "repeated_at_seconds": [],
+        "start_seconds": 840.0
+      },
+      {
+        "change_from_previous": "Transition to recovery",
+        "confidence": "high",
+        "direct_observation": "Stroke rate decreases, recovery phase becomes more relaxed.",
+        "end_seconds": 1260.0,
+        "event_type": "recovery transition",
+        "limitations": "Reduced intensity visible.",
+        "phase": "recovery_3",
+        "repeated_at_seconds": [],
+        "start_seconds": 1080.0
+      },
+      {
+        "change_from_previous": "Transition to work",
+        "confidence": "high",
+        "direct_observation": "Stroke rate and intensity increase, rapid leg drive and body swing.",
+        "end_seconds": 1500.0,
+        "event_type": "work transition",
+        "limitations": "Short recovery phase.",
+        "phase": "work_4",
+        "repeated_at_seconds": [],
+        "start_seconds": 1260.0
+      },
+      {
+        "change_from_previous": "Transition to recovery",
+        "confidence": "high",
+        "direct_observation": "Stroke rate decreases, recovery phase becomes more relaxed.",
+        "end_seconds": 1680.0,
+        "event_type": "recovery transition",
+        "limitations": "Steady but slower pace.",
+        "phase": "recovery_4",
+        "repeated_at_seconds": [],
+        "start_seconds": 1500.0
+      }
+    ],
+    "phase_coverage": [
+      {
+        "direct_observation": "Consistent, rhythmic stroke pattern with fluid leg drive, body swing, and arm pull.",
+        "limitations": "No visible pauses or self-corrections.",
+        "phase": "work_1"
+      },
+      {
+        "direct_observation": "Stroke rate decreases, recovery phase becomes more relaxed.",
+        "limitations": "Reduced intensity visible.",
+        "phase": "recovery_1"
+      },
+      {
+        "direct_observation": "Stroke rate and intensity increase, quicker leg drive and pronounced body swing.",
+        "limitations": "Shorter recovery phase.",
+        "phase": "work_2"
+      },
+      {
+        "direct_observation": "Stroke rate decreases, recovery phase becomes more relaxed.",
+        "limitations": "Steady but slower pace.",
+        "phase": "recovery_2"
+      },
+      {
+        "direct_observation": "Stroke rate and intensity increase, rapid leg drive and body swing.",
+        "limitations": "Short recovery phase.",
+        "phase": "work_3"
+      },
+      {
+        "direct_observation": "Stroke rate decreases, recovery phase becomes more relaxed.",
+        "limitations": "Reduced intensity visible.",
+        "phase": "recovery_3"
+      },
+      {
+        "direct_observation": "Stroke rate and intensity increase, rapid leg drive and body swing.",
+        "limitations": "Short recovery phase.",
+        "phase": "work_4"
+      },
+      {
+        "direct_observation": "Stroke rate decreases, recovery phase becomes more relaxed.",
+        "limitations": "Steady but slower pace.",
+        "phase": "recovery_4"
+      }
+    ],
+    "video_summary": "The video captures a complete rowing workout from 00:00 to 28:00, showing consistent transitions between work and recovery phases. Each work phase features increased stroke rate and intensity, while recovery phases show reduced intensity and relaxed recovery timing. The final observed timestamp reaches 28:15, confirming the workout's completion."
+  }
+}

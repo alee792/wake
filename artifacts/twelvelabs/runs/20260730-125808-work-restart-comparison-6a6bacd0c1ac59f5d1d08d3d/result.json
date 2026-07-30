@@ -1,0 +1,63 @@
+{
+  "provider": "twelvelabs-pegasus",
+  "generationMode": "real-api",
+  "model": "pegasus1.5",
+  "assetId": null,
+  "taskId": "6a6bacd0c1ac59f5d1d08d3d",
+  "generationId": "80aed4d4-4d8e-41af-83e1-5b0d58825b4d",
+  "finishReason": "stop",
+  "capturedAt": "2026-07-30T20:00:38.104160+00:00",
+  "result": {
+    "analysis_summary": "The athlete establishes rowing rhythm differently across the four work intervals. Work 3 at second 840 shows a slower and less-fluid restart compared to the other intervals, requiring more strokes to stabilize rhythm.",
+    "findings": [
+      {
+        "comparison": "Work 1 stabilizes after 3 strokes, similar to Work 4 but slower than Work 2.",
+        "comparison_window": "0-30",
+        "confidence": "high",
+        "counterevidence": "Works 1 and 4 show similar initial recovery timing but stabilize faster than Work 3.",
+        "direct_observation": "Recovery timing is slightly longer; hands-away occurs later relative to seat movement. Body preparation is visible but not fully synchronized with leg drive.",
+        "end_seconds": 30,
+        "interpretation_support": "supports",
+        "limitations": "Observation limited to visible stroke mechanics without physiological inference.",
+        "start_seconds": 0,
+        "title": "Work 1 Start"
+      },
+      {
+        "comparison": "Work 2 stabilizes fastest, after 2 strokes, with smoother sequencing.",
+        "comparison_window": "420-450",
+        "confidence": "high",
+        "counterevidence": "Work 2 stabilizes fastest, with smoother sequencing.",
+        "direct_observation": "Recovery timing is consistent with Work 1\u2019s initial strokes. Hands-away timing is slightly earlier than Work 1. Body preparation appears more anticipatory.",
+        "end_seconds": 450,
+        "interpretation_support": "supports",
+        "limitations": "Observation limited to visible stroke mechanics without physiological inference.",
+        "start_seconds": 420,
+        "title": "Work 2 Start"
+      },
+      {
+        "comparison": "Work 3 exhibits a slower, less-fluid restart, stabilizing after 4 strokes.",
+        "comparison_window": "840-870",
+        "confidence": "high",
+        "counterevidence": "Works 1 and 4 show similar initial recovery timing but stabilize faster than Work 3.",
+        "direct_observation": "Recovery timing is noticeably longer; hands-away occurs significantly later. Body preparation is delayed; core engagement lags behind leg drive.",
+        "end_seconds": 870,
+        "interpretation_support": "supports",
+        "limitations": "Observation limited to visible stroke mechanics without physiological inference.",
+        "start_seconds": 840,
+        "title": "Work 3 Start"
+      },
+      {
+        "comparison": "Work 4 stabilizes after 3 strokes, similar to Work 1 but slower than Work 2.",
+        "comparison_window": "1260-1290",
+        "confidence": "high",
+        "counterevidence": "Works 1 and 4 show similar initial recovery timing but stabilize faster than Work 3.",
+        "direct_observation": "Recovery timing is similar to Work 1\u2019s initial strokes. Hands-away timing is consistent with Work 2. Body preparation is anticipatory but less pronounced than Work 2.",
+        "end_seconds": 1290,
+        "interpretation_support": "supports",
+        "limitations": "Observation limited to visible stroke mechanics without physiological inference.",
+        "start_seconds": 1260,
+        "title": "Work 4 Start"
+      }
+    ]
+  }
+}

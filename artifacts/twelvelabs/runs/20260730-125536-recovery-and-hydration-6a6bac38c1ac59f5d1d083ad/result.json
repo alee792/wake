@@ -1,0 +1,51 @@
+{
+  "provider": "twelvelabs-pegasus",
+  "generationMode": "real-api",
+  "model": "pegasus1.5",
+  "assetId": null,
+  "taskId": "6a6bac38c1ac59f5d1d083ad",
+  "generationId": "36c371e7-cbff-4559-a850-48e4d3a7bc8c",
+  "finishReason": "stop",
+  "capturedAt": "2026-07-30T19:57:29.251112+00:00",
+  "result": {
+    "analysis_summary": "The athlete performs two distinct hydration events during Recovery 2 and Recovery 4. The mechanics of drinking are consistent, but the post-hydration behavior differs: the athlete checks a watch after the first event but resumes rowing immediately after the second. Following Recovery 2, the athlete requires approximately 4-5 strokes to re-establish a steady rowing rhythm.",
+    "findings": [
+      {
+        "comparison": "The hydration mechanics (unscrewing, drinking, screwing) are identical in both events. However, post-hydration behavior differs: the athlete checks a watch after Recovery 2 but resumes rowing immediately after Recovery 4.",
+        "comparison_window": "Recovery 2 (06:08-06:16) vs Recovery 4 (15:17-15:27)",
+        "confidence": "high",
+        "counterevidence": "None observed; actions are clearly visible.",
+        "direct_observation": "The athlete stops rowing, places the handle on the rail, picks up a water bottle, unscrews the cap, drinks, and replaces the cap.",
+        "end_seconds": 676,
+        "interpretation_support": "supports",
+        "limitations": "Fixed frontal camera angle; specific watch time is illegible.",
+        "start_seconds": 668,
+        "title": "Hydration Event 1 (Recovery 2)"
+      },
+      {
+        "comparison": "Hydration mechanics are consistent with Event 1. Post-hydration behavior differs as the athlete resumes rowing immediately without checking a watch.",
+        "comparison_window": "Recovery 4 (15:17-15:27)",
+        "confidence": "high",
+        "counterevidence": "None observed.",
+        "direct_observation": "The athlete stops rowing, drinks from a water bottle, and resumes rowing immediately after capping the bottle.",
+        "end_seconds": 1527,
+        "interpretation_support": "supports",
+        "limitations": "Fixed frontal camera angle.",
+        "start_seconds": 1517,
+        "title": "Hydration Event 2 (Recovery 4)"
+      },
+      {
+        "comparison": "Transition from rest to work interval.",
+        "comparison_window": "Post-Recovery 2 (08:40-08:50)",
+        "confidence": "medium",
+        "counterevidence": "Subjective assessment of 'steady' rhythm.",
+        "direct_observation": "The first 3-4 strokes appear slower and less fluid. By the 5th stroke, the rhythm appears steady.",
+        "end_seconds": 850,
+        "interpretation_support": "supports",
+        "limitations": "Fixed frontal camera angle; leg movement is not fully visible.",
+        "start_seconds": 840,
+        "title": "Rhythm Re-establishment Post-Recovery 2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+Compare Work 2 at video seconds 420-660 with Work 4 at video seconds 1260-1500.
+
+Concept2 telemetry is authoritative:
+
+- Work 2: 932 meters, approximately 161 watts and 28.7 strokes/minute.
+- Work 4: 962 meters, approximately 179 watts and 30.2 strokes/minute.
+
+Determine whether directly visible rowing mechanics distinguish the lowest-output
+work interval from the strongest work interval. Compare equivalent portions:
+
+- Opening: 420-480 versus 1260-1320
+- Middle: 510-570 versus 1350-1410
+- Finish: 600-660 versus 1440-1500
+
+Examine recovery timing, hands-away timing, body preparation, seat-handle
+sequencing, forward reach, and stroke-to-stroke rhythm. Do not infer power,
+force, fatigue, physiology, or intent from video. The supplied telemetry already
+establishes the performance difference.
+
+Return a small number of high-value factual findings. Each finding must cite
+precise source-video seconds, include counterevidence, and say whether the video
+supports, weakens, or cannot resolve a proposed visible difference. If the two
+intervals look mechanically indistinguishable, state that clearly.

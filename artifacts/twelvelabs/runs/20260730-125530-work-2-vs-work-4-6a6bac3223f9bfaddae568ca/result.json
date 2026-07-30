@@ -1,0 +1,51 @@
+{
+  "provider": "twelvelabs-pegasus",
+  "generationMode": "real-api",
+  "model": "pegasus1.5",
+  "assetId": null,
+  "taskId": "6a6bac3223f9bfaddae568ca",
+  "generationId": "7f1e24d5-8852-4fec-8bf3-d3ac778e80c6",
+  "finishReason": "stop",
+  "capturedAt": "2026-07-30T19:57:28.903802+00:00",
+  "result": {
+    "analysis_summary": "The video analysis reveals no visually distinguishable rowing mechanics between Work 2 (420-660s) and Work 4 (1260-1500s) despite telemetry differences in output.",
+    "findings": [
+      {
+        "comparison": "Work 2 (420-480s) vs Work 4 (1260-1320s)",
+        "comparison_window": "Opening",
+        "confidence": "high",
+        "counterevidence": "Telemetry shows Work 4 has higher watts and stroke rate, but video shows identical mechanics.",
+        "direct_observation": "Rower maintains consistent stroke pattern with identical body angle, handle grip, and leg drive.",
+        "end_seconds": 480,
+        "interpretation_support": "unresolved",
+        "limitations": "Video cannot resolve subtle mechanical differences that may correlate with telemetry output.",
+        "start_seconds": 420,
+        "title": "Opening Phase Mechanics"
+      },
+      {
+        "comparison": "Work 2 (510-570s) vs Work 4 (1350-1410s)",
+        "comparison_window": "Middle",
+        "confidence": "high",
+        "counterevidence": "Telemetry indicates Work 4 is stronger, yet video shows no change in stroke sequencing.",
+        "direct_observation": "Hands-away timing and forward reach are visually consistent across both intervals.",
+        "end_seconds": 570,
+        "interpretation_support": "supports",
+        "limitations": "Visual analysis cannot detect internal force generation differences.",
+        "start_seconds": 510,
+        "title": "Middle Phase Mechanics"
+      },
+      {
+        "comparison": "Work 2 (600-660s) vs Work 4 (1440-1500s)",
+        "comparison_window": "Finish",
+        "confidence": "high",
+        "counterevidence": "Telemetry shows Work 4 has higher output, but video shows steady rhythm in both.",
+        "direct_observation": "Stroke-to-stroke rhythm and posture remain unchanged in both intervals.",
+        "end_seconds": 660,
+        "interpretation_support": "weakens",
+        "limitations": "Video cannot capture physiological or intent-based differences.",
+        "start_seconds": 600,
+        "title": "Finish Phase Mechanics"
+      }
+    ]
+  }
+}

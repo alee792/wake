@@ -1,0 +1,29 @@
+Compare how the athlete establishes rowing rhythm at the beginning of all four
+work intervals in the complete source video.
+
+Concept2 defines the authoritative work starts:
+
+- Work 1 starts at source second 0
+- Work 2 starts at source second 420
+- Work 3 starts at source second 840
+- Work 4 starts at source second 1260
+
+Inspect these source-video windows:
+
+- 0-30
+- 420-450
+- 840-870
+- 1260-1290
+
+For each work start, count the visible strokes from the boundary until the
+stroke-to-stroke rhythm first appears steady. Describe only directly visible
+changes in recovery timing, hands-away timing, body preparation, seat-handle
+sequencing, forward reach, and rhythm.
+
+Compare the four starts and determine whether a slower or less-fluid restart is
+unique to Work 3 at second 840, recurs at other starts, or cannot be resolved.
+Include counterevidence. Do not infer fatigue, physiology, power, force, or
+workout intent.
+
+All numeric timestamps must use seconds from the beginning of the complete source
+video, not clip-local time. Return one finding for each of the four work starts.
