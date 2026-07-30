@@ -47,5 +47,16 @@ The dashboard's submission command is `./submit_project.sh`.
 
 - [Wake — Hackathon](https://drive.google.com/drive/folders/1SiUoV7_L8o03bRBtyBmjiiq5qKnkzbT7)
   — source folder containing the canonical docs and golden session assets.
+- [Current Wake documents](docs/current/README.md) — local snapshots of the
+  latest product, design, architecture, frontend, demo, and prompting documents.
 - [Imported brainstorming documents](docs/drive/README.md) — local Markdown
   and Word copies of the three canonical Google Docs.
+- [Desktop Replay mockups](docs/assets/) — two 1536 × 1024 PNG references
+  downloaded from Drive.
+
+## Source data
+
+- [Concept2 workout 118993656](data/concept2/118993656/README.md) — original
+  FIT, TCX, and stroke-level CSV exports of the same workout.
+- [Workout source videos](data/source-videos/README.md) — Drive links and file
+  sizes. The multi-gigabyte video binaries remain outside Git.
