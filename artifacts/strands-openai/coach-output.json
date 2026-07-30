@@ -1,0 +1,14 @@
+{
+  "headline": "Rate increased while power dropped",
+  "explanation": "During Work 2 (08:25-08:45) the average stroke rate rose from 28.4 spm to 29.8 spm while average power fell from 165.5 W to 157.3 W (candidate-work-2-concept2). In the later Work 3 window (16:45-17:05) power rose to 215.3 W at 30.4 spm (candidate-work-3-concept2). Calibrated frontal video did not reveal a visible cause; Pegasus visual analysis for intervals 2 vs 3 and 2 vs 4 reported unresolved differences (pegasus-interval-2-vs-3-visual-unresolved, pegasus-interval-2-vs-4-visual-unresolved).",
+  "cue": "Add a stroke per minute only after confirming power stays at or above the starting average.",
+  "drill": "Repeat a short work segment at the current rate, then add one stroke per minute only while watts remain at or above the starting average.",
+  "successCriterion": "Power remains at or above the starting average after the rate increase.",
+  "citedObservationIds": [
+    "candidate-work-2-concept2",
+    "candidate-work-3-concept2",
+    "pegasus-interval-2-vs-3-visual-unresolved",
+    "pegasus-interval-2-vs-4-visual-unresolved"
+  ],
+  "limitation": "The fixed frontal video cannot measure force or explain the telemetry difference; failure to resolve a difference does not mean the mechanics were identical."
+}

@@ -2,144 +2,98 @@
 
 **Date:** 2026-07-30  
 **Region:** us-east-1  
-**Identity:** Participant role (account 8278****6489)
+**Model:** openai.gpt-oss-120b-1:0  
+**Framework:** strands-agents 1.50.2 (BedrockModel)
 
 ---
 
-## Summary of Findings
+## Summary
 
-### 1. Native Bedrock Runtime — WORKS
+Native `bedrock-runtime:Converse` works with existing permissions. The full Wake
+coaching pipeline (Strands agent + tool calling + Pegasus evidence + Neo4j bundle →
+validated CoachOutput) succeeds end-to-end.
 
-Both standard Bedrock Runtime APIs succeed against `openai.gpt-oss-120b-1:0`:
+### What this proves
 
-| API | Status | Notes |
-|-----|--------|-------|
-| `bedrock-runtime:Converse` | **Success** | Native Bedrock message format; returns reasoning + text content blocks |
-| `bedrock-runtime:InvokeModel` | **Success** | Requires base64-encoded body; returns OpenAI `chat.completion` JSON |
+OpenAI on Bedrock (`openai.gpt-oss-120b-1:0`) synthesized final Concept2, aligned
+Pegasus, and Neo4j evidence into validated coaching.
 
-The model is ACTIVE, supports TEXT in/out, streaming, and ON_DEMAND inference.
-No inference profile required — the model ID works directly.
-
-### 2. Mantle Responses — UNAVAILABLE THROUGH CURRENT CLI/SDK
-
-`bedrock-mantle` is not a recognized service in the currently installed AWS CLI
-(version 2.36.11). The previous `bedrock-mantle:CreateInference` denial was against
-a preview/beta endpoint not present in this CLI version. This path is blocked at the
-installed SDK level for this environment. It may become available in a future CLI
-release or through direct HTTP request signing against the Mantle endpoint.
-
-### 3. `bedrock:ListInferenceProfiles` — DENIED
-
-Previously confirmed denied. Not required for native inference since the bare
-model ID (`openai.gpt-oss-120b-1:0`) works with both Converse and InvokeModel.
-
-### 4. Wake End-to-End — WORKS (Strands + Native Converse)
-
-Successfully ran a complete Wake coaching pipeline:
-- Strands `BedrockModel` (uses `bedrock-runtime:Converse` natively)
-- Tool-calling: `retrieve_explanation_bundle` invoked mid-agent-loop
-- Input: curated Pegasus evidence + Neo4j ExplanationBundle
-- Output: validated `CoachOutput` (schema, citations, numeric audit all pass)
-- Latency: 3.3s end-to-end including tool call round-trip
-
-The existing Strands `OpenAIResponsesModel` cannot use native Converse — it
-requires Mantle. Switching to `BedrockModel` is the only code change required;
-the model ID, tool definitions, system prompt, and validation pipeline are identical.
+This does NOT claim that OpenAI dispatched the Pegasus investigations.
 
 ---
 
-## Commands Attempted
+## API Results
 
-```bash
-# Model metadata (success)
-aws bedrock get-foundation-model --model-identifier "openai.gpt-oss-120b-1:0" --region us-east-1
+| Path | Status | Notes |
+|------|--------|-------|
+| `bedrock-runtime:Converse` | **Works** | Used by Strands `BedrockModel`; returns reasoning + text |
+| `bedrock-runtime:InvokeModel` | **Works** | Base64-encoded body; returns OpenAI chat.completion |
+| Mantle Responses (`bedrock-mantle`) | **Unavailable** | Not in installed AWS CLI 2.36.11; may become available in future release |
+| `bedrock:ListInferenceProfiles` | **Denied** | Not required for inference |
 
-# Converse API (success)
-aws bedrock-runtime converse \
-  --model-id "openai.gpt-oss-120b-1:0" \
-  --region us-east-1 \
-  --messages '[{"role":"user","content":[{"text":"..."}]}]' \
-  --inference-config '{"maxTokens":256}'
+### Strands Compatibility
 
-# InvokeModel API (success — body must be base64)
-echo -n '{"messages":[...],"max_completion_tokens":256}' | base64 | \
-  xargs -I{} aws bedrock-runtime invoke-model \
-    --model-id "openai.gpt-oss-120b-1:0" \
-    --region us-east-1 \
-    --content-type "application/json" \
-    --accept "application/json" \
-    --body {} /dev/stdout
+| Model Class | Backend | Status |
+|-------------|---------|--------|
+| `BedrockModel` | `bedrock-runtime:Converse` | **Works** — tool calling, reasoning, structured output |
+| `OpenAIResponsesModel` | Mantle | **Blocked** — service not in installed CLI; IAM also denied |
 
-# Strands end-to-end (success — BedrockModel with tool calling)
-# See artifacts/strands-openai/request.json for reproducible command
+---
 
-# Mantle (not available in installed CLI 2.36.11)
-aws bedrock-mantle create-inference ...  # ERROR: invalid choice
+## End-to-End Run
+
+- **Input:** D-014 Neo4j ExplanationBundle + aligned Pegasus normalized evidence
+- **Observations cited:** `candidate-work-2-concept2`, `candidate-work-3-concept2`,
+  `pegasus-interval-2-vs-3-visual-unresolved`, `pegasus-interval-2-vs-4-visual-unresolved`
+- **Validation:** schema pass, citation pass, numeric audit pass (23 tokens)
+- **Latency:** 24.6s (includes tool call round-trip + reasoning)
+- **Stop reason:** end_turn
+
+### CoachOutput
+
+```json
+{
+  "headline": "Rate increased while power dropped",
+  "explanation": "During Work 2 (08:25-08:45) the average stroke rate rose from 28.4 spm to 29.8 spm while average power fell from 165.5 W to 157.3 W. In the later Work 3 window (16:45-17:05) power rose to 215.3 W at 30.4 spm. Calibrated frontal video did not reveal a visible cause; Pegasus visual analysis for intervals 2 vs 3 and 2 vs 4 reported unresolved differences.",
+  "citedObservationIds": ["candidate-work-2-concept2", "candidate-work-3-concept2", "pegasus-interval-2-vs-3-visual-unresolved", "pegasus-interval-2-vs-4-visual-unresolved"],
+  "limitation": "The fixed frontal video cannot measure force or explain the telemetry difference; failure to resolve a difference does not mean the mechanics were identical."
+}
 ```
-
----
-
-## Architecture Implications
-
-Wake's current design (D-007) routes through OpenAI Responses via Mantle.
-Native Bedrock bypasses Mantle entirely, using standard `bedrock-runtime` permissions.
-
-| Consideration | Mantle Responses | Native Bedrock |
-|---------------|-----------------|----------------|
-| Permission needed | `bedrock-mantle:CreateInference` (denied; service not in installed CLI 2.36.11) | `bedrock-runtime:Converse` / `InvokeModel` (both granted) |
-| Response format | OpenAI Responses API | Converse: Bedrock native; InvokeModel: OpenAI chat.completion |
-| Streaming | Unknown (untestable in current environment) | Supported (`converse-stream`) |
-| Model access | Same model IDs | Same model IDs |
-| SDK support | Not in installed AWS CLI 2.36.11 | Full support |
-| Strands integration | `OpenAIResponsesModel` (blocked) | `BedrockModel` (works, with tool calling) |
-
----
-
-## Strands Compatibility
-
-| Strands Model Class | Backend | Status | Notes |
-|---------------------|---------|--------|-------|
-| `OpenAIResponsesModel` | Mantle (`bedrock-mantle:CreateInference`) | **Blocked** | Service not in installed CLI; IAM also denied |
-| `BedrockModel` | `bedrock-runtime:Converse` | **Works** | Native tool calling, reasoning content, structured output |
-
-The only code change required: replace `OpenAIResponsesModel(...)` with
-`BedrockModel(model_id='openai.gpt-oss-120b-1:0', region_name='us-east-1')`.
-Everything else — tools, system prompt, validation, CoachOutput schema — remains identical.
 
 ---
 
 ## Recommendation
 
-**Approve native OpenAI-on-Bedrock via `BedrockModel` as an explicit architecture change from D-007.**
+**Approve native OpenAI-on-Bedrock via Strands `BedrockModel` as D-007 amendment.**
 
-Rationale:
-1. It works today with existing permissions — no IAM changes needed.
-2. The full Wake pipeline (Strands agent + tool calling + validation) passes end-to-end.
-3. `Converse` provides a provider-neutral envelope (same API for Anthropic, Meta, OpenAI models on Bedrock).
-4. Mantle Responses is not available through the currently installed CLI/SDK and the required permission is denied — unblocking it requires both an IAM change and a CLI/SDK upgrade.
-5. The 120b model includes chain-of-thought reasoning (returned as `reasoningContent`) at no extra prompt engineering cost.
-6. This run proves that OpenAI synthesized reviewed Pegasus and Neo4j evidence into coaching. It does not claim that OpenAI dispatched the Pegasus investigations.
+The only code change: replace `OpenAIResponsesModel(...)` with
+`BedrockModel(model_id='openai.gpt-oss-120b-1:0', region_name='us-east-1')`.
+Tools, system prompt, validation, and CoachOutput schema are unchanged.
 
-### Proposed next step
+---
 
-Record this as an architecture change from D-007:
-> **D-007 amendment:** Wake inference routes through Strands `BedrockModel` using
-> native `bedrock-runtime:Converse` against `openai.gpt-oss-120b-1:0` in us-east-1,
-> replacing the `OpenAIResponsesModel` / Mantle Responses path which is unavailable
-> through the currently installed CLI/SDK.
+## Reproducible Command
 
-The 20b model (`openai.gpt-oss-20b-1:0`) was not tested because the 120b succeeded
-on the first attempt. It remains available as a cost/latency fallback.
+```bash
+.venv/bin/python scripts/strands_openai/run_e2e.py
+```
+
+Or with explicit args:
+```bash
+.venv/bin/python -m pipeline.strands_openai.run \
+  --bundle graph/cache/explanation-bundle.json \
+  --pegasus artifacts/twelvelabs/pegasus-normalized-evidence.json \
+  --insight-id insight-rate-without-power \
+  --output artifacts/strands-openai/coach-output.json \
+  --capture artifacts/strands-openai/capture.json
+```
 
 ---
 
 ## Artifacts
 
-### `artifacts/bedrock-exploration/`
-- `request.json` — sanitized request template with both API formats
-- `response.json` — complete raw response from Converse + supplemental InvokeModel sample
-- `HANDOFF.md` — this file
-
-### `artifacts/strands-openai/`
-- `request.json` — full Strands end-to-end request (model, tools, sources, reproducible command)
-- `response.json` — raw response with CoachOutput, reasoning, validation, and Strands incompatibility documentation
+- `artifacts/strands-openai/coach-output.json` — validated CoachOutput from real inference
+- `artifacts/strands-openai/capture.json` — full capture metadata (model, region, latency, audit, reasoning)
+- `pipeline/strands_openai/run.py` — implementation (BedrockModel + tool calling)
+- `pipeline/strands_openai/test_bedrock_model.py` — unit tests for native Bedrock path
+- `scripts/strands_openai/run_e2e.py` — runnable end-to-end script

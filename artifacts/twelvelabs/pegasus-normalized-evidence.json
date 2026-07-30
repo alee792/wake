@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.0",
+  "provider": "twelvelabs-pegasus",
+  "assetId": "6a6b961bb9dc44a9051ef6f3",
+  "timeConvention": "Concept2 workout-global elapsed seconds; video-local seconds are translated with artifacts/twelvelabs/video-concept2-alignment.json.",
+  "reviewMode": "human-source-and-clock-reviewed",
+  "observations": [
+    {
+      "id": "pegasus-interval-3-restart-count-unresolved",
+      "provider": "twelvelabs-pegasus",
+      "startSeconds": 840,
+      "endSeconds": 870,
+      "kind": "context",
+      "statement": "Visual evidence unresolved: the calibrated Interval 3 opening review did not establish an objective number of strokes before the rhythm became steady.",
+      "confidence": 0.9,
+      "citations": [
+        "artifacts/twelvelabs/runs/20260730-133552-aligned-interval-restarts-6a6bb5a80d774e7cec6cd373/result.json",
+        "artifacts/twelvelabs/interval-3-restart-verification.json",
+        "artifacts/twelvelabs/video-concept2-alignment.json"
+      ],
+      "limitations": [
+        "The provider returned approximate recovery and hands-away timings but did not define or return a reproducible restart-stroke count.",
+        "The exact four-or-five-stroke claim from the earlier unaligned pass is rejected."
+      ],
+      "generationMode": "api",
+      "rawResponsePath": "artifacts/twelvelabs/runs/20260730-133552-aligned-interval-restarts-6a6bb5a80d774e7cec6cd373/result.json"
+    },
+    {
+      "id": "pegasus-interval-2-vs-4-visual-unresolved",
+      "provider": "twelvelabs-pegasus",
+      "startSeconds": 420,
+      "endSeconds": 660,
+      "kind": "visual",
+      "statement": "Visual evidence unresolved: Pegasus did not find a reliable visible explanation for the performance difference between calibrated, equivalent windows in Intervals 2 and 4.",
+      "confidence": 0.8,
+      "citations": [
+        "artifacts/twelvelabs/runs/20260730-133534-aligned-interval-2-vs-4-6a6bb59639bf4592836cd793/result.json",
+        "artifacts/twelvelabs/video-concept2-alignment.json"
+      ],
+      "limitations": [
+        "The comparison also uses Interval 4 workout-global windows from 1260 to 1500 seconds.",
+        "Failure to resolve a difference does not mean the mechanics were identical.",
+        "The fixed frontal video cannot measure force or explain the telemetry difference."
+      ],
+      "generationMode": "api",
+      "rawResponsePath": "artifacts/twelvelabs/runs/20260730-133534-aligned-interval-2-vs-4-6a6bb59639bf4592836cd793/result.json"
+    },
+    {
+      "id": "pegasus-interval-2-vs-3-visual-unresolved",
+      "provider": "twelvelabs-pegasus",
+      "startSeconds": 525,
+      "endSeconds": 545,
+      "kind": "visual",
+      "statement": "Visual evidence unresolved: Pegasus did not find a reliable visible explanation for the large output difference between the calibrated Interval 2 and Interval 3 windows at nearly equal stroke rates.",
+      "confidence": 0.7,
+      "citations": [
+        "artifacts/twelvelabs/runs/20260730-133540-aligned-interval-2-vs-3-6a6bb59cc1ac59f5d1d119b7/result.json",
+        "artifacts/twelvelabs/video-concept2-alignment.json"
+      ],
+      "limitations": [
+        "The comparison also uses the Interval 3 workout-global window from 1025 to 1050 seconds.",
+        "The provider classified the finding as low-confidence and unresolved.",
+        "The fixed frontal video cannot measure force or explain the telemetry difference."
+      ],
+      "generationMode": "api",
+      "rawResponsePath": "artifacts/twelvelabs/runs/20260730-133540-aligned-interval-2-vs-3-6a6bb59cc1ac59f5d1d119b7/result.json"
+    },
+    {
+      "id": "pegasus-hydration-recovery-2",
+      "provider": "twelvelabs-pegasus",
+      "startSeconds": 699.089,
+      "endSeconds": 707.089,
+      "kind": "context",
+      "statement": "During Recovery 2, the athlete stopped rowing and drank from a water bottle.",
+      "confidence": 0.95,
+      "citations": [
+        "artifacts/twelvelabs/runs/20260730-125536-recovery-and-hydration-6a6bac38c1ac59f5d1d083ad/result.json",
+        "artifacts/twelvelabs/video-concept2-alignment.json",
+        "human-confirmation:2026-07-30"
+      ],
+      "limitations": [
+        "The raw Pegasus result uses video-local seconds 668 to 676.",
+        "The observation records the visible action only; no hydration purpose, strategy, or performance effect is inferred.",
+        "Clock alignment uncertainty is approximately plus or minus 0.7 seconds."
+      ],
+      "generationMode": "api",
+      "rawResponsePath": "artifacts/twelvelabs/runs/20260730-125536-recovery-and-hydration-6a6bac38c1ac59f5d1d083ad/result.json"
+    },
+    {
+      "id": "pegasus-hydration-recovery-4",
+      "provider": "twelvelabs-pegasus",
+      "startSeconds": 1548.089,
+      "endSeconds": 1558.089,
+      "kind": "context",
+      "statement": "During Recovery 4, the athlete stopped rowing and drank from a water bottle.",
+      "confidence": 0.95,
+      "citations": [
+        "artifacts/twelvelabs/runs/20260730-125536-recovery-and-hydration-6a6bac38c1ac59f5d1d083ad/result.json",
+        "artifacts/twelvelabs/video-concept2-alignment.json",
+        "human-confirmation:2026-07-30"
+      ],
+      "limitations": [
+        "The raw Pegasus result uses video-local seconds 1517 to 1527.",
+        "The observation records the visible action only; no hydration purpose, strategy, or performance effect is inferred.",
+        "Clock alignment uncertainty is approximately plus or minus 0.7 seconds."
+      ],
+      "generationMode": "api",
+      "rawResponsePath": "artifacts/twelvelabs/runs/20260730-125536-recovery-and-hydration-6a6bac38c1ac59f5d1d083ad/result.json"
+    }
+  ],
+  "excludedRuns": [
+    {
+      "taskId": "6a6bab37eb0afeafecfa8fe5",
+      "reason": "The full-video phase prompt applied Concept2 phase boundaries directly to the unsynchronized video clock."
+    },
+    {
+      "taskId": "6a6bac3223f9bfaddae568ca",
+      "reason": "The comparison used unshifted Concept2 seconds as Pegasus video seconds."
+    },
+    {
+      "taskId": "6a6bacd0c1ac59f5d1d08d3d",
+      "reason": "The restart comparison used unshifted Concept2 seconds as Pegasus video seconds and included unsupported core-engagement language."
+    },
+    {
+      "taskId": "6a6bae5eb9dc44a905207bcf",
+      "reason": "The comparison used unshifted Concept2 seconds as Pegasus video seconds."
+    }
+  ],
+  "rejectedClaims": [
+    {
+      "claim": "The compared intervals had identical mechanics.",
+      "reason": "No detected difference is preserved as visual evidence unresolved, not identity."
+    },
+    {
+      "claim": "Core engagement lagged behind leg drive.",
+      "reason": "Core engagement is not directly observable from the fixed frontal video."
+    },
+    {
+      "claim": "Interval 3 took exactly four or five strokes to settle.",
+      "reason": "The calibrated pass did not define or return an objective count."
+    },
+    {
+      "claim": "The athlete drank to maintain or improve performance.",
+      "reason": "The visible water breaks do not establish purpose or causal effect."
+    }
+  ]
+}
