@@ -1,0 +1,58 @@
+{
+  "api": "bedrock-runtime:Converse",
+  "region": "us-east-1",
+  "modelId": "openai.gpt-oss-120b-1:0",
+  "captureTime": "2026-07-30T00:33:00Z",
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "reasoningContent": {
+            "reasoningText": {
+              "text": "We need to provide a concise two-sentence summary of retrieval-augmented generation (RAG). Provide clear definition."
+            }
+          }
+        },
+        {
+          "text": "Retrieval‑augmented generation (RAG) combines a large language model with an external knowledge base: the model first retrieves relevant documents or passages, then conditions its generation on this retrieved information. This architecture lets the system produce up‑to‑date, factual, and domain‑specific responses while keeping the language model’s fluency."
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 88,
+    "outputTokens": 101,
+    "totalTokens": 189
+  },
+  "metrics": {
+    "latencyMs": 1276
+  },
+  "supplemental": {
+    "invokeModel": {
+      "note": "Also tested successfully via bedrock-runtime:InvokeModel with base64-encoded body",
+      "responseFormat": "OpenAI chat.completion object",
+      "sampleResponse": {
+        "id": "chatcmpl-873a5381-2a1c-4dd4-9001-b77d571f1297",
+        "model": "openai.gpt-oss-120b-1:0",
+        "object": "chat.completion",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "Hello, great to meet you!"
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 73,
+          "completion_tokens": 69,
+          "total_tokens": 142
+        }
+      }
+    }
+  }
+}
