@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "provider": "twelvelabs-pegasus",
   "generationMode": "real-api",
-  "reviewMode": "pending-human-review",
+  "reviewMode": "partially-human-reviewed",
   "assetId": "6a6b961bb9dc44a9051ef6f3",
   "strategy": {
     "structuralPasses": 1,
@@ -38,14 +38,14 @@
   ],
   "candidateInsights": [
     {
-      "title": "Work 3 took longer to settle",
+      "title": "Interval 3 started unevenly, then produced the biggest build",
       "sourceStartSeconds": 840,
-      "sourceEndSeconds": 870,
-      "telemetryContext": "Start of Work 3",
-      "directObservation": "Pegasus reported a slower, less-fluid restart that stabilized after roughly four strokes; the other work starts stabilized after roughly two or three.",
+      "sourceEndSeconds": 1080,
+      "telemetryContext": "Concept2 shows Interval 3 rising from about 139 W and 26.5 spm in its first minute to about 211 W and 30.5 spm in its final minute.",
+      "directObservation": "Pegasus described the opening strokes as slower and less fluid than the other interval starts.",
       "confidence": "medium",
-      "status": "candidate",
-      "reviewNote": "Verify stroke counts manually. Exclude the provider phrase 'core engagement' because it is not directly visible."
+      "status": "accepted-cross-modal-insight",
+      "reviewNote": "Use the telemetry-backed build and the directly visible opening description. Do not claim an exact number of strokes before the rhythm became steady."
     },
     {
       "title": "The strongest interval looked mechanically similar",
@@ -64,8 +64,8 @@
       "telemetryContext": "Recovery 2 and Recovery 4",
       "directObservation": "Pegasus found visible hydration events around 11:08 and 25:17 and reported different immediate post-event behavior.",
       "confidence": "high",
-      "status": "timeline-marker",
-      "reviewNote": "Useful synchronization evidence; probably not a primary coaching insight."
+      "status": "human-confirmed-timeline-marker",
+      "reviewNote": "The athlete confirmed both water breaks. Useful synchronization evidence; probably not a primary coaching insight."
     },
     {
       "title": "Similar-looking strokes produced very different output",
@@ -86,6 +86,17 @@
     {
       "claim": "The video shows identical mechanics between Work 2 and Work 4.",
       "reason": "Absence of a detected difference should be recorded as unresolved, not identity."
+    },
+    {
+      "claim": "Interval 3 took exactly four strokes to settle.",
+      "reason": "The provider did not define a measurable threshold for 'settled'; preserve only the broader directly visible description."
     }
-  ]
+  ],
+  "humanReview": {
+    "reviewedAt": "2026-07-30",
+    "confirmed": [
+      "Hydration event around 11:08",
+      "Hydration event around 25:17"
+    ]
+  }
 }
