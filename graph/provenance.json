@@ -1,0 +1,48 @@
+{
+  "stepId": "neo4j-explanation-rate-without-power",
+  "provider": "neo4j",
+  "service": "Neo4j Aura 5.27",
+  "executionMode": "live-aura",
+  "databaseId": "125e2ba1",
+  "uri": "neo4j+s://125e2ba1.databases.neo4j.io",
+  "inputPaths": [
+    "graph/cypher/constraints.cypher",
+    "graph/cypher/reconcile-d014.cypher",
+    "graph/cypher/seed.cypher",
+    "graph/seed/golden-session.json",
+    "artifacts/twelvelabs/pegasus-normalized-evidence.json",
+    "artifacts/twelvelabs/video-concept2-alignment.json",
+    "graph/params/hero-insight.json",
+    "graph/cypher/explain-explanation.cypher",
+    "graph/cypher/explanation.cypher"
+  ],
+  "outputPaths": [
+    "graph/results/explanation-aura.json",
+    "graph/cache/explanation-bundle.json"
+  ],
+  "capturedAt": "2026-07-30T21:10:43Z",
+  "humanReviewed": true,
+  "providerEvidence": {
+    "provider": "twelvelabs-pegasus",
+    "executionMode": "api",
+    "assetId": "6a6b961bb9dc44a9051ef6f3",
+    "observationCount": 5,
+    "clockMapping": "workoutSeconds = videoSeconds + 31.089",
+    "estimatedUncertaintySeconds": 0.7,
+    "normalizedEvidencePath": "artifacts/twelvelabs/pegasus-normalized-evidence.json",
+    "alignmentPath": "artifacts/twelvelabs/video-concept2-alignment.json"
+  },
+  "limitations": [
+    "Pegasus could not resolve a visible cause for the output difference; pressure or connection remains a hypothesis.",
+    "The fixed frontal video cannot measure force or establish identical mechanics.",
+    "The calibrated video-to-workout offset retains approximately ±0.7 seconds uncertainty.",
+    "The Work 3 event is a connected comparison, not a visually confirmed recurrence.",
+    "No exact restart-stroke count, core-engagement claim, or causal hydration claim is represented."
+  ],
+  "contentRecapture": {
+    "supportingConcept2ObservationId": "candidate-work-2-concept2",
+    "comparisonConcept2ObservationId": "candidate-work-3-concept2",
+    "comparisonClassification": "comparison-not-recurrence",
+    "visualConclusion": "calibrated frontal video did not resolve a visible cause"
+  }
+}

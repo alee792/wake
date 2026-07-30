@@ -1,0 +1,137 @@
+{
+  "capturedAt": "2026-07-30T21:39:36.891776+00:00",
+  "executionMode": "real-api",
+  "provider": "openai",
+  "service": "bedrock-runtime:Converse",
+  "framework": "strands-agents (BedrockModel)",
+  "model": "openai.gpt-oss-120b-1:0",
+  "region": "us-east-1",
+  "store": false,
+  "latencySeconds": 24.577,
+  "stopReason": "end_turn",
+  "bundlePath": "graph/cache/explanation-bundle.json",
+  "pegasusPath": "artifacts/twelvelabs/pegasus-normalized-evidence.json",
+  "outputPath": "artifacts/strands-openai/coach-output.json",
+  "citationValidation": "passed",
+  "numericClaimAudit": [
+    {
+      "field": "explanation",
+      "token": "2",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "08:25",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "08:45",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "28.4 spm",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "29.8 spm",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "165.5 w",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "157.3 w",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "2",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "3",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "16:45",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "17:05",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "215.3 w",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "30.4 spm",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "3",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "2",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "3",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "2",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "4",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "2",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "3",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "2",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "4",
+      "status": "matched"
+    },
+    {
+      "field": "drill",
+      "token": "one",
+      "status": "matched"
+    }
+  ],
+  "hasPegasusCitation": true,
+  "claim": "OpenAI synthesized reviewed Pegasus and Neo4j evidence into coaching",
+  "reasoningContent": "We have bundle:\n\ninsight: headline \"Rate rose without preserving power in the Work 2 candidate.\"\nexplanation: \"Concept2 measurements show 157.3 W at 29.8 spm in the selected Work 2 window versus 215.3 W at 30.4 spm in the Work 3 comparison. Calibrated frontal video review did not resolve a visible cause, so pressure or connection remains a hypothesis.\"\n\nsupportingEvidence: candidate-work-2-concept2 (id) with statement \"Compared with 08:25\u201308:45, mean stroke rate rose from 28.4 to 29.8 spm while mean power fell from 165.5 to 157.3 W.\" and limitations.\n\ncontradictingEvidence: several visual unresolved statements: interval-2-vs-4 (id), interval-2-vs-3 (id). Both have limitations.\n\nWe need CoachOutput fields:\n\nheadline: concise coaching headline, no provider names. Could be derived from insight headline maybe \"Rate rose while power fell\". But we must use only content from bundle? Probably okay.\n\nexplanation: what happened, referencing primary event and comparison using exact numbers from bundle; note unresolved visual evidence. Must reference primary event: candidate-work-2 (work 2) rate rose as power fell. And also mention Work 3 comparison? The explanation should include exact numbers: from supportingEvidence: stroke rate rose from 28.4 to 29.8 spm, power fell from 165.5 to 157.3 W. Also maybe mention Work 3 rose power etc? Bundle's explanation includes Work 3 numbers. But we need to reference primary event and comparison using exact numbers. Should also note unresolved visual evidence (contradicting). So mention that Pegasus visual evidence unresolved for intervals 2 vs 3 and 2 vs 4, thus no visible cause.\n\ncitedObservationIds: list all IDs referenced in explanation and limitation. So must include: \"candidate-work-2-concept2\", \"pegasus-interval-2-vs-4-visual-unresolved\", \"pegasus-interval-2-vs-3-visual-unresolved\". Also maybe include \"candidate-work-3-concept2\"? Not needed unless referenced. Explanation includes Work 3 numbers? Might include but not required. Use only IDs referenced. We'll reference Work 3 numbers? The insight mention 215.3 W at 30.4 spm in Work 3; that value comes from candidate-work-3-concept2. So if we reference that number, we need to cite its ID. The instruction: \"Cite every observation ID from supportingEvidence and contradictingEvidence that the explanation or limitation references. Include both Concept2 and Pegasus IDs when the explanation addresses their evidence.\" So if we use numbers from candidate-work-3-concept2, must cite that ID too. So include \"candidate-work-3-concept2\". Good.\n\nAlso limitation: we must preserve limitation from contradicting evidence. Contradicting evidence entries have limitations arrays. We need to include limitation field from CoachOutput, \"preserve the limitation from contradicting evidence\". Possibly combine? Perhaps include one limitation string? We should maybe concatenate both? But spec: \"preserve the limitation from contradicting evidence.\" Could be the limitation of the visual unresolved evidence: maybe \"Failure to resolve a difference does not mean the mechanics were identical.\" Or include both? Might need to include the limitation array as a string? Probably pick the limitation that is most relevant: maybe the first limitation from the first contradictory evidence? Not sure. Might include both separated by space. We'll include the limitation from the pegasus-interval-2-vs-3-visual-unresolved: \"The fixed frontal video cannot measure force or explain the telemetry difference.\" but also include \"Failure to resolve a difference does not mean the mechanics were identical.\" Could combine.\n\nBut instruction: \"preserve the limitation from contradicting evidence.\" Could be singular; maybe we choose the limitation that mentions inability to measure force, as that ties to power vs rate. Use that.\n\ndrill: verbatim from bundle: \"Repeat a short work segment at the current rate, then add one stroke per minute only while watts remain at or above the starting average.\"\n\nsuccessCriterion: verbatim: \"Power remains at or above the starting average after the rate increase.\"\n\ncue: short coaching instruction; may reference recovery timing as hypothesis. Could be \"Add strokes slowly, ensuring power stays above baseline before increasing rate.\" Something like that.\n\nNow construct JSON fields.\n\nMake sure headline is concise, no provider names. Eg \"Rate increased but power dropped\". Use numbers? Not necessary.\n\nExplanation: We'll write: \"During Work\u202f2 (08:25\u201308:45) the average stroke rate rose from 28.4\u202fspm to 29.8\u202fspm while average power fell from 165.5\u202fW to 157.3\u202fW (candidate\u2011work\u20112\u2011concept2). In the later Work\u202f3 window (16:45\u201317:05) power rose to 215.3\u202fW at 30.4\u202fspm (candidate\u2011work\u20113\u2011concept2). Calibrated frontal video did not reveal a visible cause; Pegasus visual analysis for intervals\u202f2\u202fvs\u202f3 and\u202f2\u202fvs\u202f4 reported unresolved differences (pegasus\u2011interval\u20112\u2011vs\u20113\u2011visual\u2011unresolved, pegasus\u2011interval\u20112\u2011vs\u20114\u2011visual\u2011unresolved).\"\n\nNote need plain ASCII spaces, no special characters like non-breaking spaces. Use normal spaces.\n\nCite IDs in explanation: include them as parentheses.\n\nCue: \"Add a stroke per minute only after confirming power stays at or above the starting average.\" That's short.\n\nLimitation: we could combine: \"The fixed frontal video cannot measure force or explain the telemetry difference; failure to resolve a difference does not mean the mechanics were identical.\" That's from both limitations.\n\ncitedObservationIds: list all IDs: [\"candidate-work-2-concept2\",\"candidate-work-3-concept2\",\"pegasus-interval-2-vs-3-visual-unresolved\",\"pegasus-interval-2-vs-4-visual-unresolved\"]\n\nMake sure JSON ordering may not matter but include fields exactly.\n\nProceed.",
+  "reviewed": false
+}
