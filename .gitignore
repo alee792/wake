@@ -1,0 +1,12 @@
+.envrc
+.venv/
+.claude/
+node_modules/
+dist/
+.DS_Store
+*.pyc
+__pycache__/
+
+# Provider responses containing private media delivery URLs.
+artifacts/twelvelabs/jockey-observation.json
+artifacts/twelvelabs/jockey-raw-response.json

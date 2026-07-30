@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "sourcePath": "artifacts/twelvelabs/pegasus-pasted-output.json",
+  "validationPath": "artifacts/twelvelabs/pegasus-validation.json",
+  "reviewMode": "human-reviewed",
+  "selectedHighlights": [
+    {
+      "role": "hero",
+      "providerMomentIndex": null,
+      "selectionReason": "",
+      "concept2PhaseId": "",
+      "mediaAssetId": null,
+      "reviewState": "pending"
+    },
+    {
+      "role": "recurrence-or-comparison",
+      "providerMomentIndex": null,
+      "selectionReason": "",
+      "concept2PhaseId": "",
+      "mediaAssetId": null,
+      "reviewState": "pending"
+    }
+  ],
+  "notes": [
+    "Copy selected provider moments without rewriting direct_observation, confidence, or limitations.",
+    "Keep Pegasus repeated_at suggestions separate from Jockey cited moments.",
+    "Do not select a recovery-window moment as a work-interval performance event."
+  ]
+}

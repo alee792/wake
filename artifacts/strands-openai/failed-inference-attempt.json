@@ -1,0 +1,16 @@
+{
+  "attemptedAt": "2026-07-30T19:38:00Z",
+  "executionMode": "failed-real-api-attempt",
+  "provider": "openai",
+  "service": "amazon-bedrock-mantle",
+  "model": "openai.gpt-oss-120b",
+  "region": "us-east-1",
+  "store": false,
+  "providerResponseId": null,
+  "inputPath": "graph/cache/explanation-bundle.json",
+  "outputPath": null,
+  "errorCode": "access_denied",
+  "missingPermission": "bedrock-mantle:CreateInference",
+  "reviewed": true,
+  "limitation": "No model response was created. This attempt is not a successful OpenAI or Strands generation."
+}

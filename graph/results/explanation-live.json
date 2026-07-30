@@ -1,0 +1,75 @@
+{
+  "recurrences": [
+    {
+      "eventId": "candidate-work-3",
+      "startSeconds": 1025,
+      "importance": "comparison",
+      "endSeconds": 1050,
+      "title": "Work 3 comparison window",
+      "reviewState": "telemetry-only",
+      "focusSeconds": 1037
+    }
+  ],
+  "insight": {
+    "confidence": 0.75,
+    "insightId": "insight-rate-without-power",
+    "reviewState": "provisional-telemetry-only",
+    "explanation": "Concept2 measurements support the selected Work 2 event; the Work 3 comparison shows that a rate increase did not always reduce power, so the finding is event-specific pending video review.",
+    "headline": "Rate rose without preserving power in the Work 2 candidate."
+  },
+  "supportingEvidence": [
+    {
+      "citations": ["data/concept2/118993656/concept2-result-118993656.csv"],
+      "startSeconds": 525,
+      "provider": "concept2",
+      "kind": "measurement",
+      "rawResponsePath": "data/concept2/118993656/concept2-result-118993656.csv",
+      "confidence": 1.0,
+      "generationMode": "derived",
+      "endSeconds": 545,
+      "statement": "Compared with 08:25–08:45, mean stroke rate rose from 28.4 to 29.8 spm while mean power fell from 165.5 to 157.3 W.",
+      "id": "candidate-work-2-concept2",
+      "limitations": ["Twenty-second window averages are deterministic Wake derivations from Concept2 CSV samples."]
+    }
+  ],
+  "contradictingEvidence": [
+    {
+      "citations": ["artifacts/data/replay-fixture.stub.json", "artifacts/twelvelabs/README.md"],
+      "startSeconds": 525,
+      "provider": "manual",
+      "kind": "context",
+      "rawResponsePath": "artifacts/data/replay-fixture.stub.json",
+      "confidence": 1.0,
+      "generationMode": "manual",
+      "endSeconds": 545,
+      "statement": "The event remains a telemetry-only candidate because no source video or provider-derived visual observation was available.",
+      "id": "candidate-selection-manual",
+      "limitations": ["No visual or causal technique claim can be made."]
+    }
+  ],
+  "segment": {
+    "startSeconds": 420,
+    "segmentId": "work-2",
+    "endSeconds": 660,
+    "name": "Work 2",
+    "segmentType": "work"
+  },
+  "source": "neo4j",
+  "event": {
+    "eventId": "candidate-work-2",
+    "startSeconds": 525,
+    "importance": "candidate",
+    "endSeconds": 545,
+    "title": "Work 2 rate rose as power fell",
+    "reviewState": "telemetry-only",
+    "focusSeconds": 535
+  },
+  "drill": {
+    "instructions": "Repeat a short work segment at the current rate, then add one stroke per minute only while watts remain at or above the starting average.",
+    "drillId": "drill-hold-pressure-before-rate",
+    "name": "Hold pressure before building rate",
+    "generationMode": "manual",
+    "reviewState": "provisional",
+    "successCriterion": "Power remains at or above the starting average after the rate increase."
+  }
+}

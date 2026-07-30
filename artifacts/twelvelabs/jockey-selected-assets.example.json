@@ -1,0 +1,16 @@
+{
+  "assets": [
+    {
+      "role": "hero",
+      "assetId": "replace-with-ready-selected-clip-asset-id",
+      "replayStartSeconds": 1025,
+      "replayEndSeconds": 1050
+    },
+    {
+      "role": "recurrence-or-comparison",
+      "assetId": "replace-with-ready-selected-clip-asset-id",
+      "replayStartSeconds": 525,
+      "replayEndSeconds": 545
+    }
+  ]
+}

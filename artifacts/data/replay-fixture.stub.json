@@ -1,0 +1,4735 @@
+{
+  "schemaVersion": "1.0",
+  "session": {
+    "id": "concept2-118993656",
+    "title": "4 × 4:00 / 3:00 Recovery",
+    "date": "2026-07-30",
+    "durationSeconds": 1680,
+    "status": "Reviewed Replay",
+    "distanceMeters": 5941
+  },
+  "phases": [
+    {
+      "id": "work-1",
+      "name": "Work 1",
+      "type": "work",
+      "startSeconds": 0,
+      "endSeconds": 240
+    },
+    {
+      "id": "recovery-1",
+      "name": "Recovery 1",
+      "type": "recovery",
+      "startSeconds": 240,
+      "endSeconds": 420
+    },
+    {
+      "id": "work-2",
+      "name": "Work 2",
+      "type": "work",
+      "startSeconds": 420,
+      "endSeconds": 660
+    },
+    {
+      "id": "recovery-2",
+      "name": "Recovery 2",
+      "type": "recovery",
+      "startSeconds": 660,
+      "endSeconds": 840
+    },
+    {
+      "id": "work-3",
+      "name": "Work 3",
+      "type": "work",
+      "startSeconds": 840,
+      "endSeconds": 1080
+    },
+    {
+      "id": "recovery-3",
+      "name": "Recovery 3",
+      "type": "recovery",
+      "startSeconds": 1080,
+      "endSeconds": 1260
+    },
+    {
+      "id": "work-4",
+      "name": "Work 4",
+      "type": "work",
+      "startSeconds": 1260,
+      "endSeconds": 1500
+    },
+    {
+      "id": "recovery-4",
+      "name": "Recovery 4",
+      "type": "recovery",
+      "startSeconds": 1500,
+      "endSeconds": 1680
+    }
+  ],
+  "intervals": [
+    {
+      "id": "work-1",
+      "name": "Work 1",
+      "startSeconds": 0,
+      "endSeconds": 240,
+      "workSeconds": 240,
+      "distanceMeters": 953,
+      "averagePaceSecondsPer500m": 126.4,
+      "averageWatts": 175.3,
+      "averageStrokeRate": 28.6,
+      "insight": "Pending reviewed video evidence."
+    },
+    {
+      "id": "work-2",
+      "name": "Work 2",
+      "startSeconds": 420,
+      "endSeconds": 660,
+      "workSeconds": 240,
+      "distanceMeters": 932,
+      "averagePaceSecondsPer500m": 129.9,
+      "averageWatts": 160.7,
+      "averageStrokeRate": 28.7,
+      "insight": "Pending reviewed video evidence."
+    },
+    {
+      "id": "work-3",
+      "name": "Work 3",
+      "startSeconds": 840,
+      "endSeconds": 1080,
+      "workSeconds": 240,
+      "distanceMeters": 952,
+      "averagePaceSecondsPer500m": 125.7,
+      "averageWatts": 173.2,
+      "averageStrokeRate": 28.6,
+      "insight": "Pending reviewed video evidence."
+    },
+    {
+      "id": "work-4",
+      "name": "Work 4",
+      "startSeconds": 1260,
+      "endSeconds": 1500,
+      "workSeconds": 240,
+      "distanceMeters": 962,
+      "averagePaceSecondsPer500m": 125.4,
+      "averageWatts": 179.3,
+      "averageStrokeRate": 30.2,
+      "insight": "Pending reviewed video evidence."
+    }
+  ],
+  "telemetry": [
+    {
+      "timeSeconds": 3.2,
+      "watts": 85,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 160.5
+    },
+    {
+      "timeSeconds": 5.4,
+      "watts": 97,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 153.6
+    },
+    {
+      "timeSeconds": 7.4,
+      "watts": 118,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 143.7
+    },
+    {
+      "timeSeconds": 9.5,
+      "watts": 126,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 140.4
+    },
+    {
+      "timeSeconds": 11.5,
+      "watts": 126,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 140.4
+    },
+    {
+      "timeSeconds": 13.6,
+      "watts": 142,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 135.1
+    },
+    {
+      "timeSeconds": 15.8,
+      "watts": 136,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 137.2
+    },
+    {
+      "timeSeconds": 17.9,
+      "watts": 133,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 138.1
+    },
+    {
+      "timeSeconds": 20,
+      "watts": 135,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 137.3
+    },
+    {
+      "timeSeconds": 22,
+      "watts": 148,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 133.1
+    },
+    {
+      "timeSeconds": 24.1,
+      "watts": 148,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 133.1
+    },
+    {
+      "timeSeconds": 26.2,
+      "watts": 146,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 133.8
+    },
+    {
+      "timeSeconds": 28.3,
+      "watts": 145,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 134.1
+    },
+    {
+      "timeSeconds": 30.4,
+      "watts": 145,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 134.1
+    },
+    {
+      "timeSeconds": 32.4,
+      "watts": 155,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131.3
+    },
+    {
+      "timeSeconds": 34.5,
+      "watts": 155,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131.3
+    },
+    {
+      "timeSeconds": 36.6,
+      "watts": 156,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.9
+    },
+    {
+      "timeSeconds": 38.7,
+      "watts": 166,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128.2
+    },
+    {
+      "timeSeconds": 40.7,
+      "watts": 175,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126
+    },
+    {
+      "timeSeconds": 42.9,
+      "watts": 175,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.1
+    },
+    {
+      "timeSeconds": 45,
+      "watts": 174,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 126.3
+    },
+    {
+      "timeSeconds": 47.1,
+      "watts": 172,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.8
+    },
+    {
+      "timeSeconds": 49.2,
+      "watts": 170,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 127.1
+    },
+    {
+      "timeSeconds": 51.3,
+      "watts": 180,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 124.7
+    },
+    {
+      "timeSeconds": 53.4,
+      "watts": 181,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 124.5
+    },
+    {
+      "timeSeconds": 55.5,
+      "watts": 180,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 124.9
+    },
+    {
+      "timeSeconds": 57.5,
+      "watts": 179,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 125.1
+    },
+    {
+      "timeSeconds": 59.6,
+      "watts": 179,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 125.1
+    },
+    {
+      "timeSeconds": 61.7,
+      "watts": 191,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 122.4
+    },
+    {
+      "timeSeconds": 63.9,
+      "watts": 180,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 124.7
+    },
+    {
+      "timeSeconds": 66,
+      "watts": 186,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 123.5
+    },
+    {
+      "timeSeconds": 68.2,
+      "watts": 194,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 121.8
+    },
+    {
+      "timeSeconds": 70.3,
+      "watts": 205,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 119.5
+    },
+    {
+      "timeSeconds": 72.4,
+      "watts": 204,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 119.7
+    },
+    {
+      "timeSeconds": 74.5,
+      "watts": 204,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 119.7
+    },
+    {
+      "timeSeconds": 76.6,
+      "watts": 190,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 122.6
+    },
+    {
+      "timeSeconds": 78.6,
+      "watts": 189,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 122.9
+    },
+    {
+      "timeSeconds": 80.7,
+      "watts": 195,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 121.5
+    },
+    {
+      "timeSeconds": 82.8,
+      "watts": 193,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 121.9
+    },
+    {
+      "timeSeconds": 84.8,
+      "watts": 194,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 121.8
+    },
+    {
+      "timeSeconds": 86.9,
+      "watts": 192,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 122.2
+    },
+    {
+      "timeSeconds": 89,
+      "watts": 193,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 121.9
+    },
+    {
+      "timeSeconds": 91.1,
+      "watts": 187,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 123.3
+    },
+    {
+      "timeSeconds": 93.1,
+      "watts": 195,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 121.5
+    },
+    {
+      "timeSeconds": 95.2,
+      "watts": 193,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 122
+    },
+    {
+      "timeSeconds": 97.2,
+      "watts": 184,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 123.8
+    },
+    {
+      "timeSeconds": 99.2,
+      "watts": 187,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 123.2
+    },
+    {
+      "timeSeconds": 101.2,
+      "watts": 195,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 121.5
+    },
+    {
+      "timeSeconds": 103.3,
+      "watts": 189,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 122.9
+    },
+    {
+      "timeSeconds": 105.4,
+      "watts": 187,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 123.3
+    },
+    {
+      "timeSeconds": 107.5,
+      "watts": 179,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 125
+    },
+    {
+      "timeSeconds": 109.6,
+      "watts": 179,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 125
+    },
+    {
+      "timeSeconds": 111.8,
+      "watts": 184,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 123.8
+    },
+    {
+      "timeSeconds": 113.8,
+      "watts": 184,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 124
+    },
+    {
+      "timeSeconds": 115.9,
+      "watts": 184,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 123.9
+    },
+    {
+      "timeSeconds": 118.1,
+      "watts": 184,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 123.9
+    },
+    {
+      "timeSeconds": 120.2,
+      "watts": 178,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 125.3
+    },
+    {
+      "timeSeconds": 122.3,
+      "watts": 183,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 124.1
+    },
+    {
+      "timeSeconds": 124.4,
+      "watts": 183,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 124.1
+    },
+    {
+      "timeSeconds": 126.5,
+      "watts": 182,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 124.4
+    },
+    {
+      "timeSeconds": 128.6,
+      "watts": 181,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 124.5
+    },
+    {
+      "timeSeconds": 130.7,
+      "watts": 181,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 124.5
+    },
+    {
+      "timeSeconds": 132.8,
+      "watts": 178,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 125.2
+    },
+    {
+      "timeSeconds": 134.9,
+      "watts": 180,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 124.7
+    },
+    {
+      "timeSeconds": 137.2,
+      "watts": 173,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 126.5
+    },
+    {
+      "timeSeconds": 139.3,
+      "watts": 173,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 126.5
+    },
+    {
+      "timeSeconds": 141.4,
+      "watts": 178,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 125.2
+    },
+    {
+      "timeSeconds": 143.6,
+      "watts": 185,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 123.7
+    },
+    {
+      "timeSeconds": 145.7,
+      "watts": 185,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 123.7
+    },
+    {
+      "timeSeconds": 147.9,
+      "watts": 179,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 125.1
+    },
+    {
+      "timeSeconds": 150,
+      "watts": 179,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 125.1
+    },
+    {
+      "timeSeconds": 152.2,
+      "watts": 170,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 127.3
+    },
+    {
+      "timeSeconds": 154.4,
+      "watts": 165,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 128.4
+    },
+    {
+      "timeSeconds": 156.5,
+      "watts": 173,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.5
+    },
+    {
+      "timeSeconds": 158.6,
+      "watts": 173,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.5
+    },
+    {
+      "timeSeconds": 160.7,
+      "watts": 189,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 122.9
+    },
+    {
+      "timeSeconds": 162.8,
+      "watts": 185,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 123.6
+    },
+    {
+      "timeSeconds": 165,
+      "watts": 175,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 126
+    },
+    {
+      "timeSeconds": 167.1,
+      "watts": 175,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 126
+    },
+    {
+      "timeSeconds": 169.2,
+      "watts": 170,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 127.3
+    },
+    {
+      "timeSeconds": 171.3,
+      "watts": 185,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 123.7
+    },
+    {
+      "timeSeconds": 173.4,
+      "watts": 191,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 122.4
+    },
+    {
+      "timeSeconds": 175.5,
+      "watts": 191,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 122.4
+    },
+    {
+      "timeSeconds": 177.6,
+      "watts": 190,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 122.5
+    },
+    {
+      "timeSeconds": 179.6,
+      "watts": 194,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 121.8
+    },
+    {
+      "timeSeconds": 181.8,
+      "watts": 184,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 123.8
+    },
+    {
+      "timeSeconds": 183.9,
+      "watts": 175,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 125.9
+    },
+    {
+      "timeSeconds": 185.9,
+      "watts": 175,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126
+    },
+    {
+      "timeSeconds": 188,
+      "watts": 180,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 124.8
+    },
+    {
+      "timeSeconds": 190.1,
+      "watts": 180,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 124.8
+    },
+    {
+      "timeSeconds": 192.2,
+      "watts": 174,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.3
+    },
+    {
+      "timeSeconds": 194.2,
+      "watts": 175,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126
+    },
+    {
+      "timeSeconds": 196.3,
+      "watts": 172,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.6
+    },
+    {
+      "timeSeconds": 198.4,
+      "watts": 167,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128
+    },
+    {
+      "timeSeconds": 200.5,
+      "watts": 167,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128
+    },
+    {
+      "timeSeconds": 202.5,
+      "watts": 171,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 127
+    },
+    {
+      "timeSeconds": 204.6,
+      "watts": 176,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 125.7
+    },
+    {
+      "timeSeconds": 206.7,
+      "watts": 176,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 125.8
+    },
+    {
+      "timeSeconds": 208.8,
+      "watts": 171,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 127
+    },
+    {
+      "timeSeconds": 211,
+      "watts": 172,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 126.7
+    },
+    {
+      "timeSeconds": 213.1,
+      "watts": 189,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 122.9
+    },
+    {
+      "timeSeconds": 215.1,
+      "watts": 186,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 123.4
+    },
+    {
+      "timeSeconds": 217.2,
+      "watts": 180,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 124.7
+    },
+    {
+      "timeSeconds": 219.3,
+      "watts": 209,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 118.7
+    },
+    {
+      "timeSeconds": 221.5,
+      "watts": 209,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 118.7
+    },
+    {
+      "timeSeconds": 223.6,
+      "watts": 203,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 119.9
+    },
+    {
+      "timeSeconds": 225.6,
+      "watts": 203,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 119.9
+    },
+    {
+      "timeSeconds": 227.8,
+      "watts": 181,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 124.6
+    },
+    {
+      "timeSeconds": 229.9,
+      "watts": 182,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 124.4
+    },
+    {
+      "timeSeconds": 232,
+      "watts": 176,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 125.7
+    },
+    {
+      "timeSeconds": 234.2,
+      "watts": 175,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 126.1
+    },
+    {
+      "timeSeconds": 236.3,
+      "watts": 165,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128.5
+    },
+    {
+      "timeSeconds": 238.4,
+      "watts": 165,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128.5
+    },
+    {
+      "timeSeconds": 242.2,
+      "watts": 162,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 129.3
+    },
+    {
+      "timeSeconds": 244.3,
+      "watts": 167,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 127.9
+    },
+    {
+      "timeSeconds": 246.5,
+      "watts": 161,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 129.6
+    },
+    {
+      "timeSeconds": 248.9,
+      "watts": 103,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 150.3
+    },
+    {
+      "timeSeconds": 251.4,
+      "watts": 77,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 165.9
+    },
+    {
+      "timeSeconds": 253.9,
+      "watts": 67,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 173.1
+    },
+    {
+      "timeSeconds": 256.5,
+      "watts": 66,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 174.3
+    },
+    {
+      "timeSeconds": 259,
+      "watts": 65,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 175.7
+    },
+    {
+      "timeSeconds": 261.5,
+      "watts": 67,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 173.2
+    },
+    {
+      "timeSeconds": 264,
+      "watts": 67,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 173.2
+    },
+    {
+      "timeSeconds": 266.5,
+      "watts": 73,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 168.3
+    },
+    {
+      "timeSeconds": 268.9,
+      "watts": 77,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 165.5
+    },
+    {
+      "timeSeconds": 271.4,
+      "watts": 77,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 165.5
+    },
+    {
+      "timeSeconds": 273.7,
+      "watts": 82,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 162.5
+    },
+    {
+      "timeSeconds": 276.3,
+      "watts": 87,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 159
+    },
+    {
+      "timeSeconds": 278.8,
+      "watts": 87,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 159
+    },
+    {
+      "timeSeconds": 281.3,
+      "watts": 84,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 160.6
+    },
+    {
+      "timeSeconds": 283.7,
+      "watts": 84,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 160.6
+    },
+    {
+      "timeSeconds": 286.3,
+      "watts": 85,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 160.2
+    },
+    {
+      "timeSeconds": 288.8,
+      "watts": 90,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 157.2
+    },
+    {
+      "timeSeconds": 291.1,
+      "watts": 93,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 155.4
+    },
+    {
+      "timeSeconds": 293.5,
+      "watts": 87,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 158.8
+    },
+    {
+      "timeSeconds": 295.9,
+      "watts": 86,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 159.8
+    },
+    {
+      "timeSeconds": 298.4,
+      "watts": 86,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 159.8
+    },
+    {
+      "timeSeconds": 300.8,
+      "watts": 85,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 160.3
+    },
+    {
+      "timeSeconds": 303.2,
+      "watts": 84,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 160.9
+    },
+    {
+      "timeSeconds": 305.7,
+      "watts": 84,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 160.9
+    },
+    {
+      "timeSeconds": 308.1,
+      "watts": 86,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 159.6
+    },
+    {
+      "timeSeconds": 310.5,
+      "watts": 82,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 161.9
+    },
+    {
+      "timeSeconds": 313,
+      "watts": 82,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 161.9
+    },
+    {
+      "timeSeconds": 315.3,
+      "watts": 83,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 161.3
+    },
+    {
+      "timeSeconds": 317.8,
+      "watts": 86,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 159.6
+    },
+    {
+      "timeSeconds": 320.1,
+      "watts": 93,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 155.4
+    },
+    {
+      "timeSeconds": 322.5,
+      "watts": 93,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 155.4
+    },
+    {
+      "timeSeconds": 324.9,
+      "watts": 88,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 158.6
+    },
+    {
+      "timeSeconds": 327.3,
+      "watts": 89,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 157.8
+    },
+    {
+      "timeSeconds": 329.7,
+      "watts": 89,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 157.8
+    },
+    {
+      "timeSeconds": 332.1,
+      "watts": 88,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 158.4
+    },
+    {
+      "timeSeconds": 334.5,
+      "watts": 92,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 156.2
+    },
+    {
+      "timeSeconds": 336.8,
+      "watts": 91,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 156.8
+    },
+    {
+      "timeSeconds": 339.2,
+      "watts": 91,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 156.6
+    },
+    {
+      "timeSeconds": 341.6,
+      "watts": 93,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 155.6
+    },
+    {
+      "timeSeconds": 343.9,
+      "watts": 93,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 155.6
+    },
+    {
+      "timeSeconds": 346.4,
+      "watts": 88,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 158.4
+    },
+    {
+      "timeSeconds": 348.7,
+      "watts": 86,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 159.5
+    },
+    {
+      "timeSeconds": 351,
+      "watts": 88,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 158.5
+    },
+    {
+      "timeSeconds": 353.4,
+      "watts": 85,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 160.2
+    },
+    {
+      "timeSeconds": 355.7,
+      "watts": 83,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 161.3
+    },
+    {
+      "timeSeconds": 358.1,
+      "watts": 83,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 161.3
+    },
+    {
+      "timeSeconds": 360.5,
+      "watts": 82,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 162.4
+    },
+    {
+      "timeSeconds": 362.8,
+      "watts": 82,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 162.3
+    },
+    {
+      "timeSeconds": 365.2,
+      "watts": 82,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 162.5
+    },
+    {
+      "timeSeconds": 367.5,
+      "watts": 81,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 162.8
+    },
+    {
+      "timeSeconds": 369.8,
+      "watts": 81,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 162.9
+    },
+    {
+      "timeSeconds": 372.1,
+      "watts": 81,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 163
+    },
+    {
+      "timeSeconds": 374.5,
+      "watts": 78,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 165.1
+    },
+    {
+      "timeSeconds": 376.8,
+      "watts": 78,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 165.1
+    },
+    {
+      "timeSeconds": 379.2,
+      "watts": 83,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 161.7
+    },
+    {
+      "timeSeconds": 381.6,
+      "watts": 93,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 155.4
+    },
+    {
+      "timeSeconds": 383.9,
+      "watts": 93,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 155.8
+    },
+    {
+      "timeSeconds": 386.2,
+      "watts": 81,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 162.7
+    },
+    {
+      "timeSeconds": 388.4,
+      "watts": 83,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 161.3
+    },
+    {
+      "timeSeconds": 390.6,
+      "watts": 88,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 158.5
+    },
+    {
+      "timeSeconds": 392.9,
+      "watts": 94,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 154.9
+    },
+    {
+      "timeSeconds": 395.2,
+      "watts": 97,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 153.2
+    },
+    {
+      "timeSeconds": 397.6,
+      "watts": 96,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 154
+    },
+    {
+      "timeSeconds": 399.9,
+      "watts": 93,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 155.8
+    },
+    {
+      "timeSeconds": 402.2,
+      "watts": 100,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 152
+    },
+    {
+      "timeSeconds": 404.6,
+      "watts": 100,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 152
+    },
+    {
+      "timeSeconds": 406.9,
+      "watts": 98,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 152.6
+    },
+    {
+      "timeSeconds": 409.2,
+      "watts": 97,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 153.4
+    },
+    {
+      "timeSeconds": 411.5,
+      "watts": 98,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 152.9
+    },
+    {
+      "timeSeconds": 413.7,
+      "watts": 90,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 157.4
+    },
+    {
+      "timeSeconds": 416,
+      "watts": 91,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 156.4
+    },
+    {
+      "timeSeconds": 418.3,
+      "watts": 92,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 156.1
+    },
+    {
+      "timeSeconds": 420,
+      "watts": 92,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 155.9
+    },
+    {
+      "timeSeconds": 420.7,
+      "watts": 92,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 155.9
+    },
+    {
+      "timeSeconds": 420.8,
+      "watts": 131,
+      "strokeRate": 0,
+      "paceSecondsPer500m": 138.9
+    },
+    {
+      "timeSeconds": 423,
+      "watts": 140,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 135.6
+    },
+    {
+      "timeSeconds": 425.2,
+      "watts": 134,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 137.7
+    },
+    {
+      "timeSeconds": 427.5,
+      "watts": 134,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 137.7
+    },
+    {
+      "timeSeconds": 429.7,
+      "watts": 144,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 134.4
+    },
+    {
+      "timeSeconds": 431.9,
+      "watts": 144,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 134.4
+    },
+    {
+      "timeSeconds": 434,
+      "watts": 167,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128
+    },
+    {
+      "timeSeconds": 436.1,
+      "watts": 159,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.2
+    },
+    {
+      "timeSeconds": 438.2,
+      "watts": 153,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131.7
+    },
+    {
+      "timeSeconds": 440.2,
+      "watts": 153,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131.7
+    },
+    {
+      "timeSeconds": 442.3,
+      "watts": 161,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.5
+    },
+    {
+      "timeSeconds": 444.4,
+      "watts": 159,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130
+    },
+    {
+      "timeSeconds": 446.5,
+      "watts": 154,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131.4
+    },
+    {
+      "timeSeconds": 448.6,
+      "watts": 154,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131.4
+    },
+    {
+      "timeSeconds": 450.8,
+      "watts": 152,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 132
+    },
+    {
+      "timeSeconds": 453.2,
+      "watts": 163,
+      "strokeRate": 26,
+      "paceSecondsPer500m": 129.1
+    },
+    {
+      "timeSeconds": 455.4,
+      "watts": 163,
+      "strokeRate": 26,
+      "paceSecondsPer500m": 129.1
+    },
+    {
+      "timeSeconds": 457.6,
+      "watts": 161,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 129.5
+    },
+    {
+      "timeSeconds": 459.8,
+      "watts": 161,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 129.5
+    },
+    {
+      "timeSeconds": 462,
+      "watts": 162,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.4
+    },
+    {
+      "timeSeconds": 464.1,
+      "watts": 162,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.4
+    },
+    {
+      "timeSeconds": 466.3,
+      "watts": 163,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.1
+    },
+    {
+      "timeSeconds": 468.4,
+      "watts": 163,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.1
+    },
+    {
+      "timeSeconds": 470.6,
+      "watts": 164,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 128.7
+    },
+    {
+      "timeSeconds": 472.7,
+      "watts": 160,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 129.7
+    },
+    {
+      "timeSeconds": 474.8,
+      "watts": 160,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.9
+    },
+    {
+      "timeSeconds": 477,
+      "watts": 160,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.9
+    },
+    {
+      "timeSeconds": 479.2,
+      "watts": 147,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 133.4
+    },
+    {
+      "timeSeconds": 481.3,
+      "watts": 147,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 133.4
+    },
+    {
+      "timeSeconds": 483.5,
+      "watts": 149,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 133
+    },
+    {
+      "timeSeconds": 485.7,
+      "watts": 149,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 133
+    },
+    {
+      "timeSeconds": 487.9,
+      "watts": 159,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 130
+    },
+    {
+      "timeSeconds": 490,
+      "watts": 160,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.8
+    },
+    {
+      "timeSeconds": 492.2,
+      "watts": 162,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.4
+    },
+    {
+      "timeSeconds": 494.3,
+      "watts": 162,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.4
+    },
+    {
+      "timeSeconds": 496.5,
+      "watts": 157,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 130.6
+    },
+    {
+      "timeSeconds": 498.6,
+      "watts": 150,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 132.7
+    },
+    {
+      "timeSeconds": 500.9,
+      "watts": 147,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 133.4
+    },
+    {
+      "timeSeconds": 503.2,
+      "watts": 147,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 133.4
+    },
+    {
+      "timeSeconds": 505.4,
+      "watts": 151,
+      "strokeRate": 26,
+      "paceSecondsPer500m": 132.2
+    },
+    {
+      "timeSeconds": 507.6,
+      "watts": 151,
+      "strokeRate": 26,
+      "paceSecondsPer500m": 132.2
+    },
+    {
+      "timeSeconds": 509.6,
+      "watts": 189,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 122.7
+    },
+    {
+      "timeSeconds": 511.7,
+      "watts": 179,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 125.1
+    },
+    {
+      "timeSeconds": 513.9,
+      "watts": 160,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.9
+    },
+    {
+      "timeSeconds": 515.9,
+      "watts": 163,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128.9
+    },
+    {
+      "timeSeconds": 517.9,
+      "watts": 163,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128.9
+    },
+    {
+      "timeSeconds": 520,
+      "watts": 171,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 127
+    },
+    {
+      "timeSeconds": 522.1,
+      "watts": 162,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 129.3
+    },
+    {
+      "timeSeconds": 524.1,
+      "watts": 166,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 128.3
+    },
+    {
+      "timeSeconds": 526.1,
+      "watts": 166,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 128.3
+    },
+    {
+      "timeSeconds": 528.2,
+      "watts": 161,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 129.6
+    },
+    {
+      "timeSeconds": 530.2,
+      "watts": 164,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128.8
+    },
+    {
+      "timeSeconds": 532.2,
+      "watts": 160,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 129.7
+    },
+    {
+      "timeSeconds": 534.2,
+      "watts": 158,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 130.4
+    },
+    {
+      "timeSeconds": 536.2,
+      "watts": 158,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 130.4
+    },
+    {
+      "timeSeconds": 538.2,
+      "watts": 158,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 130.3
+    },
+    {
+      "timeSeconds": 540.3,
+      "watts": 154,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131.5
+    },
+    {
+      "timeSeconds": 542.3,
+      "watts": 147,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 133.5
+    },
+    {
+      "timeSeconds": 544.3,
+      "watts": 147,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 133.5
+    },
+    {
+      "timeSeconds": 546.3,
+      "watts": 150,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 132.5
+    },
+    {
+      "timeSeconds": 548.4,
+      "watts": 157,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.6
+    },
+    {
+      "timeSeconds": 550.5,
+      "watts": 157,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.6
+    },
+    {
+      "timeSeconds": 552.5,
+      "watts": 155,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131.3
+    },
+    {
+      "timeSeconds": 554.6,
+      "watts": 161,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 129.6
+    },
+    {
+      "timeSeconds": 556.7,
+      "watts": 167,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 128.1
+    },
+    {
+      "timeSeconds": 558.7,
+      "watts": 167,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 128.1
+    },
+    {
+      "timeSeconds": 560.8,
+      "watts": 167,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 128.1
+    },
+    {
+      "timeSeconds": 562.9,
+      "watts": 170,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 127.2
+    },
+    {
+      "timeSeconds": 565,
+      "watts": 175,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 126
+    },
+    {
+      "timeSeconds": 567.2,
+      "watts": 166,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 128.2
+    },
+    {
+      "timeSeconds": 569.2,
+      "watts": 166,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 128.2
+    },
+    {
+      "timeSeconds": 571.4,
+      "watts": 161,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 129.5
+    },
+    {
+      "timeSeconds": 573.5,
+      "watts": 166,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 128.3
+    },
+    {
+      "timeSeconds": 575.6,
+      "watts": 162,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 129.4
+    },
+    {
+      "timeSeconds": 577.7,
+      "watts": 165,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128.4
+    },
+    {
+      "timeSeconds": 579.8,
+      "watts": 155,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 131.2
+    },
+    {
+      "timeSeconds": 581.9,
+      "watts": 146,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 133.9
+    },
+    {
+      "timeSeconds": 584,
+      "watts": 150,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 132.6
+    },
+    {
+      "timeSeconds": 586,
+      "watts": 166,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128.3
+    },
+    {
+      "timeSeconds": 588,
+      "watts": 169,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 127.4
+    },
+    {
+      "timeSeconds": 590,
+      "watts": 169,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 127.4
+    },
+    {
+      "timeSeconds": 592.1,
+      "watts": 165,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 128.4
+    },
+    {
+      "timeSeconds": 594.1,
+      "watts": 163,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 129
+    },
+    {
+      "timeSeconds": 596.1,
+      "watts": 164,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128.7
+    },
+    {
+      "timeSeconds": 598.1,
+      "watts": 160,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 129.8
+    },
+    {
+      "timeSeconds": 600.1,
+      "watts": 153,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 131.9
+    },
+    {
+      "timeSeconds": 602.1,
+      "watts": 143,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 134.7
+    },
+    {
+      "timeSeconds": 604.1,
+      "watts": 160,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 129.8
+    },
+    {
+      "timeSeconds": 606.2,
+      "watts": 159,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.1
+    },
+    {
+      "timeSeconds": 608.3,
+      "watts": 154,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131.5
+    },
+    {
+      "timeSeconds": 610.3,
+      "watts": 157,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.5
+    },
+    {
+      "timeSeconds": 612.4,
+      "watts": 167,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128
+    },
+    {
+      "timeSeconds": 614.4,
+      "watts": 167,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128
+    },
+    {
+      "timeSeconds": 616.3,
+      "watts": 181,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 124.5
+    },
+    {
+      "timeSeconds": 618.2,
+      "watts": 181,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 124.5
+    },
+    {
+      "timeSeconds": 620.2,
+      "watts": 190,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 122.6
+    },
+    {
+      "timeSeconds": 622.2,
+      "watts": 188,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 123
+    },
+    {
+      "timeSeconds": 624.1,
+      "watts": 180,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 124.9
+    },
+    {
+      "timeSeconds": 626.1,
+      "watts": 180,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 124.9
+    },
+    {
+      "timeSeconds": 628,
+      "watts": 181,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 124.5
+    },
+    {
+      "timeSeconds": 630,
+      "watts": 167,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 127.9
+    },
+    {
+      "timeSeconds": 632,
+      "watts": 167,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 127.9
+    },
+    {
+      "timeSeconds": 633.9,
+      "watts": 193,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 122
+    },
+    {
+      "timeSeconds": 635.8,
+      "watts": 189,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 122.8
+    },
+    {
+      "timeSeconds": 637.7,
+      "watts": 184,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 123.9
+    },
+    {
+      "timeSeconds": 639.8,
+      "watts": 184,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 123.9
+    },
+    {
+      "timeSeconds": 641.8,
+      "watts": 186,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 123.5
+    },
+    {
+      "timeSeconds": 643.8,
+      "watts": 167,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 128
+    },
+    {
+      "timeSeconds": 645.8,
+      "watts": 170,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 127.1
+    },
+    {
+      "timeSeconds": 647.8,
+      "watts": 168,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 127.7
+    },
+    {
+      "timeSeconds": 649.8,
+      "watts": 168,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 127.7
+    },
+    {
+      "timeSeconds": 651.8,
+      "watts": 171,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 126.9
+    },
+    {
+      "timeSeconds": 653.8,
+      "watts": 170,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 127.1
+    },
+    {
+      "timeSeconds": 655.8,
+      "watts": 163,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 129.1
+    },
+    {
+      "timeSeconds": 657.8,
+      "watts": 163,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 129.1
+    },
+    {
+      "timeSeconds": 660,
+      "watts": 163,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 128.9
+    },
+    {
+      "timeSeconds": 662.2,
+      "watts": 163,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 128.9
+    },
+    {
+      "timeSeconds": 662.2,
+      "watts": 20,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 259.4
+    },
+    {
+      "timeSeconds": 663.5,
+      "watts": 17,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 276.4
+    },
+    {
+      "timeSeconds": 665.9,
+      "watts": 36,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 213
+    },
+    {
+      "timeSeconds": 668.6,
+      "watts": 42,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 203
+    },
+    {
+      "timeSeconds": 671.4,
+      "watts": 41,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 205
+    },
+    {
+      "timeSeconds": 674,
+      "watts": 42,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 203.2
+    },
+    {
+      "timeSeconds": 676.4,
+      "watts": 48,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 194.4
+    },
+    {
+      "timeSeconds": 678.8,
+      "watts": 48,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 194.2
+    },
+    {
+      "timeSeconds": 681.3,
+      "watts": 48,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 194.2
+    },
+    {
+      "timeSeconds": 683.8,
+      "watts": 49,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 192.8
+    },
+    {
+      "timeSeconds": 686.3,
+      "watts": 79,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 164
+    },
+    {
+      "timeSeconds": 688.9,
+      "watts": 94,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155.1
+    },
+    {
+      "timeSeconds": 691.4,
+      "watts": 94,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155.1
+    },
+    {
+      "timeSeconds": 693.9,
+      "watts": 61,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 178.7
+    },
+    {
+      "timeSeconds": 696.3,
+      "watts": 61,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 178.7
+    },
+    {
+      "timeSeconds": 698.8,
+      "watts": 61,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 179.2
+    },
+    {
+      "timeSeconds": 701.2,
+      "watts": 63,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 177.1
+    },
+    {
+      "timeSeconds": 703.7,
+      "watts": 70,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 170.7
+    },
+    {
+      "timeSeconds": 706.1,
+      "watts": 71,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 169.9
+    },
+    {
+      "timeSeconds": 708.4,
+      "watts": 83,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 161.3
+    },
+    {
+      "timeSeconds": 710.7,
+      "watts": 83,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 161.3
+    },
+    {
+      "timeSeconds": 712.9,
+      "watts": 84,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 161
+    },
+    {
+      "timeSeconds": 715.2,
+      "watts": 81,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 162.6
+    },
+    {
+      "timeSeconds": 717.5,
+      "watts": 81,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 163
+    },
+    {
+      "timeSeconds": 719.9,
+      "watts": 79,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 164.5
+    },
+    {
+      "timeSeconds": 722.3,
+      "watts": 79,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 164.5
+    },
+    {
+      "timeSeconds": 724.6,
+      "watts": 85,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 160.4
+    },
+    {
+      "timeSeconds": 727,
+      "watts": 88,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 158.6
+    },
+    {
+      "timeSeconds": 729.4,
+      "watts": 89,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 158
+    },
+    {
+      "timeSeconds": 731.8,
+      "watts": 89,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 158
+    },
+    {
+      "timeSeconds": 734.2,
+      "watts": 91,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 156.7
+    },
+    {
+      "timeSeconds": 736.6,
+      "watts": 93,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155.3
+    },
+    {
+      "timeSeconds": 738.9,
+      "watts": 93,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155.3
+    },
+    {
+      "timeSeconds": 741.3,
+      "watts": 93,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155.3
+    },
+    {
+      "timeSeconds": 743.7,
+      "watts": 91,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 156.4
+    },
+    {
+      "timeSeconds": 746,
+      "watts": 96,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 153.7
+    },
+    {
+      "timeSeconds": 748.2,
+      "watts": 96,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 153.7
+    },
+    {
+      "timeSeconds": 750.5,
+      "watts": 95,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 154.4
+    },
+    {
+      "timeSeconds": 752.9,
+      "watts": 95,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 154.4
+    },
+    {
+      "timeSeconds": 755.3,
+      "watts": 97,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 153.2
+    },
+    {
+      "timeSeconds": 757.7,
+      "watts": 94,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155
+    },
+    {
+      "timeSeconds": 760.1,
+      "watts": 94,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155
+    },
+    {
+      "timeSeconds": 762.6,
+      "watts": 102,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 150.6
+    },
+    {
+      "timeSeconds": 765,
+      "watts": 102,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 150.6
+    },
+    {
+      "timeSeconds": 767.5,
+      "watts": 100,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 151.9
+    },
+    {
+      "timeSeconds": 769.9,
+      "watts": 98,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 152.9
+    },
+    {
+      "timeSeconds": 772.3,
+      "watts": 94,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155
+    },
+    {
+      "timeSeconds": 774.6,
+      "watts": 92,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 156.2
+    },
+    {
+      "timeSeconds": 776.9,
+      "watts": 93,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155.8
+    },
+    {
+      "timeSeconds": 779.2,
+      "watts": 94,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155.2
+    },
+    {
+      "timeSeconds": 781.6,
+      "watts": 93,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155.7
+    },
+    {
+      "timeSeconds": 784,
+      "watts": 93,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155.7
+    },
+    {
+      "timeSeconds": 786.4,
+      "watts": 95,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 154.5
+    },
+    {
+      "timeSeconds": 788.9,
+      "watts": 95,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 154.5
+    },
+    {
+      "timeSeconds": 791.2,
+      "watts": 93,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 155.4
+    },
+    {
+      "timeSeconds": 793.5,
+      "watts": 92,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 156.2
+    },
+    {
+      "timeSeconds": 795.9,
+      "watts": 92,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 156.3
+    },
+    {
+      "timeSeconds": 798.3,
+      "watts": 92,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 156.3
+    },
+    {
+      "timeSeconds": 800.7,
+      "watts": 98,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 152.9
+    },
+    {
+      "timeSeconds": 803.1,
+      "watts": 98,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 152.9
+    },
+    {
+      "timeSeconds": 805.4,
+      "watts": 100,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 152
+    },
+    {
+      "timeSeconds": 807.7,
+      "watts": 104,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 149.9
+    },
+    {
+      "timeSeconds": 810,
+      "watts": 106,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 149
+    },
+    {
+      "timeSeconds": 812.3,
+      "watts": 101,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 151.3
+    },
+    {
+      "timeSeconds": 814.6,
+      "watts": 106,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 148.9
+    },
+    {
+      "timeSeconds": 816.9,
+      "watts": 106,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 148.9
+    },
+    {
+      "timeSeconds": 840,
+      "watts": 105,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 149.6
+    },
+    {
+      "timeSeconds": 840.6,
+      "watts": 0,
+      "strokeRate": 0,
+      "paceSecondsPer500m": 0
+    },
+    {
+      "timeSeconds": 842.8,
+      "watts": 115,
+      "strokeRate": 26,
+      "paceSecondsPer500m": 145
+    },
+    {
+      "timeSeconds": 845.1,
+      "watts": 150,
+      "strokeRate": 26,
+      "paceSecondsPer500m": 132.7
+    },
+    {
+      "timeSeconds": 847.3,
+      "watts": 139,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 136.2
+    },
+    {
+      "timeSeconds": 849.7,
+      "watts": 139,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 136.2
+    },
+    {
+      "timeSeconds": 852,
+      "watts": 127,
+      "strokeRate": 26,
+      "paceSecondsPer500m": 140.3
+    },
+    {
+      "timeSeconds": 854.3,
+      "watts": 135,
+      "strokeRate": 26,
+      "paceSecondsPer500m": 137.5
+    },
+    {
+      "timeSeconds": 856.6,
+      "watts": 135,
+      "strokeRate": 26,
+      "paceSecondsPer500m": 137.5
+    },
+    {
+      "timeSeconds": 858.9,
+      "watts": 142,
+      "strokeRate": 26,
+      "paceSecondsPer500m": 135.1
+    },
+    {
+      "timeSeconds": 861.2,
+      "watts": 138,
+      "strokeRate": 26,
+      "paceSecondsPer500m": 136.3
+    },
+    {
+      "timeSeconds": 863.5,
+      "watts": 140,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 135.6
+    },
+    {
+      "timeSeconds": 865.6,
+      "watts": 140,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 135.6
+    },
+    {
+      "timeSeconds": 867.8,
+      "watts": 160,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.9
+    },
+    {
+      "timeSeconds": 869.9,
+      "watts": 157,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.7
+    },
+    {
+      "timeSeconds": 872.1,
+      "watts": 157,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.7
+    },
+    {
+      "timeSeconds": 874.1,
+      "watts": 149,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 133
+    },
+    {
+      "timeSeconds": 876.3,
+      "watts": 153,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 131.7
+    },
+    {
+      "timeSeconds": 878.5,
+      "watts": 153,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 131.7
+    },
+    {
+      "timeSeconds": 880.6,
+      "watts": 153,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 131.9
+    },
+    {
+      "timeSeconds": 882.8,
+      "watts": 145,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 134.2
+    },
+    {
+      "timeSeconds": 884.9,
+      "watts": 148,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 133.3
+    },
+    {
+      "timeSeconds": 887.1,
+      "watts": 148,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 133.3
+    },
+    {
+      "timeSeconds": 889.2,
+      "watts": 145,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 134.2
+    },
+    {
+      "timeSeconds": 891.3,
+      "watts": 146,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 133.7
+    },
+    {
+      "timeSeconds": 893.4,
+      "watts": 156,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 130.8
+    },
+    {
+      "timeSeconds": 895.6,
+      "watts": 150,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 132.7
+    },
+    {
+      "timeSeconds": 897.7,
+      "watts": 150,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 132.7
+    },
+    {
+      "timeSeconds": 899.7,
+      "watts": 149,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 132.8
+    },
+    {
+      "timeSeconds": 901.9,
+      "watts": 153,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 131.7
+    },
+    {
+      "timeSeconds": 904.1,
+      "watts": 157,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 130.7
+    },
+    {
+      "timeSeconds": 906.2,
+      "watts": 157,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 130.7
+    },
+    {
+      "timeSeconds": 908.3,
+      "watts": 160,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 129.7
+    },
+    {
+      "timeSeconds": 910.4,
+      "watts": 159,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 130.1
+    },
+    {
+      "timeSeconds": 912.6,
+      "watts": 156,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 130.9
+    },
+    {
+      "timeSeconds": 914.7,
+      "watts": 161,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 129.5
+    },
+    {
+      "timeSeconds": 916.8,
+      "watts": 193,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 122
+    },
+    {
+      "timeSeconds": 918.8,
+      "watts": 191,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 122.3
+    },
+    {
+      "timeSeconds": 920.8,
+      "watts": 173,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.4
+    },
+    {
+      "timeSeconds": 922.9,
+      "watts": 164,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128.7
+    },
+    {
+      "timeSeconds": 924.8,
+      "watts": 164,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128.7
+    },
+    {
+      "timeSeconds": 926.9,
+      "watts": 168,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 127.6
+    },
+    {
+      "timeSeconds": 928.9,
+      "watts": 167,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 128.1
+    },
+    {
+      "timeSeconds": 930.9,
+      "watts": 168,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 127.6
+    },
+    {
+      "timeSeconds": 933,
+      "watts": 163,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 129.1
+    },
+    {
+      "timeSeconds": 935,
+      "watts": 171,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 126.9
+    },
+    {
+      "timeSeconds": 937,
+      "watts": 171,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 126.9
+    },
+    {
+      "timeSeconds": 939,
+      "watts": 172,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 126.8
+    },
+    {
+      "timeSeconds": 941,
+      "watts": 168,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 127.8
+    },
+    {
+      "timeSeconds": 943.2,
+      "watts": 168,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 127.8
+    },
+    {
+      "timeSeconds": 945.4,
+      "watts": 171,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 127
+    },
+    {
+      "timeSeconds": 947.5,
+      "watts": 172,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.7
+    },
+    {
+      "timeSeconds": 949.6,
+      "watts": 172,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.7
+    },
+    {
+      "timeSeconds": 951.7,
+      "watts": 172,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 126.7
+    },
+    {
+      "timeSeconds": 953.8,
+      "watts": 175,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.1
+    },
+    {
+      "timeSeconds": 956,
+      "watts": 157,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 130.5
+    },
+    {
+      "timeSeconds": 958.1,
+      "watts": 158,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 130.4
+    },
+    {
+      "timeSeconds": 960.3,
+      "watts": 158,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 130.4
+    },
+    {
+      "timeSeconds": 962.4,
+      "watts": 170,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 127.2
+    },
+    {
+      "timeSeconds": 964.5,
+      "watts": 177,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 125.6
+    },
+    {
+      "timeSeconds": 966.6,
+      "watts": 176,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 125.7
+    },
+    {
+      "timeSeconds": 968.8,
+      "watts": 176,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 125.7
+    },
+    {
+      "timeSeconds": 970.9,
+      "watts": 173,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 126.5
+    },
+    {
+      "timeSeconds": 972.9,
+      "watts": 175,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126
+    },
+    {
+      "timeSeconds": 975,
+      "watts": 175,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 125.9
+    },
+    {
+      "timeSeconds": 977.2,
+      "watts": 173,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 126.4
+    },
+    {
+      "timeSeconds": 979.2,
+      "watts": 173,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 126.4
+    },
+    {
+      "timeSeconds": 981.3,
+      "watts": 172,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 126.7
+    },
+    {
+      "timeSeconds": 983.4,
+      "watts": 172,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 126.7
+    },
+    {
+      "timeSeconds": 985.5,
+      "watts": 163,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 129.1
+    },
+    {
+      "timeSeconds": 987.5,
+      "watts": 163,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 129.1
+    },
+    {
+      "timeSeconds": 989.6,
+      "watts": 168,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 127.7
+    },
+    {
+      "timeSeconds": 991.6,
+      "watts": 162,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 129.4
+    },
+    {
+      "timeSeconds": 993.7,
+      "watts": 157,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.7
+    },
+    {
+      "timeSeconds": 995.8,
+      "watts": 156,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.9
+    },
+    {
+      "timeSeconds": 997.8,
+      "watts": 157,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.5
+    },
+    {
+      "timeSeconds": 999.9,
+      "watts": 153,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131.9
+    },
+    {
+      "timeSeconds": 1002,
+      "watts": 155,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131.2
+    },
+    {
+      "timeSeconds": 1004,
+      "watts": 159,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 130.2
+    },
+    {
+      "timeSeconds": 1006.1,
+      "watts": 168,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 127.7
+    },
+    {
+      "timeSeconds": 1008.1,
+      "watts": 177,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 125.5
+    },
+    {
+      "timeSeconds": 1010.3,
+      "watts": 189,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 122.9
+    },
+    {
+      "timeSeconds": 1012.3,
+      "watts": 189,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 122.9
+    },
+    {
+      "timeSeconds": 1014.5,
+      "watts": 202,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 120.2
+    },
+    {
+      "timeSeconds": 1016.5,
+      "watts": 218,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 117.1
+    },
+    {
+      "timeSeconds": 1018.5,
+      "watts": 218,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 117.1
+    },
+    {
+      "timeSeconds": 1020.6,
+      "watts": 215,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 117.7
+    },
+    {
+      "timeSeconds": 1022.6,
+      "watts": 213,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 118
+    },
+    {
+      "timeSeconds": 1024.6,
+      "watts": 213,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 118
+    },
+    {
+      "timeSeconds": 1026.6,
+      "watts": 224,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 116
+    },
+    {
+      "timeSeconds": 1028.5,
+      "watts": 224,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 116
+    },
+    {
+      "timeSeconds": 1030.5,
+      "watts": 230,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 115
+    },
+    {
+      "timeSeconds": 1032.5,
+      "watts": 238,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 113.7
+    },
+    {
+      "timeSeconds": 1034.5,
+      "watts": 225,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 115.9
+    },
+    {
+      "timeSeconds": 1036.5,
+      "watts": 225,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 115.9
+    },
+    {
+      "timeSeconds": 1038.4,
+      "watts": 201,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 120.3
+    },
+    {
+      "timeSeconds": 1040.3,
+      "watts": 216,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 117.5
+    },
+    {
+      "timeSeconds": 1042.2,
+      "watts": 199,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 120.8
+    },
+    {
+      "timeSeconds": 1044.2,
+      "watts": 199,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 120.8
+    },
+    {
+      "timeSeconds": 1046.1,
+      "watts": 201,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 120.3
+    },
+    {
+      "timeSeconds": 1048.1,
+      "watts": 202,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 120.2
+    },
+    {
+      "timeSeconds": 1050.1,
+      "watts": 202,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 120.2
+    },
+    {
+      "timeSeconds": 1052.1,
+      "watts": 189,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 122.7
+    },
+    {
+      "timeSeconds": 1054.1,
+      "watts": 189,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 122.7
+    },
+    {
+      "timeSeconds": 1056.1,
+      "watts": 195,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 121.6
+    },
+    {
+      "timeSeconds": 1058,
+      "watts": 219,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 116.9
+    },
+    {
+      "timeSeconds": 1059.9,
+      "watts": 219,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 117
+    },
+    {
+      "timeSeconds": 1061.9,
+      "watts": 211,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 118.4
+    },
+    {
+      "timeSeconds": 1063.9,
+      "watts": 211,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 118.4
+    },
+    {
+      "timeSeconds": 1065.9,
+      "watts": 208,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 118.9
+    },
+    {
+      "timeSeconds": 1067.8,
+      "watts": 215,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 117.6
+    },
+    {
+      "timeSeconds": 1069.7,
+      "watts": 179,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 125
+    },
+    {
+      "timeSeconds": 1071.5,
+      "watts": 179,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 125
+    },
+    {
+      "timeSeconds": 1073.5,
+      "watts": 239,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 113.5
+    },
+    {
+      "timeSeconds": 1075.4,
+      "watts": 239,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 113.5
+    },
+    {
+      "timeSeconds": 1077.4,
+      "watts": 198,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 121
+    },
+    {
+      "timeSeconds": 1079.3,
+      "watts": 215,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 117.7
+    },
+    {
+      "timeSeconds": 1082.1,
+      "watts": 215,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 117.7
+    },
+    {
+      "timeSeconds": 1084.6,
+      "watts": 193,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 121.9
+    },
+    {
+      "timeSeconds": 1087.4,
+      "watts": 66,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 174.5
+    },
+    {
+      "timeSeconds": 1089.9,
+      "watts": 66,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 174.5
+    },
+    {
+      "timeSeconds": 1092.4,
+      "watts": 54,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 186.1
+    },
+    {
+      "timeSeconds": 1095,
+      "watts": 51,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 190.3
+    },
+    {
+      "timeSeconds": 1097.5,
+      "watts": 52,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 189.1
+    },
+    {
+      "timeSeconds": 1099.9,
+      "watts": 52,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 189.1
+    },
+    {
+      "timeSeconds": 1102.4,
+      "watts": 55,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 185.8
+    },
+    {
+      "timeSeconds": 1104.8,
+      "watts": 58,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 181.6
+    },
+    {
+      "timeSeconds": 1107.2,
+      "watts": 58,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 181.6
+    },
+    {
+      "timeSeconds": 1109.6,
+      "watts": 59,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 180.7
+    },
+    {
+      "timeSeconds": 1112,
+      "watts": 61,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 178.6
+    },
+    {
+      "timeSeconds": 1114.3,
+      "watts": 63,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 176.9
+    },
+    {
+      "timeSeconds": 1116.6,
+      "watts": 67,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 173.7
+    },
+    {
+      "timeSeconds": 1119,
+      "watts": 67,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 173.7
+    },
+    {
+      "timeSeconds": 1121.4,
+      "watts": 71,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 170.3
+    },
+    {
+      "timeSeconds": 1123.9,
+      "watts": 71,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 170.3
+    },
+    {
+      "timeSeconds": 1126.3,
+      "watts": 76,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 166.2
+    },
+    {
+      "timeSeconds": 1128.7,
+      "watts": 79,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 164.4
+    },
+    {
+      "timeSeconds": 1131,
+      "watts": 83,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 161.5
+    },
+    {
+      "timeSeconds": 1133.4,
+      "watts": 83,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 161.3
+    },
+    {
+      "timeSeconds": 1135.6,
+      "watts": 83,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 161.3
+    },
+    {
+      "timeSeconds": 1137.9,
+      "watts": 85,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 160.5
+    },
+    {
+      "timeSeconds": 1140.1,
+      "watts": 93,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 155.8
+    },
+    {
+      "timeSeconds": 1142.5,
+      "watts": 94,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 155.2
+    },
+    {
+      "timeSeconds": 1144.8,
+      "watts": 92,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 156.1
+    },
+    {
+      "timeSeconds": 1147,
+      "watts": 92,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 156.1
+    },
+    {
+      "timeSeconds": 1149.2,
+      "watts": 102,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 151
+    },
+    {
+      "timeSeconds": 1151.5,
+      "watts": 92,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 155.9
+    },
+    {
+      "timeSeconds": 1153.6,
+      "watts": 92,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 155.9
+    },
+    {
+      "timeSeconds": 1155.8,
+      "watts": 97,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 153.6
+    },
+    {
+      "timeSeconds": 1158,
+      "watts": 71,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 170
+    },
+    {
+      "timeSeconds": 1160.2,
+      "watts": 99,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 152.4
+    },
+    {
+      "timeSeconds": 1162.5,
+      "watts": 112,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 146.2
+    },
+    {
+      "timeSeconds": 1164.8,
+      "watts": 112,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 146.2
+    },
+    {
+      "timeSeconds": 1166.8,
+      "watts": 115,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 145.1
+    },
+    {
+      "timeSeconds": 1169,
+      "watts": 94,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 154.8
+    },
+    {
+      "timeSeconds": 1171.2,
+      "watts": 94,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 154.8
+    },
+    {
+      "timeSeconds": 1173.3,
+      "watts": 114,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 145.2
+    },
+    {
+      "timeSeconds": 1175.6,
+      "watts": 124,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 141.2
+    },
+    {
+      "timeSeconds": 1177.8,
+      "watts": 124,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 141.2
+    },
+    {
+      "timeSeconds": 1180,
+      "watts": 104,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 150
+    },
+    {
+      "timeSeconds": 1182.2,
+      "watts": 104,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 150
+    },
+    {
+      "timeSeconds": 1184.4,
+      "watts": 110,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 147.2
+    },
+    {
+      "timeSeconds": 1186.7,
+      "watts": 112,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 146.2
+    },
+    {
+      "timeSeconds": 1188.8,
+      "watts": 112,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 146.2
+    },
+    {
+      "timeSeconds": 1191,
+      "watts": 116,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 144.7
+    },
+    {
+      "timeSeconds": 1193.2,
+      "watts": 119,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 143.1
+    },
+    {
+      "timeSeconds": 1195.3,
+      "watts": 119,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 143.1
+    },
+    {
+      "timeSeconds": 1197.6,
+      "watts": 117,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 144.1
+    },
+    {
+      "timeSeconds": 1199.8,
+      "watts": 106,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 149
+    },
+    {
+      "timeSeconds": 1202,
+      "watts": 100,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 151.6
+    },
+    {
+      "timeSeconds": 1204.1,
+      "watts": 97,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 153.6
+    },
+    {
+      "timeSeconds": 1206.3,
+      "watts": 97,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 153.6
+    },
+    {
+      "timeSeconds": 1208.6,
+      "watts": 98,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 152.6
+    },
+    {
+      "timeSeconds": 1210.9,
+      "watts": 108,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 148.1
+    },
+    {
+      "timeSeconds": 1213.2,
+      "watts": 108,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 148
+    },
+    {
+      "timeSeconds": 1215.4,
+      "watts": 96,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 153.7
+    },
+    {
+      "timeSeconds": 1217.5,
+      "watts": 96,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 153.7
+    },
+    {
+      "timeSeconds": 1219.7,
+      "watts": 87,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 159
+    },
+    {
+      "timeSeconds": 1222,
+      "watts": 91,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 156.4
+    },
+    {
+      "timeSeconds": 1224.2,
+      "watts": 91,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 156.4
+    },
+    {
+      "timeSeconds": 1226.4,
+      "watts": 114,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 145.4
+    },
+    {
+      "timeSeconds": 1228.6,
+      "watts": 114,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 145.4
+    },
+    {
+      "timeSeconds": 1230.8,
+      "watts": 88,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 158.5
+    },
+    {
+      "timeSeconds": 1233,
+      "watts": 90,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 157
+    },
+    {
+      "timeSeconds": 1235.1,
+      "watts": 89,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 157.6
+    },
+    {
+      "timeSeconds": 1237.4,
+      "watts": 92,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 155.9
+    },
+    {
+      "timeSeconds": 1239.6,
+      "watts": 92,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 155.9
+    },
+    {
+      "timeSeconds": 1241.8,
+      "watts": 94,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 155.2
+    },
+    {
+      "timeSeconds": 1244,
+      "watts": 93,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 155.3
+    },
+    {
+      "timeSeconds": 1246.1,
+      "watts": 96,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 153.7
+    },
+    {
+      "timeSeconds": 1248.3,
+      "watts": 96,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 153.7
+    },
+    {
+      "timeSeconds": 1250.5,
+      "watts": 95,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 154.7
+    },
+    {
+      "timeSeconds": 1252.5,
+      "watts": 93,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 155.7
+    },
+    {
+      "timeSeconds": 1254.7,
+      "watts": 93,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 155.8
+    },
+    {
+      "timeSeconds": 1256.8,
+      "watts": 93,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 155.8
+    },
+    {
+      "timeSeconds": 1259.1,
+      "watts": 104,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 150
+    },
+    {
+      "timeSeconds": 1260,
+      "watts": 104,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 150
+    },
+    {
+      "timeSeconds": 1260.8,
+      "watts": 160,
+      "strokeRate": 0,
+      "paceSecondsPer500m": 129.7
+    },
+    {
+      "timeSeconds": 1262.8,
+      "watts": 174,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.2
+    },
+    {
+      "timeSeconds": 1265,
+      "watts": 174,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.2
+    },
+    {
+      "timeSeconds": 1267.2,
+      "watts": 151,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 132.2
+    },
+    {
+      "timeSeconds": 1269.2,
+      "watts": 148,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 133.3
+    },
+    {
+      "timeSeconds": 1271.3,
+      "watts": 157,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 130.5
+    },
+    {
+      "timeSeconds": 1273.5,
+      "watts": 157,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 130.5
+    },
+    {
+      "timeSeconds": 1275.6,
+      "watts": 156,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 130.9
+    },
+    {
+      "timeSeconds": 1277.7,
+      "watts": 161,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 129.5
+    },
+    {
+      "timeSeconds": 1279.8,
+      "watts": 165,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 128.4
+    },
+    {
+      "timeSeconds": 1281.9,
+      "watts": 160,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 129.8
+    },
+    {
+      "timeSeconds": 1283.9,
+      "watts": 156,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131
+    },
+    {
+      "timeSeconds": 1286,
+      "watts": 159,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130
+    },
+    {
+      "timeSeconds": 1287.9,
+      "watts": 159,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130
+    },
+    {
+      "timeSeconds": 1290,
+      "watts": 167,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 127.9
+    },
+    {
+      "timeSeconds": 1292,
+      "watts": 178,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 125.3
+    },
+    {
+      "timeSeconds": 1294.1,
+      "watts": 170,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 127.1
+    },
+    {
+      "timeSeconds": 1296.1,
+      "watts": 169,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 127.5
+    },
+    {
+      "timeSeconds": 1298,
+      "watts": 169,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 127.5
+    },
+    {
+      "timeSeconds": 1300,
+      "watts": 172,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 126.7
+    },
+    {
+      "timeSeconds": 1302,
+      "watts": 156,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 130.9
+    },
+    {
+      "timeSeconds": 1304,
+      "watts": 162,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 129.3
+    },
+    {
+      "timeSeconds": 1306,
+      "watts": 158,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.4
+    },
+    {
+      "timeSeconds": 1308.1,
+      "watts": 151,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 132.4
+    },
+    {
+      "timeSeconds": 1310.2,
+      "watts": 148,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 133.2
+    },
+    {
+      "timeSeconds": 1312.3,
+      "watts": 157,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.5
+    },
+    {
+      "timeSeconds": 1314.4,
+      "watts": 152,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 132
+    },
+    {
+      "timeSeconds": 1316.4,
+      "watts": 153,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 131.8
+    },
+    {
+      "timeSeconds": 1318.6,
+      "watts": 148,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 133.1
+    },
+    {
+      "timeSeconds": 1320.7,
+      "watts": 148,
+      "strokeRate": 28,
+      "paceSecondsPer500m": 133.1
+    },
+    {
+      "timeSeconds": 1322.9,
+      "watts": 150,
+      "strokeRate": 27,
+      "paceSecondsPer500m": 132.6
+    },
+    {
+      "timeSeconds": 1325,
+      "watts": 150,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 132.6
+    },
+    {
+      "timeSeconds": 1327,
+      "watts": 159,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 130.1
+    },
+    {
+      "timeSeconds": 1329.1,
+      "watts": 186,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 123.5
+    },
+    {
+      "timeSeconds": 1331,
+      "watts": 186,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 123.5
+    },
+    {
+      "timeSeconds": 1332.9,
+      "watts": 201,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 120.3
+    },
+    {
+      "timeSeconds": 1334.8,
+      "watts": 185,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 123.7
+    },
+    {
+      "timeSeconds": 1336.8,
+      "watts": 185,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 123.7
+    },
+    {
+      "timeSeconds": 1338.8,
+      "watts": 202,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 120.1
+    },
+    {
+      "timeSeconds": 1340.8,
+      "watts": 206,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 119.4
+    },
+    {
+      "timeSeconds": 1342.7,
+      "watts": 193,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 122
+    },
+    {
+      "timeSeconds": 1344.6,
+      "watts": 194,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 121.7
+    },
+    {
+      "timeSeconds": 1346.5,
+      "watts": 194,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 121.7
+    },
+    {
+      "timeSeconds": 1348.4,
+      "watts": 182,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 124.4
+    },
+    {
+      "timeSeconds": 1350.3,
+      "watts": 182,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 124.4
+    },
+    {
+      "timeSeconds": 1352.2,
+      "watts": 179,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 125
+    },
+    {
+      "timeSeconds": 1354,
+      "watts": 186,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 123.5
+    },
+    {
+      "timeSeconds": 1355.9,
+      "watts": 186,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 123.5
+    },
+    {
+      "timeSeconds": 1357.8,
+      "watts": 184,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 123.8
+    },
+    {
+      "timeSeconds": 1359.6,
+      "watts": 176,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 125.7
+    },
+    {
+      "timeSeconds": 1361.5,
+      "watts": 180,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 124.7
+    },
+    {
+      "timeSeconds": 1363.4,
+      "watts": 186,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 123.5
+    },
+    {
+      "timeSeconds": 1365.3,
+      "watts": 186,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 123.5
+    },
+    {
+      "timeSeconds": 1367,
+      "watts": 179,
+      "strokeRate": 34,
+      "paceSecondsPer500m": 125.1
+    },
+    {
+      "timeSeconds": 1369.1,
+      "watts": 168,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 127.8
+    },
+    {
+      "timeSeconds": 1371,
+      "watts": 179,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 125.1
+    },
+    {
+      "timeSeconds": 1373,
+      "watts": 184,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 123.9
+    },
+    {
+      "timeSeconds": 1374.9,
+      "watts": 184,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 123.9
+    },
+    {
+      "timeSeconds": 1376.7,
+      "watts": 182,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 124.4
+    },
+    {
+      "timeSeconds": 1378.6,
+      "watts": 171,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 126.9
+    },
+    {
+      "timeSeconds": 1380.5,
+      "watts": 169,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 127.4
+    },
+    {
+      "timeSeconds": 1382.4,
+      "watts": 170,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 127.2
+    },
+    {
+      "timeSeconds": 1384.4,
+      "watts": 172,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 126.7
+    },
+    {
+      "timeSeconds": 1386.4,
+      "watts": 171,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 127
+    },
+    {
+      "timeSeconds": 1388.3,
+      "watts": 171,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 127
+    },
+    {
+      "timeSeconds": 1390.3,
+      "watts": 175,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 125.9
+    },
+    {
+      "timeSeconds": 1392.2,
+      "watts": 175,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 125.9
+    },
+    {
+      "timeSeconds": 1394.2,
+      "watts": 172,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 126.7
+    },
+    {
+      "timeSeconds": 1396.3,
+      "watts": 174,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 126.2
+    },
+    {
+      "timeSeconds": 1398.4,
+      "watts": 174,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 126.2
+    },
+    {
+      "timeSeconds": 1400.3,
+      "watts": 177,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 125.5
+    },
+    {
+      "timeSeconds": 1402.2,
+      "watts": 177,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 125.5
+    },
+    {
+      "timeSeconds": 1404.2,
+      "watts": 177,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 125.5
+    },
+    {
+      "timeSeconds": 1406.2,
+      "watts": 184,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 124
+    },
+    {
+      "timeSeconds": 1408.2,
+      "watts": 179,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 125
+    },
+    {
+      "timeSeconds": 1410.1,
+      "watts": 185,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 123.7
+    },
+    {
+      "timeSeconds": 1412.1,
+      "watts": 187,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 123.3
+    },
+    {
+      "timeSeconds": 1414,
+      "watts": 187,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 123.3
+    },
+    {
+      "timeSeconds": 1416,
+      "watts": 196,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 121.3
+    },
+    {
+      "timeSeconds": 1418,
+      "watts": 202,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 120.1
+    },
+    {
+      "timeSeconds": 1419.9,
+      "watts": 212,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 118.1
+    },
+    {
+      "timeSeconds": 1421.9,
+      "watts": 197,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 121.1
+    },
+    {
+      "timeSeconds": 1424,
+      "watts": 197,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 121.1
+    },
+    {
+      "timeSeconds": 1425.9,
+      "watts": 186,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 123.5
+    },
+    {
+      "timeSeconds": 1427.9,
+      "watts": 178,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 125.2
+    },
+    {
+      "timeSeconds": 1430,
+      "watts": 178,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 125.2
+    },
+    {
+      "timeSeconds": 1432,
+      "watts": 175,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 126.1
+    },
+    {
+      "timeSeconds": 1434,
+      "watts": 177,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 125.6
+    },
+    {
+      "timeSeconds": 1436,
+      "watts": 177,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 125.6
+    },
+    {
+      "timeSeconds": 1438.1,
+      "watts": 179,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 125.1
+    },
+    {
+      "timeSeconds": 1440,
+      "watts": 179,
+      "strokeRate": 29,
+      "paceSecondsPer500m": 125.1
+    },
+    {
+      "timeSeconds": 1442,
+      "watts": 181,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 124.6
+    },
+    {
+      "timeSeconds": 1444,
+      "watts": 177,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 125.5
+    },
+    {
+      "timeSeconds": 1446,
+      "watts": 177,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 125.5
+    },
+    {
+      "timeSeconds": 1448,
+      "watts": 161,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 129.5
+    },
+    {
+      "timeSeconds": 1449.9,
+      "watts": 151,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 132.2
+    },
+    {
+      "timeSeconds": 1451.9,
+      "watts": 150,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 132.6
+    },
+    {
+      "timeSeconds": 1453.8,
+      "watts": 150,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 132.6
+    },
+    {
+      "timeSeconds": 1455.8,
+      "watts": 167,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 128
+    },
+    {
+      "timeSeconds": 1457.8,
+      "watts": 182,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 124.3
+    },
+    {
+      "timeSeconds": 1459.7,
+      "watts": 182,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 124.3
+    },
+    {
+      "timeSeconds": 1461.6,
+      "watts": 203,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 120
+    },
+    {
+      "timeSeconds": 1463.6,
+      "watts": 203,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 120
+    },
+    {
+      "timeSeconds": 1465.6,
+      "watts": 206,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 119.3
+    },
+    {
+      "timeSeconds": 1467.6,
+      "watts": 206,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 119.3
+    },
+    {
+      "timeSeconds": 1469.5,
+      "watts": 204,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 119.8
+    },
+    {
+      "timeSeconds": 1471.3,
+      "watts": 209,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 118.8
+    },
+    {
+      "timeSeconds": 1473.3,
+      "watts": 215,
+      "strokeRate": 30,
+      "paceSecondsPer500m": 117.6
+    },
+    {
+      "timeSeconds": 1475.2,
+      "watts": 227,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 115.5
+    },
+    {
+      "timeSeconds": 1477.1,
+      "watts": 227,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 115.5
+    },
+    {
+      "timeSeconds": 1479,
+      "watts": 230,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 115
+    },
+    {
+      "timeSeconds": 1480.8,
+      "watts": 217,
+      "strokeRate": 33,
+      "paceSecondsPer500m": 117.2
+    },
+    {
+      "timeSeconds": 1482.8,
+      "watts": 217,
+      "strokeRate": 33,
+      "paceSecondsPer500m": 117.2
+    },
+    {
+      "timeSeconds": 1484.7,
+      "watts": 193,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 122
+    },
+    {
+      "timeSeconds": 1486.6,
+      "watts": 193,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 122
+    },
+    {
+      "timeSeconds": 1488.4,
+      "watts": 206,
+      "strokeRate": 35,
+      "paceSecondsPer500m": 119.4
+    },
+    {
+      "timeSeconds": 1490.2,
+      "watts": 240,
+      "strokeRate": 33,
+      "paceSecondsPer500m": 113.4
+    },
+    {
+      "timeSeconds": 1492.1,
+      "watts": 240,
+      "strokeRate": 33,
+      "paceSecondsPer500m": 113.4
+    },
+    {
+      "timeSeconds": 1493.9,
+      "watts": 189,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 122.7
+    },
+    {
+      "timeSeconds": 1495.8,
+      "watts": 194,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 121.7
+    },
+    {
+      "timeSeconds": 1497.7,
+      "watts": 194,
+      "strokeRate": 32,
+      "paceSecondsPer500m": 121.7
+    },
+    {
+      "timeSeconds": 1499.6,
+      "watts": 191,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 122.4
+    },
+    {
+      "timeSeconds": 1502.5,
+      "watts": 115,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 145.1
+    },
+    {
+      "timeSeconds": 1504.9,
+      "watts": 115,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 145.1
+    },
+    {
+      "timeSeconds": 1507.3,
+      "watts": 57,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 182.9
+    },
+    {
+      "timeSeconds": 1509.8,
+      "watts": 50,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 190.8
+    },
+    {
+      "timeSeconds": 1512.4,
+      "watts": 46,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 196.7
+    },
+    {
+      "timeSeconds": 1513.9,
+      "watts": 11,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 320.6
+    },
+    {
+      "timeSeconds": 1516.4,
+      "watts": 23,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 246.7
+    },
+    {
+      "timeSeconds": 1518.8,
+      "watts": 39,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 207.4
+    },
+    {
+      "timeSeconds": 1521.2,
+      "watts": 46,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 196.6
+    },
+    {
+      "timeSeconds": 1523.7,
+      "watts": 48,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 193.6
+    },
+    {
+      "timeSeconds": 1526.2,
+      "watts": 48,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 193.6
+    },
+    {
+      "timeSeconds": 1528.6,
+      "watts": 49,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 192.8
+    },
+    {
+      "timeSeconds": 1531.1,
+      "watts": 47,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 195
+    },
+    {
+      "timeSeconds": 1533.5,
+      "watts": 47,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 195
+    },
+    {
+      "timeSeconds": 1535.9,
+      "watts": 47,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 195.9
+    },
+    {
+      "timeSeconds": 1538.3,
+      "watts": 45,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 198.4
+    },
+    {
+      "timeSeconds": 1540.6,
+      "watts": 43,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 201.5
+    },
+    {
+      "timeSeconds": 1543.1,
+      "watts": 43,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 201.5
+    },
+    {
+      "timeSeconds": 1545.6,
+      "watts": 42,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 202
+    },
+    {
+      "timeSeconds": 1547.9,
+      "watts": 45,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 197.8
+    },
+    {
+      "timeSeconds": 1550.3,
+      "watts": 51,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 189.7
+    },
+    {
+      "timeSeconds": 1552.5,
+      "watts": 57,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 183.5
+    },
+    {
+      "timeSeconds": 1554.8,
+      "watts": 54,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 186.6
+    },
+    {
+      "timeSeconds": 1557.2,
+      "watts": 55,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 185
+    },
+    {
+      "timeSeconds": 1559.6,
+      "watts": 55,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 185
+    },
+    {
+      "timeSeconds": 1562,
+      "watts": 57,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 183
+    },
+    {
+      "timeSeconds": 1564.3,
+      "watts": 60,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 180.1
+    },
+    {
+      "timeSeconds": 1566.6,
+      "watts": 60,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 180.4
+    },
+    {
+      "timeSeconds": 1569,
+      "watts": 64,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 176.2
+    },
+    {
+      "timeSeconds": 1571.4,
+      "watts": 64,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 176.2
+    },
+    {
+      "timeSeconds": 1573.8,
+      "watts": 70,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 171.4
+    },
+    {
+      "timeSeconds": 1576.2,
+      "watts": 72,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 169.5
+    },
+    {
+      "timeSeconds": 1578.6,
+      "watts": 72,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 169.5
+    },
+    {
+      "timeSeconds": 1581,
+      "watts": 77,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 165.7
+    },
+    {
+      "timeSeconds": 1583.3,
+      "watts": 77,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 165.7
+    },
+    {
+      "timeSeconds": 1585.6,
+      "watts": 75,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 166.8
+    },
+    {
+      "timeSeconds": 1587.9,
+      "watts": 73,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 168.5
+    },
+    {
+      "timeSeconds": 1590.2,
+      "watts": 80,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 163.7
+    },
+    {
+      "timeSeconds": 1592.5,
+      "watts": 83,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 161.8
+    },
+    {
+      "timeSeconds": 1594.8,
+      "watts": 82,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 161.9
+    },
+    {
+      "timeSeconds": 1597.3,
+      "watts": 83,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 161.5
+    },
+    {
+      "timeSeconds": 1599.5,
+      "watts": 84,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 160.7
+    },
+    {
+      "timeSeconds": 1601.9,
+      "watts": 87,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 158.8
+    },
+    {
+      "timeSeconds": 1604.2,
+      "watts": 87,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 158.8
+    },
+    {
+      "timeSeconds": 1606.5,
+      "watts": 86,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 159.6
+    },
+    {
+      "timeSeconds": 1608.9,
+      "watts": 89,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 157.7
+    },
+    {
+      "timeSeconds": 1611.4,
+      "watts": 89,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 157.7
+    },
+    {
+      "timeSeconds": 1613.8,
+      "watts": 86,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 159.5
+    },
+    {
+      "timeSeconds": 1616.2,
+      "watts": 86,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 159.5
+    },
+    {
+      "timeSeconds": 1618.6,
+      "watts": 87,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 158.9
+    },
+    {
+      "timeSeconds": 1621,
+      "watts": 82,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 162.4
+    },
+    {
+      "timeSeconds": 1623.4,
+      "watts": 82,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 162.4
+    },
+    {
+      "timeSeconds": 1625.7,
+      "watts": 80,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 163.7
+    },
+    {
+      "timeSeconds": 1628.1,
+      "watts": 81,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 162.8
+    },
+    {
+      "timeSeconds": 1630.4,
+      "watts": 75,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 166.9
+    },
+    {
+      "timeSeconds": 1632.8,
+      "watts": 70,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 171
+    },
+    {
+      "timeSeconds": 1635.1,
+      "watts": 69,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 171.6
+    },
+    {
+      "timeSeconds": 1637.4,
+      "watts": 68,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 172.7
+    },
+    {
+      "timeSeconds": 1639.8,
+      "watts": 67,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 173.2
+    },
+    {
+      "timeSeconds": 1642.3,
+      "watts": 67,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 173.2
+    },
+    {
+      "timeSeconds": 1644.7,
+      "watts": 67,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 173.7
+    },
+    {
+      "timeSeconds": 1647.1,
+      "watts": 67,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 173.7
+    },
+    {
+      "timeSeconds": 1649.6,
+      "watts": 69,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 171.7
+    },
+    {
+      "timeSeconds": 1652,
+      "watts": 69,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 171.7
+    },
+    {
+      "timeSeconds": 1654.4,
+      "watts": 69,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 171.7
+    },
+    {
+      "timeSeconds": 1656.8,
+      "watts": 68,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 172.3
+    },
+    {
+      "timeSeconds": 1659.3,
+      "watts": 68,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 172.3
+    },
+    {
+      "timeSeconds": 1661.7,
+      "watts": 75,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 166.8
+    },
+    {
+      "timeSeconds": 1664.2,
+      "watts": 75,
+      "strokeRate": 31,
+      "paceSecondsPer500m": 167.4
+    }
+  ],
+  "events": [],
+  "explanations": {},
+  "recommendations": [],
+  "mediaMappings": [],
+  "initialState": {
+    "currentTimeSeconds": 0,
+    "selectedEventId": "",
+    "evidenceExpanded": false,
+    "provenanceExpanded": false,
+    "videoExpanded": false
+  },
+  "buildManifest": {
+    "schemaVersion": "1.0",
+    "generatedAt": "2026-07-30T19:38:04.652Z",
+    "recordingMode": "offline",
+    "steps": [
+      {
+        "id": "normalize-concept2-csv",
+        "role": "source-normalization",
+        "provider": "concept2",
+        "modelOrService": "csv-export",
+        "executionMode": "derived",
+        "inputPaths": [
+          "data/concept2/118993656/concept2-result-118993656.csv"
+        ],
+        "outputPaths": [
+          "artifacts/data/concept2-normalized.json",
+          "artifacts/data/replay-fixture.stub.json"
+        ],
+        "timestamp": "2026-07-30T19:38:04.659Z",
+        "contentHash": "c3dc6d7e044ba72dcb75290aa942350e326daf9f4c34243124de60daeca38506",
+        "humanReviewed": false
+      },
+      {
+        "id": "identify-telemetry-review-candidates",
+        "role": "candidate-selection",
+        "provider": "manual",
+        "modelOrService": "Wake source review",
+        "executionMode": "manual",
+        "inputPaths": [],
+        "outputPaths": [
+          "artifacts/data/concept2-normalized.json"
+        ],
+        "timestamp": "2026-07-30T19:38:04.659Z",
+        "humanReviewed": false
+      }
+    ]
+  }
+}

@@ -1,711 +1,283 @@
-<!-- Imported from https://docs.google.com/document/d/17dW3y-9Kkt3Oep1aJKLC9gb5VeEGhCL39-akFuE5_Js/edit | Drive modified 2026-07-30T17:57:36.118Z -->
+# Wake Frontend Implementation Guide
 
-Wake — Frontend Implementation Guide
+Status: Canonical implementation reference
 
-Status: Canonical for hackathon implementation
-Platform: Desktop web
+Target: Desktop recording build
 
-1. Purpose
+## 1. Implementation Goal
 
-This guide translates Wake’s product and design direction into a buildable frontend structure. It is implementation guidance, not a replacement for DESIGN.md.
+Render one completed workout from a deterministic `ReplayFixture`. The browser
+must work offline and must not reconstruct coaching, graph relationships, or
+provider logic.
 
-2. Experience hierarchy
+Priority:
 
-The page should communicate this order:
+1. complete first frame;
+2. synchronized hero selection;
+3. evidence and recurrence;
+4. next-session action;
+5. sponsor provenance;
+6. decorative polish.
 
-Replay → selected insight → evidence → expandable video → interval comparison → next session.
+Before implementing layout, inspect
+[End-State Reference](end-state-reference.md). It is the visual acceptance target
+for the opening frame.
 
-The Replay is the primary interaction surface. Video is synchronized evidence and remains secondary until expanded.
+## 2. Suggested Stack
 
-3. Primary screen
+- Vite
+- React
+- TypeScript
+- plain CSS or CSS modules
+- lightweight SVG telemetry
+- native HTML video
 
-Desktop target: 1440 px and above.
+Avoid a router, charting framework, state framework, or UI kit unless already
+present and working. One route is sufficient.
 
-Main regions:
-- Compact left navigation rail.
-- Session header with title, date, duration, distance, machine, and verification state.
-- Full-width Replay with workout phases, telemetry tracks, events, coach cues, and one shared playhead.
-- Insight, evidence, and video row.
-- Interval Breakdown table and Next Session card.
+## 3. Component Structure
 
-Do not include a second full telemetry timeline. The Interval Breakdown provides comparison rather than duplication.
-
-4. Component tree
-
-AppShell
-  NavigationRail
-  ReplayPage
-    SessionHeader
-    ReplaySurface
-      PhaseTrack
-      TelemetryTracks
-      EventTrack
-      CoachCueTrack
-      Playhead
-    MomentWorkspace
-      InsightPanel
-      EvidencePanel
-      VideoEvidence
-    IntervalBreakdown
-    NextSessionCard
-
-5. State model
-
-Canonical shared state:
-- currentTimeMs
-- isPlaying
-- selectedEventId
-- selectedIntervalId
-- expandedEvidenceId
-- videoMode: embedded | expanded
-
-All time-based components read from the same currentTimeMs. Never maintain independent chart and video cursors.
-
-Selecting an event must:
-- seek the shared playhead;
-- select the relevant insight;
-- update evidence;
-- seek video;
-- highlight the containing interval.
-
-Selecting an interval must:
-- highlight its range in Replay;
-- update interval selection;
-- focus its highest-priority event when available.
-
-6. Replay implementation
-
-Use one normalized time scale across all tracks. Layers may have different sampling rates but must map to the same x coordinate.
-
-Telemetry authority:
-- Concept2 values are authoritative for pace, watts, stroke rate, distance, and intervals.
-- Heart rate is authoritative when supplied by the connected sensor stream.
-- Video-derived estimates must not overwrite telemetry.
-
-Rendering guidance:
-- Prefer SVG or canvas for synchronized charts.
-- Keep non-selected series muted.
-- Use teal for playback and selection.
-- Use amber only for coaching moments.
-- The selected time window may receive a restrained glow.
-
-7. Video behavior
-
-Default embedded video is supporting evidence.
-
-Requirements:
-- preserve aspect ratio;
-- seek from shared currentTimeMs;
-- show timestamp;
-- expose expand control;
-- avoid autoplay with sound;
-- do not make the low-quality recording visually dominant.
-
-Expanded mode may occupy the main workspace while retaining a compact Replay strip.
-
-8. Insight panel
-
-Required fields:
-- concise coach headline;
-- timestamp or range;
-- short explanation;
-- key metric deltas;
-- confidence;
-- action or recommendation.
-
-Top-layer copy sounds like a coach. Provider names, agents, and internal chain-of-thought never appear in the default UI.
-
-9. Evidence panel
-
-Evidence types:
-- Telemetry
-- Visual
-- Technique
-- Heart rate
-- Context
-
-Each item includes source, time range, short factual statement, and confidence. Expanded evidence may expose provider provenance, including Pegasus or Jockey, for judges or advanced users.
-
-10. Interval Breakdown
-
-Columns for the hackathon:
-- interval;
-- time;
-- meters;
-- pace;
-- watts;
-- stroke rate;
-- heart rate;
-- Wake insight.
-
-Rows are clickable and synchronized with Replay. No sorting, filtering, pagination, editing, or exports are needed for the demo.
-
-11. Next Session card
-
-Show one focus and one drill. It should complete the flow from observation to action.
-
-12. Data fixtures
-
-Use the supplied Concept2 CSV/TCX/FIT data as the canonical fixture. Precompute a normalized session JSON containing:
-- metadata;
-- phases and intervals;
-- telemetry samples;
-- events;
-- insights;
-- evidence;
-- recommendations;
-- media references.
-
-The frontend should render from this fixture without depending on live processing during the demo.
-
-13. Loading and failure states
-
-Hackathon requirement:
-- deterministic fixture loads instantly;
-- missing video leaves Replay usable;
-- missing heart rate hides that track cleanly;
-- provider failures degrade to available evidence;
-- never block the Replay because one modality is unavailable.
-
-14. Accessibility
-
-- Minimum 4.5:1 contrast for body text.
-- All controls keyboard reachable.
-- Visible focus states.
-- Do not encode meaning through color alone.
-- Respect reduced-motion preferences.
-- Charts need text summaries for selected events.
-
-15. Definition of done
-
-The build is ready when a judge can:
-- understand the workout structure immediately;
-- click an event and see all surfaces synchronize;
-- understand one strong coaching insight;
-- inspect supporting evidence;
-- compare intervals;
-- leave with one concrete next-session action.
-WAKE — FRONTEND IMPLEMENTATION GUIDE
-
-Status
-Canonical implementation guidance for the hackathon web demo. DESIGN.md remains the authority for visual decisions.
-
-Scope
-Desktop web only. Build one excellent completed-workout Replay. Do not spend hackathon time on mobile, onboarding, billing, social features, or generalized dashboard navigation.
-
-Primary page hierarchy
-1. Session header
-2. Replay timeline
-3. Selected insight, evidence, and synchronized video
-4. Interval Breakdown
-5. Next Session action
-
-The Replay is the primary interaction surface. The timeline is its temporal backbone. Video is supporting evidence and can be expanded on demand.
-
-Recommended stack
-- React or Next.js with TypeScript
-- Tailwind CSS or CSS variables driven by DESIGN.md tokens
-- Recharts, Visx, or lightweight SVG for telemetry
-- Native HTML video element
-- Framer Motion only for a few meaningful transitions
-- Static fixture JSON for the golden session
-
-Do not introduce a complex workflow framework into the frontend.
-
-Route
-/replays/:replayId
-
-Core state
-ReplayState
-- currentTimeMs
-- durationMs
-- isPlaying
-- selectedEventId
-- selectedIntervalId
-- expandedEvidence
-- videoExpanded
-
-Data objects
-Replay
-- id
-- title
-- startTime
-- duration
-- source assets
-- phases[]
-- telemetry series
-- intervals[]
-- observations[]
-- events[]
-- insights[]
-- recommendation
-
-Observation
-- id
-- provider: pegasus | jockey | telemetry | hr | manual
-- type
-- startMs
-- endMs
-- description
-- confidence
-- evidenceRefs[]
-- providerNativePayload optional
-
-Event
-- id
-- startMs
-- endMs
-- category
-- salience
-- observationRefs[]
-- telemetryWindow
-
-Insight
-- id
-- headline
-- explanation
-- eventRefs[]
-- evidenceRefs[]
-- confidence
-- recommendationRef
-
-Component tree
+```text
 ReplayPage
-├── AppRail
 ├── SessionHeader
-├── ReplayTimeline
+├── ReplaySurface
 │   ├── PhaseTrack
-│   ├── TelemetryTrack × 4
+│   ├── TelemetryTracks
 │   ├── EventTrack
-│   ├── CoachCueTrack
-│   └── Playhead
-├── ReviewWorkspace
+│   └── ReplayPlayhead
+├── SelectedMoment
 │   ├── InsightPanel
 │   ├── EvidencePanel
 │   └── VideoEvidence
 ├── IntervalBreakdown
-└── NextSessionCard
+├── NextSessionCard
+└── ProvenanceDrawer
+```
 
-Replay synchronization contract
-A single currentTimeMs value controls:
-- timeline playhead
-- HTML video currentTime
-- active telemetry values
-- event activation
-- selected evidence window
+Name components for the product, not generic dashboard primitives.
 
-Selecting an event must:
-1. set selectedEventId
-2. seek currentTimeMs to the event anchor
-3. update insight and evidence panels
-4. highlight the event window across telemetry
-5. move visual focus to the insight
+## 4. Shared State
 
-Selecting an interval must:
-1. set selectedIntervalId
-2. highlight its timeline range
-3. update interval comparison context
-4. optionally seek to its first meaningful event
+One controller owns:
 
-Timeline rules
-- Render one full-session timeline only.
-- Align all tracks to the same x-scale.
-- Use phase bands at the top.
-- Keep unselected telemetry subdued.
-- Selected windows brighten; do not redraw into a duplicate chart.
-- Event markers remain clickable at normal desktop widths.
-- Scrubbing should update video continuously when performant, otherwise on pointer release.
-
-Insight panel
-Always lead with the coach statement. Structure:
-Headline
-Explanation
-Key metric deltas
-Context across the workout
-Action or drill link
-
-Do not show raw model output, internal agents, or chain of thought.
-
-Evidence panel
-Evidence items should include:
-- source label
-- concise factual statement
-- timestamp or range
-- confidence
-- optional thumbnail or micro-chart
-
-Evidence provider labels may include Pegasus and Jockey inside expanded provenance, but top-level user language should remain Telemetry, Visual, Technique, and Workout Pattern.
-
-Video behavior
-- Default size is secondary to the Replay and insight.
-- Maintain aspect ratio without forcing a cinematic crop.
-- Use the real low-quality consumer capture honestly.
-- Expand video through a clear button.
-- Expanded state may use a modal or rearranged split view.
-- Seeking from timeline or evidence must remain synchronized.
-
-Interval Breakdown
-Columns for hackathon fixture:
-Interval, time, meters, pace, watts, stroke rate, heart rate, Wake insight.
-
-Requirements:
-- one selected row
-- click-to-sync
-- no sort, filter, pagination, export, or editing
-- concise interpretation in final column
-
-Motion
-Implement only:
-- playhead glide
-- selected event focus glow
-- telemetry window illumination
-- evidence expansion
-- video expansion
-
-All related elements should settle within roughly 250–450 ms. Respect prefers-reduced-motion.
-
-Attention model
-Only one element owns expressive emphasis. Normally this is the selected insight. The active timeline window may glow softly, but should not compete with the insight headline.
-
-Loading and errors
-For the demo, load a fixture immediately. Preserve states for future implementation:
-- processing
-- ready
-- partial evidence
-- unavailable provider
-
-If Jockey is unavailable, display the cached or Pegasus-backed Replay without breaking the experience. Provider status belongs in provenance, not in the coaching headline.
-
-Fixture strategy
-Store a complete golden-session fixture in version control. Include:
-- real Concept2 interval values
-- sampled telemetry arrays
-- selected video asset path
-- Pegasus observations
-- Jockey cited findings
-- synthesized events
-- coach insights
-
-Keep provider raw responses separately from normalized fixture data.
-
-Accessibility
-- Full keyboard access to event markers and interval rows
-- Visible focus states
-- Text alternatives for chart insights
-- Do not rely on color alone
-- Minimum readable contrast in dark theme
-- Reduced motion support
-
-Performance targets
-- First meaningful render under 2 seconds with local fixtures
-- Timeline interactions under 100 ms
-- Smooth playhead at common desktop frame rates
-- Avoid rerendering the full chart tree on every video timeupdate; throttle or use animation frames
-
-Hard constraints for coding agents
-- Read DESIGN.md before changing UI.
-- Do not make video the hero.
-- Do not add a second telemetry timeline.
-- Do not invent new accent colors.
-- Do not add generic AI gradients or particles.
-- Do not expose agents in the default experience.
-- Do not add features outside the golden demo path without explicit approval.
-
-Definition of done
-A user can open the Replay, select a meaningful event, understand the coaching insight, inspect synchronized evidence, compare intervals, and leave with one next-session action.
-WAKE — FRONTEND IMPLEMENTATION GUIDE
-
-Status: Hackathon implementation reference
-Canonical visual source: DESIGN.md
-Target: Desktop web, 1440px-first
-
-1. IMPLEMENTATION PRIORITIES
-
-Build the artifact judges will experience, not a processing dashboard.
-
-Priority order:
-1. Coherent Replay layout
-2. Perfect synchronization and selection behavior
-3. One excellent insight and evidence state
-4. Interval breakdown
-5. Expandable video
-6. Jockey follow-up
-7. Decorative polish
-
-Do not build mobile for the hackathon.
-
-2. PAGE STRUCTURE
-
-App shell
-- compact left navigation rail
-- main content area
-- no persistent right sidebar
-
-Replay page
-- SessionHeader
-- ReplayTimeline
-- SelectedMomentRow
-  – InsightPanel
-  – EvidencePanel
-  – VideoEvidence
-- BottomRow
-  – IntervalBreakdown
-  – NextSessionCard
-- optional AskWakePopover or AskWakeDrawer
-
-The Replay occupies the top and widest region. The lower section must not repeat the same telemetry chart.
-
-3. COMPONENT TREE
-
-ReplayPage
-├─ AppRail
-├─ SessionHeader
-├─ Replay
-│  ├─ PhaseTrack
-│  ├─ TelemetryTracks
-│  ├─ EventTrack
-│  ├─ CoachCueTrack
-│  └─ ReplayPlayhead
-├─ SelectedMoment
-│  ├─ InsightCard
-│  ├─ EvidenceList
-│  └─ VideoEvidence
-├─ IntervalBreakdown
-├─ NextSessionCard
-└─ AskWake
-
-Keep chart primitives reusable, but do not abstract the product vocabulary away. Components should be named for the experience, not generic dashboard widgets.
-
-4. REPLAY DATA CONTRACT
-
-The page should render from one denormalized Replay JSON payload.
-
-Suggested top-level shape:
-- session
-- sources
-- phases
-- intervals
-- telemetry
-- events
-- coachCues
-- selectedEventId
-- recommendations
-- videoMappings
-- agentAnswers
-
-The frontend must not synthesize coaching conclusions or recompute event logic. It may derive display coordinates, interpolation, and hover values.
-
-5. STATE MODEL
-
-Core state:
-- currentTimeSeconds
-- isPlaying
-- selectedEventId
-- selectedIntervalId
-- hoveredTimeSeconds
-- videoExpanded
-- evidenceExpanded
-- askWakeOpen
-- askWakeSessionId
-- askWakeStatus
-
-Selection rules:
-- selecting an event sets selectedEventId and seeks currentTime to its focus time
-- selecting an interval highlights its range and chooses its primary event when available
-- scrubbing the Replay updates video and metric readouts
-- video playback updates the shared current time
-- opening expanded video does not create a second clock
-
-Use a single Replay controller/context or state machine so components cannot drift.
-
-6. TIMELINE AND CHARTS
-
-Render phase regions and telemetry tracks against the same x-scale.
-
-Required tracks:
-- pace
-- power
-- stroke rate
-- optional heart rate
-- events
-- coach cues
+```ts
+type ReplayState = {
+  currentTimeSeconds: number
+  selectedEventId: string
+  selectedIntervalId?: string
+  evidenceExpanded: boolean
+  provenanceExpanded: boolean
+  videoExpanded?: boolean
+}
+```
 
 Rules:
-- selected event window receives subtle teal luminance
-- selected pivotal event may use amber marker treatment
-- nonselected data is subdued
-- avoid multiple y-axis labels and chart-library chrome
-- make exact values available on hover or selection rather than labeling every point
-- keep gridlines quiet
-- use the supplied Concept2 data values rather than fabricated chart shapes
 
-For the fixture, precompute display-ready samples at an appropriate resolution.
+- every time-based component reads the same `currentTimeSeconds`;
+- video playback may update the shared clock;
+- no component owns an independent chart or media cursor;
+- components receive state and callbacks rather than importing separate fixture
+  copies.
 
-7. ATTENTIONAL MOTION
+## 5. Fixture Shape
 
-Motion directs attention; it never depicts AI thinking.
+```ts
+type ReplayFixture = {
+  schemaVersion: "1.0"
+  session: Session
+  phases: Phase[]
+  intervals: Interval[]
+  telemetry: TelemetrySample[]
+  events: ReplayEvent[]
+  explanations: Record<string, ExplanationBundle>
+  recommendations: Recommendation[]
+  mediaMappings: MediaMapping[]
+  initialState: ReplayState
+  buildManifest: BuildManifest
+}
+```
 
-Event selection sequence:
-1. playhead glides to the event
-2. event window illuminates
-3. relevant telemetry brightens
-4. insight gains a soft beacon
-5. evidence settles into place
-6. video seeks
+All time fields use global elapsed seconds in the range 0–1680.
 
-All parts should feel like one disturbance propagating through a connected system.
+The UI may derive coordinates, interpolation, and hover values. It must not derive
+event meaning or coaching conclusions.
 
-Timing guidance:
-- hover: 120–160ms
-- selection transitions: 220–320ms
-- panel expansion: 240–360ms
-- use reduced-motion alternatives
+## 6. Event Selection Contract
 
-Never use particles, neural meshes, bouncing cards, or continuous pulsing.
+Selecting an event:
 
-8. INSIGHT PANEL
+1. sets `selectedEventId`;
+2. sets the shared time to the event focus;
+3. selects its containing work interval;
+4. updates the explanation bundle;
+5. highlights the event window across all tracks;
+6. resolves the matching media mapping;
+7. moves visual focus to the insight.
 
-Hierarchy:
-- small “Key insight” label
-- large coach headline
-- one-sentence explanation
-- up to three metric deltas
-- brief context
-- one action to expand
+Selecting a recurrence citation runs the same event-selection path for the cited
+event.
 
-The headline is the primary text object. Do not show provider names or confidence jargon in the default state.
+Selecting an interval highlights its range and may select its primary event.
 
-9. EVIDENCE PANEL
+If a third Pegasus highlight is available, expose it as another event marker or
+cited-moment chip. Do not add a separate clip browser.
 
-Group by evidence type:
-- Telemetry
-- Visual
-- Technique
-- optional Context
+## 7. Replay Rendering
 
-Each evidence item contains:
-- icon
-- label
-- factual one-line statement
-- timestamp or sparkline/thumbnail where useful
-- source/provenance in expanded state
+Use one x-scale:
 
-The panel should prove the insight without becoming a debug log.
+```text
+x = plotLeft + (seconds / sessionDurationSeconds) × plotWidth
+```
 
-10. VIDEO EVIDENCE
+Required tracks:
 
-Default video is compact and visually secondary.
+- watts;
+- stroke rate;
+- work/recovery phases;
+- events;
+- shared playhead.
 
-Requirements:
-- synchronized playhead
-- seek on event selection
-- visible timestamp
-- play/pause
-- expand/collapse
-- optional playback speed
+Downsample for display before rendering. Avoid recalculating entire SVG paths on
+every playback frame.
 
-Expanded video may take more screen but should preserve access to the selected insight and timeline context.
+The selected event window spans all relevant tracks. Use teal for selection and
+amber for the pivotal marker.
 
-Never stretch low-quality source footage into the hero background.
+## 8. Evidence and Explanation
 
-11. INTERVAL BREAKDOWN
+The panel consumes one `ExplanationBundle`.
 
-Columns for the demo:
-- interval
-- time
-- meters
-- pace
-- watts
-- stroke rate
-- heart rate when available
-- Wake insight
+Collapsed:
 
-Use no more quantitative columns than fit comfortably. Selecting a row highlights the corresponding Replay phase.
+- insight;
+- short explanation;
+- two evidence summaries;
+- “Why Wake believes this.”
 
-The Wake insight column is essential. It converts a Concept2-style split table from data into coaching context.
+Expanded:
 
-12. NEXT SESSION CARD
+- supporting evidence;
+- contradicting or limiting evidence;
+- real provider and generation mode;
+- recurrence citation;
+- drill.
 
-Show:
-- one focus statement
-- one short explanation
-- one recommended drill
-- optional “Add to plan” affordance
+The live and cached Neo4j result have identical shapes. The component does not
+branch on database availability.
 
-Do not build full planning behavior unless all core Replay interactions are finished.
+## 9. Media Mapping
 
-13. ASK WAKE / JOCKEY UI
+```ts
+type MediaMapping = {
+  replayStartSeconds: number
+  replayEndSeconds: number
+  assetId: string
+  mediaStartSeconds: number
+  poster?: string
+}
+```
 
-Keep the agent surface small and contextual.
+To seek:
 
-Recommended pattern:
-- “Ask about this workout” button near evidence or selected insight
-- popover or drawer with two suggested prompts
-- one concise answer with cited moment chips
-- clicking a citation seeks the Replay
+```text
+mediaTime =
+  mediaStartSeconds + (currentTimeSeconds - replayStartSeconds)
+```
 
-Suggested prompt:
-“Where else does this pattern occur?”
+Clamp to the valid media range. If the asset is missing, render its poster and the
+Replay timestamp without breaking selection.
 
-Suggested answer structure:
-- direct conclusion
-- two cited moments
-- one limitation
+## 10. Interval Breakdown
 
-Never display chain-of-thought, tool calls, agent plans, or a generic chat homepage.
+Use work intervals only unless recovery values are essential.
 
-14. FIXTURE-FIRST IMPLEMENTATION
+Recommended columns:
 
-Create a committed Replay fixture containing the full successful demo state. Provider adapters may generate the same schema, but the page should not depend on live analysis.
+- interval;
+- work time;
+- meters;
+- pace;
+- watts;
+- stroke rate;
+- Wake insight.
 
-Suggested structure:
-/src/fixtures/morning-row-replay.json
-/src/providers/pegasus.ts
-/src/providers/jockey.ts
-/src/domain/replay.ts
-/src/components/replay/*
+Rows select their Replay ranges. Do not add sorting, filtering, pagination, or
+editing.
 
-The fixture must include cached Jockey answers and citations.
+## 11. Provenance Drawer
 
-15. RESPONSIVE BEHAVIOR
+Render from `buildManifest`.
 
-Hackathon target is desktop. Support graceful narrowing to approximately 1100px, but do not design a mobile navigation or mobile Replay.
+For each sponsor show:
 
-At narrower desktop widths:
-- reduce rail width
-- stack evidence beneath insight/video only if needed
-- preserve the timeline width
-- never hide the selected insight
+- role;
+- provider/service;
+- execution mode;
+- reviewed state.
 
-16. ACCESSIBILITY
+Do not display secrets, raw prompts, logs, or invented provider IDs.
 
-- Meet contrast requirements for text and controls
-- Do not communicate state by color alone
-- Provide keyboard event selection and playback controls
-- Add visible focus styles
-- Honor prefers-reduced-motion
-- Give charts accessible summaries
-- Label metric units explicitly
+## 12. Loading and Failure States
 
-17. PERFORMANCE
+The golden fixture is bundled with the app, so the normal recorded path has no
+loading screen.
 
-- Load the fixture immediately
-- Lazy-load the video
-- Avoid rerendering all chart paths on every playback frame
-- Update the playhead with requestAnimationFrame or a lightweight external store
-- Cache mapped x-coordinates and downsampled series
-- Preload the selected event thumbnail
+Failures:
 
-18. DEFINITION OF DONE
+- missing video → poster;
+- missing heart rate → omit track;
+- malformed optional evidence → hide item and retain insight;
+- unavailable network → no effect;
+- unavailable provider → already represented through manifest and cache.
 
-The page matches DESIGN.md and the approved desktop mockup.
+## 13. Accessibility and Recording QA
 
-Selecting the 18:10 event synchronizes every visible layer.
+- Primary controls are keyboard reachable.
+- Charts include a selected-event text summary.
+- Focus states are visible.
+- Reduced motion simplifies the coordinated transition.
+- Target viewport contains the hero path without horizontal overflow.
+- Avoid hover-only facts in the narration.
 
-The interval table selects the corresponding Replay range.
+## 14. Verification
 
-Video expands and collapses without losing context.
+Before recording:
 
-The Jockey follow-up returns cited moments and those citations seek the Replay.
+- production build succeeds;
+- direct route reload succeeds;
+- app works with network disabled;
+- hero click synchronizes every visible layer;
+- recurrence click seeks correctly;
+- interval selection works;
+- evidence and provenance expand and collapse;
+- all timestamps and deltas match the fixture;
+- local media or poster loads;
+- no console-breaking error remains;
+- first useful render is under two seconds.
+- a target-viewport screenshot matches the reference hierarchy: header, dominant
+  Replay, selected moment row, interval comparison, and next-session action.
 
-The complete demo works with the network disabled except for an optional live Jockey call.
+## 15. Scope Cuts
+
+Cut first:
+
+1. free-form Ask Wake;
+2. Jockey-specific UI;
+3. full-session video;
+4. video expansion;
+5. heart-rate track;
+6. extra events and telemetry;
+7. decorative motion;
+8. nonessential navigation.
+
+Never cut:
+
+- full-session Replay context;
+- one shared clock;
+- hero selection;
+- inspectable evidence;
+- recurrence seek;
+- next-session drill;
+- sponsor provenance;
+- offline reliability.

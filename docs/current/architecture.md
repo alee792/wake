@@ -1,325 +1,390 @@
-<!-- Imported from https://docs.google.com/document/d/1JC7q3Y91WLZw_BBLJTNxBOi1-NnsVgh1U6qZh0wz3Vs/edit | Drive modified 2026-07-30T18:12:30.427Z -->
+# Wake Hackathon Architecture
 
-WAKE — ARCHITECTURE
+Status: Canonical four-hour build architecture
 
-Status: High-level product and agent architecture
-Purpose: Preserve the reasoning model while allowing implementation choices to change
+## 1. Architectural Thesis
 
-1. ARCHITECTURAL THESIS
+Wake materializes one reviewed Replay before the recording begins.
 
-Wake builds one Shared Performance Model of a completed workout. Specialized providers contribute measurements and observations; event synthesis organizes them into meaningful time windows; interpretation explains what changed; the coach produces concise, actionable guidance.
+The sponsor-backed pipeline runs at build time. The recorded application reads a
+deterministic fixture and local media, so no API, database, model, or network call
+can interrupt the demo.
 
-The system should lean on frontier models while retaining explicit contracts, evidence, timestamps, and fallbacks.
+```text
+BUILD TIME
 
-2. SYSTEM OVERVIEW
+Concept2 + TwelveLabs Pegasus full-video candidates
+    → selected highlight clips + Jockey recurrence
+    → Neo4j evidence graph
+    → AWS Strands agent using OpenAI
+    → reviewed Replay fixture + build manifest
 
-Inputs
-- workout video or videos
-- Concept2 CSV, TCX, FIT, or API-derived data
-- optional heart rate
-- optional workout intent
+RECORDING TIME
 
-Processing
-Concept2 normalization
-+ Pegasus observation path
-+ Jockey agentic reasoning path
-+ optional audio/HR specialists
-↓
-Observation Provider Contract
-↓
-Shared Performance Model
-↓
-Event synthesis and ranking
-↓
-Interpretation
-↓
-Coach
-↓
-Replay view model
+Replay fixture + local clips/posters
+    → React Replay app
+```
 
-3. AUTHORITY BY DATA TYPE
+This is a deliberately narrow hackathon architecture, not a production ingestion
+platform.
 
-Concept2 is authoritative for:
-- pace
-- power/watts
-- stroke rate
-- distance
-- interval structure
-- elapsed time after synchronization
+## 2. System Boundary
 
-Heart-rate source is authoritative for measured HR.
-
-Video providers are authoritative only for what is visibly observable. They must not override machine telemetry or infer invisible forces and physiology.
-
-Wake owns:
-- synchronization
-- normalization
-- event formation
-- evidence evaluation
-- confidence
-- coaching interpretation
-- product presentation
-
-4. OBSERVATION PROVIDER CONTRACT
-
-All providers emit a minimum shared interface while retaining provider-native observations.
-
-Required fields:
-- id
-- provider
-- source asset
-- start time
-- end time
-- observation type
-- factual description
-- confidence
-- evidence references
-- recording geometry when relevant
-
-Optional fields:
-- structured measurements
-- entities
-- recurrence group
-- parent/child observations
-- provider-native payload
-- limitations
-
-The contract is deliberately open. Wake should not constrain frontier models to today’s ontology. Novel observations may flow downstream, where synthesis agents accept, merge, reject, or ignore them.
-
-5. PEGASUS PATH — PER-VIDEO OBSERVATION
-
-Pegasus is the dependable observation engine for individual videos.
+### Build-time plane
 
 Responsibilities:
-- segment visually meaningful windows
-- describe visible actions and changes
-- produce timestamps
-- identify rhythm, pauses, stroke-cycle changes, broad sequencing, and visible events supported by the camera angle
-- return structured observations
 
-Pegasus does not own:
-- telemetry truth
-- causal attribution
-- coaching
-- cross-modal conclusions
+- normalize the Concept2 workout onto one clock;
+- analyze only selected video windows;
+- normalize provider outputs;
+- load the compact evidence graph;
+- retrieve one explanation bundle;
+- synthesize concise coaching;
+- validate citations and numerical claims;
+- emit immutable frontend artifacts.
 
-Recommended contract:
-Video → Pegasus prompt/schema → timestamped observations → provider adapter → Shared Performance Model.
+Build-time failures may reduce sponsor coverage, but must not prevent the local
+Replay from rendering.
 
-6. JOCKEY PATH — AGENTIC VIDEO INVESTIGATION
+### Recording-time plane
 
-Jockey is a second, genuinely useful reasoning path rather than a duplicate of Pegasus.
+Responsibilities:
 
-Recommended roles:
+- render the completed session;
+- maintain one shared playback clock;
+- synchronize event, evidence, interval, and media selection;
+- reveal cached evidence and sponsor provenance;
+- remain functional with the network disabled.
 
-6.1 Pivotal-moment discovery
-Ask Jockey to investigate the full workout corpus and propose the three to five moments most relevant to performance or technique. This is useful for discovering candidates not anticipated by a fixed ontology.
+The browser performs no coaching synthesis and reconstructs no graph logic.
 
-6.2 Recurrence analysis
-Given a selected Wake event, ask:
-“Where else does this pattern occur, and what changes before and after it?”
-Jockey searches across moments, intervals, angles, or sessions and returns cited evidence.
+## 3. Source Authority
 
-6.3 Cross-angle reasoning
-Place the normal front-view workout and a short guided side-view clip in the same knowledge store. Ask whether the side view supports, contradicts, or refines a pattern seen in the front view.
+Concept2 is authoritative for:
 
-6.4 Multi-turn debrief
-Use an agent session for follow-up questions without forcing Wake to predefine every query. Examples:
-- Was this isolated or recurring?
-- Which interval handled the same rate most efficiently?
-- What changed after the athlete reset?
-- Show the clearest visual examples.
+- elapsed time;
+- work and recovery structure;
+- pace;
+- watts;
+- stroke rate;
+- distance;
+- recorded heart rate when present.
 
-6.5 Structured event proposals
-Request a schema containing ranked candidate events, time windows, descriptions, cited moments, confidence, and limitations. Wake validates and fuses these proposals with telemetry.
+TwelveLabs is authoritative only for timestamped descriptions of visible or audible
+content it actually analyzed.
 
-6.6 Highlight/debrief assembly
-Optionally use Jockey to propose a short set of clips for the final debrief. Wake controls final ordering and coaching language.
+Neo4j is authoritative for the curated relationships in the evidence bundle.
 
-7. WHY BOTH PATHS
+OpenAI produces coaching language from validated evidence. It does not create
+measurements or override Concept2.
 
-Pegasus and Jockey solve different problems.
+Wake owns:
 
-Pegasus:
-- predictable per-video observation
-- efficient extraction
-- explicit structured outputs
-- stable basis for deterministic Replay generation
+- timestamp normalization;
+- manual alignment;
+- evidence selection;
+- event boundaries;
+- confidence and limitations;
+- final presentation;
+- human review.
 
-Jockey:
-- corpus-level investigation
-- open-ended discovery
-- recurrence and comparison
-- multi-turn questions
-- cited agentic answers
+## 4. Golden-Session Time Model
 
-Wake should not force every session through both paths. A provider router may choose:
-- Pegasus only for a simple single-video upload
-- Pegasus + Jockey for a richer debrief
-- Jockey over multiple sessions or angles
-- curated/cached fixtures for the demo
+The workout contains four seven-minute blocks. CSV time resets at each block.
 
-8. SHARED PERFORMANCE MODEL
+Normalize a row with:
 
-The model is a time-indexed graph or structured document containing:
-- session metadata
-- synchronized measurements
-- observations
-- events
-- interpretations
-- evidence links
-- recommendations
-- provenance and confidence
+```text
+globalSeconds = localSeconds + blockIndex × 420
+```
 
-Conceptual entities:
-Session
-Phase
-Interval
-MeasurementSeries
-Observation
-Event
-Insight
-Evidence
-Recommendation
-SourceAsset
-ProviderRun
+The TCX phase boundaries are canonical:
 
-Events are the primary reasoning object. An event may combine several observations, such as:
-- rate increases
-- power decreases
-- pace worsens
-- recovery visibly rushes
+```text
+0–240       Work 1
+240–420     Recovery 1
+420–660     Work 2
+660–840     Recovery 2
+840–1080    Work 3
+1080–1260   Recovery 3
+1260–1500   Work 4
+1500–1680   Recovery 4
+```
 
-The resulting interpretation may be:
-“The athlete chased cadence without preserving pressure.”
+Video uses explicit mappings rather than pretending a short clip spans the full
+workout:
 
-9. EVENT SYNTHESIS
+```text
+Replay 8:45–9:05 → hero-clip.mp4 seconds 3–23
+```
 
-Event synthesis should:
-- cluster observations by overlapping time and semantic relationship
-- compare changes against nearby baselines and other intervals
-- distinguish isolated anomalies from recurring patterns
-- rank by coaching value, evidence quality, and demo clarity
-- preserve conflicting evidence
-- generate concise limitations
+The final mappings depend on verified media.
 
-For the hackathon, events may be precomputed and manually reviewed. The data structure must still reflect the production architecture.
+## 5. Sponsor Roles
 
-10. COACH LAYER
+### TwelveLabs
 
-The coach consumes validated events, not raw provider output.
+Pegasus 1.5 is a human-operated video-discovery step. The project owner runs one
+asynchronous `general` analysis against the ready 28-minute asset using
+`AnalyzePromptV2` and an `AsyncResponseFormat(type="json_schema")`, then pastes the
+real JSON output into the workspace. The prompt explicitly inspects five coverage
+windows spanning 0:00–28:00, preserves at least one factual observation per
+window, and returns no more than ten genuinely pivotal moments.
 
-It produces:
-- headline
-- explanation
-- supporting deltas
-- evidence summary
-- confidence statement
-- recommendation or drill
+Preserve the raw task response plus:
 
-The coach should use ordinary rowing language. It must never expose hidden chain-of-thought, claim provider consensus as proof, or diagnose injury.
+- asset, task, and generation IDs;
+- requested analysis mode, model, prompt, and schema;
+- coverage observations and final observed timestamp;
+- moment start and end time;
+- direct visual observation;
+- change from preceding strokes;
+- possible interpretation kept separate from the observation;
+- repeated timestamps;
+- confidence and limitations.
 
-11. REPLAY VIEW MODEL
+Review the candidates against Concept2 and select two or three clips:
 
-The frontend should receive one denormalized Replay payload containing:
-- session and interval metadata
-- aligned telemetry samples
-- event markers
-- coach cues
-- selected-event details
-- evidence references
-- video mappings
-- interval summaries
-- next-session plan
+1. the hero insight;
+2. a recurrence or comparison;
+3. an optional positive/control moment.
 
-This keeps the browser simple and prevents UI components from reconstructing reasoning.
+The Data/Jockey lieutenant validates the pasted output, maps selected media times
+to Replay time, and prepares only those clips or posters for the recorded app. Save
+the raw Pegasus response separately from Wake's curated selection. Do not build or
+run a Pegasus integration in the app. Use the handoff contract in
+[TwelveLabs Pegasus Manual Handoff](../twelvelabs-pegasus-full-video-analysis.md).
 
-12. SYNCHRONIZATION
+Jockey is the programmatic TwelveLabs integration. Create or reuse assets, add them
+to a knowledge store, wait for the items to become ready, then call the Responses
+API against the selected highlights with one narrow recurrence/comparison
+question. Save:
 
-Normalize all timestamps to elapsed workout seconds.
+- knowledge-store and item IDs;
+- response and session IDs;
+- cited moments;
+- raw response;
+- normalized recurrence observation;
+- limitations.
 
-Maintain mappings between:
-- source video time
-- Concept2 workout time
-- agent-cited source time
-- Replay time
+Jockey remains a research-preview dependency. If ingestion is not ready by the
+integration cutoff, retain the code and omit unsupported Jockey claims from the
+recording.
 
-Store alignment confidence and manual offsets. For the hackathon, manually verified synchronization is acceptable and preferable to an unreliable automated alignment.
+Minimal lifecycle:
 
-13. QUALITY AND SAFETY GATES
+```text
+asset
+  → knowledge store
+  → knowledge-store item
+  → poll until ready
+  → POST /v1.3/responses
+  → cited recurrence observation
+```
 
-Before an insight is user-visible:
-- telemetry claims must match normalized source data
-- timestamps must resolve to valid media windows
-- visible claims must be possible from the recording geometry
-- causal language must be softened unless strongly supported
-- confidence must reflect evidence quality, not model eloquence
-- conflicting evidence must be retained or the claim withheld
+### Neo4j
 
-14. FAILURE MODES AND FALLBACKS
+Store only the relationships needed to explain the hero insight:
 
-Jockey is an agentic enhancement, not a single point of failure.
+- workout and phases;
+- two events;
+- supporting and contradicting observations;
+- providers;
+- one repeated pattern;
+- one insight;
+- one drill.
 
-Mode A — full:
-Pegasus + Jockey + Concept2 + coach.
+Expose one parameterized read by `insightId`. The cached fallback must use the same
+`ExplanationBundle` shape.
 
-Mode B — Jockey unavailable:
-Pegasus + cached recurrence results + Concept2 + coach.
+See [Neo4j Evidence Graph](../neo4j-shared-evidence-graph.md).
 
-Mode C — provider unavailable:
-Curated observation fixture + real telemetry + coach.
+### OpenAI
 
-Mode D — partial capture:
-Telemetry-led Replay with reduced visual specificity.
+OpenAI consumes the Neo4j explanation bundle and returns structured coaching. Use
+the OpenAI Responses provider routed through Amazon Bedrock Mantle:
 
-The Replay schema and frontend remain identical across modes.
+```text
+Strands OpenAIResponsesModel
+    model: openai.gpt-oss-120b
+    transport: Amazon Bedrock Mantle
+    authentication: existing AWS configuration
+```
 
-15. HACKATHON IMPLEMENTATION RECOMMENDATION
+Do not require a direct OpenAI API key. Keep model ID, AWS profile, and region
+configurable through environment or the existing AWS config.
 
-Use a fixture-first pipeline:
-1. Parse and normalize the supplied Concept2 workout.
-2. Upload the front and side video assets to Twelve Labs.
-3. Run Pegasus for timestamped per-video observations.
-4. Put both assets into a Jockey knowledge store.
-5. Ask Jockey for ranked pivotal moments in structured form.
-6. Select one strong event and ask a recurrence follow-up.
-7. Fuse the chosen findings with telemetry in a reviewed Replay JSON fixture.
-8. Build the demo against the fixture.
-9. Keep live provider calls behind adapters and show one controlled live/cached Jockey interaction.
+Return:
 
-This proves an agentic architecture without risking the product demo on latency or research-preview behavior.
+```text
+headline
+explanation
+cue
+drill
+successCriterion
+citedObservationIds
+limitation
+```
 
-16. GUIDING RULE
+Validate every citation and numerical statement against the input bundle before
+the output enters the Replay fixture.
 
-Providers describe and investigate. Wake decides what the evidence means and how to coach it.
+### AWS Strands
 
-Jockey Telemetry Context Pattern
+Use one Strands agent configured with `OpenAIResponsesModel` through Bedrock Mantle
+and a small set of deterministic tools:
 
-For the hackathon, Wake should not ask Jockey to ingest raw FIT, TCX, CSV, or full stroke-by-stroke telemetry. Wake owns deterministic parsing and numerical analysis. It should derive interval boundaries, anomalies, candidate windows, and concise comparisons before invoking Jockey.
+- retrieve the explanation bundle;
+- validate evidence references;
+- emit the structured coaching result.
 
-Wake sends Jockey a compact context object containing:
-- workout structure and duration;
-- relevant interval summaries;
-- one or more candidate video windows;
-- the telemetry change that motivated each window;
-- a narrow visual research question.
+The Strands run is precomputed. Record it in the build manifest; do not run it
+during the recording.
 
-Example context:
-{
-  "workout": {"type": "4 x 4:00 / 3:00 rest", "duration_s": 2321},
-  "candidate_windows": [
-    {
-      "start_s": 1082,
-      "end_s": 1102,
-      "reason": "stroke rate rises from 29 to 32 while watts fall from 178 to 162",
-      "question": "What visible changes, if any, coincide with this telemetry change?"
-    }
-  ]
+## 6. Contracts
+
+### ProviderObservation
+
+```ts
+type ProviderObservation = {
+  id: string
+  provider:
+    | "concept2"
+    | "twelvelabs-pegasus"
+    | "twelvelabs-jockey"
+    | "manual"
+  startSeconds: number
+  endSeconds: number
+  kind: "measurement" | "visual" | "technique" | "context"
+  statement: string
+  confidence?: number
+  citations: string[]
+  limitations: string[]
+  generationMode: "api" | "cached-api" | "derived" | "manual"
+  rawResponsePath?: string
 }
+```
 
-Jockey treats Concept2 numbers as authoritative context, inspects the indexed video, and returns timestamped visual findings, counterevidence, and confidence. It must distinguish visible observation from interpretation and must not infer force, joint loading, or physiology from video alone.
+### ExplanationBundle
 
-The final coaching conclusion remains Wake's responsibility:
-Concept2 telemetry -> deterministic candidate event -> compact Jockey context -> cited visual findings -> Wake reconciliation -> coaching insight.
+```ts
+type ExplanationBundle = {
+  insight: Insight
+  event: Event
+  segment: Segment
+  supportingEvidence: ProviderObservation[]
+  contradictingEvidence: ProviderObservation[]
+  recurrences: Event[]
+  drill: Drill
+  source: "neo4j" | "cached-neo4j"
+}
+```
 
-Hackathon constraint: limit this to three to six high-value windows in the hero workout. Do not build generalized raw-file ingestion, unrestricted agent loops, or a telemetry-analysis engine inside Jockey.
+### ReplayFixture
+
+```ts
+type ReplayFixture = {
+  schemaVersion: "1.0"
+  session: Session
+  phases: Phase[]
+  intervals: Interval[]
+  telemetry: TelemetrySample[]
+  events: ReplayEvent[]
+  explanations: Record<string, ExplanationBundle>
+  recommendations: Recommendation[]
+  mediaMappings: MediaMapping[]
+  initialState: ReplayState
+  buildManifest: BuildManifest
+}
+```
+
+### BuildManifest
+
+Each step records:
+
+- step ID;
+- provider and model/service;
+- execution mode;
+- input and output paths;
+- provider response ID when real;
+- timestamp;
+- optional content hash;
+- human-reviewed flag.
+
+Secrets never enter the manifest.
+
+## 7. Validation Gates
+
+Before fixture emission:
+
+- phase bounds cover 0–1680 seconds;
+- all telemetry samples are globally sorted;
+- all event and evidence timestamps are in range;
+- every referenced ID resolves;
+- metric deltas can be reproduced;
+- provider attribution matches stored artifacts;
+- OpenAI citations exist in the explanation bundle;
+- media mappings resolve to valid local assets;
+- unsupported biomechanical claims are rejected.
+
+## 8. Suggested Repository Shape
+
+```text
+app/
+  src/
+    domain/
+    generated/
+    replay/
+    moment/
+    provenance/
+  public/media/
+
+pipeline/
+  concept2/
+  twelvelabs/
+  neo4j/
+  strands/
+  openai/
+  build/
+
+artifacts/
+  raw/
+  normalized/
+  cached/
+  manifests/
+
+coordination/
+docs/
+```
+
+The Integration Captain freezes exact paths before parallel implementation begins.
+
+## 9. Failure Modes
+
+| Failure | Recorded-path response |
+|---|---|
+| Pegasus analysis unavailable | Hand-select clips, label selection manual, and do not claim Pegasus analysis |
+| Jockey unavailable | Omit Jockey; use the imported Pegasus observation and a manually curated recurrence labeled manual |
+| Neo4j unavailable | Use the captured query result marked `cached-neo4j` |
+| OpenAI unavailable | Use a captured real output; otherwise label reviewed coaching manual |
+| Strands unavailable | Do not claim Strands orchestration |
+| Video missing | Render the mapped poster and Replay timestamp |
+| Network unavailable | No effect on the recording |
+
+## 10. Explicitly Deferred
+
+- upload and processing UI;
+- generalized ingestion;
+- live provider calls;
+- runtime agent swarm;
+- graph visualization;
+- GraphRAG, embeddings, and GDS;
+- cross-session history;
+- automatic synchronization;
+- production deployment architecture;
+- authentication and multi-user state.
+
+## 11. Architectural North Star
+
+Sponsor tools create and connect evidence at build time. The athlete experiences
+one calm, coherent Replay at recording time.

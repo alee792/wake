@@ -4,16 +4,108 @@ Owner: Integration Captain
 
 Record decisions newest first. Decisions here override proposals in status files.
 
-### D-014 — PENDING: Pegasus source-clock alignment and integration hold
+### D-018 — Multi-insight expansion is deterministic and Aura-backed
 
-- Time: hold recorded 2026-07-30 13:38 PDT; final decision pending
+- Time: 2026-07-30 15:09 PDT
+- Requested by: Project owner
+- Decision: Expand Replay from one Insight/two windows to a reviewed collection
+  of five independently selectable insights derived deterministically from
+  Concept2 telemetry, D-014 evidence, and D-017 athlete marks. Persist/query the
+  collection through live Aura with an identical offline cache. Bedrock may
+  narrate reviewed facts but is not required to discover or store them.
+- Reason: The current single-bundle contract collapses a workout with multiple
+  useful patterns into one story. Real insight quality comes from reproducible
+  comparisons and goal evaluation, not additional prose generation.
+- Files/contracts affected: New additive InsightCollection artifacts and
+  validators under `graph/**`, Aura nodes/relationships, Replay insight
+  navigation, provenance, and replacement recording verification.
+- Required follow-up: Include Work 2 minute progression, Work 3 late surge, Work
+  4 strongest interval, the post-goal sub-2:15 evaluation, and the existing
+  similar-rate/different-output comparison. Preserve source windows,
+  calculations, citations, limitations, and review state for each.
+- Cut or fallback: Do not infer visual cause. D-014/D-015 remain immutable.
+  Athlete marks remain athlete-verified with `jockeyDetected: false`.
+
+### D-017 — Athlete Goal and Flag are distinct Replay events
+
+- Time: 2026-07-30 14:53 PDT
+- Requested by: Project owner
+- Decision: Accept the athlete-authored verbal goal and one-finger attention
+  marker as a new Replay event family, displayed as distinct `Goal` and `Flag`
+  events. They are athlete-verified, not Jockey-detected. Each accepted event
+  requires a reviewed local MP4/poster, original video-local time, calibrated
+  workout-global time, provenance, and review state before it appears.
+- Reason: Athlete voice notes and intentional gestures let the athlete preserve
+  goals and attention bookmarks during the workout for later review.
+- Files/contracts affected: Athlete-mark normalization, local media manifest,
+  Replay timeline/view models, event detail/media panel, provenance, replacement
+  recording, and G-005 verification.
+- Required follow-up: Data/Jockey must resolve the verbal-goal clock conflict
+  before clipping: reported video `21:25` maps to workout `21:56.089`, while Work
+  4 begins at workout `21:00` / video `20:28.911`. Replay uses the reviewed
+  canonical result only and renders Goal and Flag with different shapes, labels,
+  colors, and accessible names.
+- Cut or fallback: Never claim Jockey detected or transcribed either mark. A
+  mark without a reviewed local clip/poster remains absent from the recording.
+
+### D-016 — Next-session output is an executable Concept2 workout
+
+- Time: 2026-07-30 14:40 PDT
+- Requested by: Project owner
+- Decision: Replace the cue-only drill handoff with an additive
+  `WorkoutPrescription` artifact generated and validated by the Strands/Bedrock
+  lane. It must specify RowErg workout type, exact ordered work/rest steps,
+  pace/power and stroke-rate targets, warm-up/cool-down guidance, a measurable
+  success criterion, evidence citations, limitations, and human review state.
+  It must also include concise ErgData `Create > Variable Intervals` programming
+  instructions.
+- Reason: “Hold pressure before building rate” is advice, not a workout the
+  athlete can take to a PM5 and execute.
+- Files/contracts affected: Strands schemas/validation and cached-real output,
+  BuildManifest/provenance, Replay next-session card, narration, and G-004.
+- Required follow-up: Strands generates one evidence-grounded prescription with
+  the final Ask Wake response. Replay renders the ordered intervals and a
+  copyable ErgData setup recipe while preserving the completed hero first frame.
+- Cut or fallback: Do not claim a direct ErgData/PM5 import or API transfer
+  unless an official supported interface is actually implemented and verified.
+  The safe delivery is an exact, copyable variable-interval recipe.
+
+### D-015 — Autonomous Jockey cross-angle context accepted for Ask Wake
+
+- Time: 2026-07-30 14:25 PDT
 - Requested by: Project owner / Data and Jockey Intelligence
-- Interim decision: Hold all Pegasus- or Jockey-derived Neo4j, Replay, coaching,
-  provenance, narration, and recording ingestion. The TCX workout clock starts at
-  `13:35:00Z`; video filename/metadata place video start at approximately
-  `13:35:31.089Z`. Normalize provider timestamps with
-  `workoutSeconds = videoSeconds + 31.089`, carrying estimated uncertainty
-  `±0.7s`.
+- Decision: Accept
+  `artifacts/twelvelabs/runs/20260730-212016-autonomous-cross-angle/normalized-supplemental-context.json`
+  as real Jockey API evidence for the Ask Wake candidate-mechanism narrative.
+  The store-wide request supplied no selection, item/source name, or side-view
+  hint; Jockey independently selected and cited the supplemental low-angle item.
+- Reason: The primary full-session angle could not resolve a visible mechanism.
+  Jockey's autonomous cross-angle investigation found a directly visible
+  drive-sequencing pattern that is useful as a coaching hypothesis and returned
+  explicit non-occurrence and non-causation boundaries.
+- Files/contracts affected: Ask Wake context/query artifact, Strands/Bedrock
+  prompt and validation, supplemental media manifest, Replay Ask Wake panel,
+  BuildManifest, provenance, and replacement narration/recording.
+- Required follow-up: Neo4j stores and queries this as supplemental
+  candidate-mechanism context without attaching its clip-local seconds to the
+  workout-global Replay event. Strands cites the context alongside both Concept2
+  windows and the calibrated Pegasus limitation. Replay packages the reviewed
+  side-view clip and keeps its clock visibly clip-local.
+- Cut or fallback: Never claim the pattern occurred in the hero/comparison
+  windows or caused the 58 W difference. If the Ask Wake integration misses its
+  cut, preserve the artifact in provenance and omit the interactive claim.
+
+### D-014 — Clock-aligned Pegasus evidence accepted for post-freeze integration
+
+- Time: hold recorded 2026-07-30 13:38 PDT; finalized 2026-07-30 13:50 PDT
+- Requested by: Project owner / Data and Jockey Intelligence
+- Decision: Accept only the five canonical observations in
+  `artifacts/twelvelabs/pegasus-normalized-evidence.json` for downstream
+  integration. The TCX workout clock starts at `13:35:00Z`; video
+  filename/metadata place video start at approximately `13:35:31.089Z`.
+  Normalize provider timestamps with `workoutSeconds = videoSeconds + 31.089`,
+  carrying estimated uncertainty `±0.7s`. Release Neo4j, Replay, BuildManifest,
+  and provenance integration for these five observations only.
 - Reason: Earlier Pegasus passes treated video seconds as Concept2 workout
   seconds. Their interval comparisons and markers are therefore misaligned and
   cannot support Replay claims. For example, video hydration markers `11:08` and
@@ -22,14 +114,18 @@ Record decisions newest first. Decisions here override proposals in status files
   any Jockey normalization, Neo4j provider observations and explanation
   bundle/cache, Replay fixture evidence, BuildManifest, provenance, narration,
   and any replacement recording.
-- Required follow-up: Data/Jockey completes corrected aligned passes and
-  regenerates `artifacts/twelvelabs/pegasus-normalized-evidence.json` with the
-  mapping, uncertainty, and raw provenance. Integration Captain validates the
-  regenerated artifact before finalizing D-014 and releasing any downstream
-  ingestion.
+- Required follow-up: Data/Jockey preserves
+  `artifacts/twelvelabs/pegasus-normalized-evidence.json`, its alignment
+  artifact, corrected runs, and exclusions. Neo4j imports only the five stable
+  observation IDs and rebuilds its explanation bundle/cache. Replay consumes only
+  that rebuilt bundle and the calibrated media mapping. BuildManifest and
+  provenance record real Pegasus API execution. Re-run graph tests, fixture
+  validation, `npm test`, `npm run build`, offline media verification, and
+  recording review before replacing the D-013 take.
 - Cut or fallback: D-013 remains authoritative for the completed recording.
   Earlier unshifted Pegasus comparisons must not be integrated. No downstream
-  owner begins ingestion until the captain records D-014 as final.
+  claim may say identical mechanics, core engagement, an exact restart-stroke
+  count, or causal hydration. Pressure/connection remains a labeled hypothesis.
 
 ### D-013 — Final content and sponsor inventory frozen
 

@@ -1,0 +1,353 @@
+{
+  "schemaVersion": "1.0",
+  "reviewState": "human-reviewed",
+  "source": {
+    "provider": "twelvelabs",
+    "assetId": "6a6bb004c1ac59f5d1d0c0a8",
+    "filename": "PXL_20260730_133531089.mp4",
+    "durationSeconds": 1695.254
+  },
+  "clockAlignment": {
+    "artifactPath": "artifacts/twelvelabs/video-concept2-alignment.json",
+    "formula": "workoutSeconds = videoSeconds + 31.089",
+    "offsetSeconds": 31.089,
+    "estimatedUncertaintySeconds": 0.7
+  },
+  "mediaMappings": [
+    {
+      "id": "media-work2-hero",
+      "role": "hero",
+      "assetId": "6a6bb004c1ac59f5d1d0c0a8",
+      "replayStartSeconds": 525,
+      "replayEndSeconds": 545,
+      "focusSeconds": 535,
+      "sourceVideoStartSeconds": 493.911,
+      "sourceVideoEndSeconds": 513.911,
+      "cutSourceStartSeconds": 491.911,
+      "cutSourceEndSeconds": 515.911,
+      "mediaStartSeconds": 2,
+      "mediaEndSeconds": 22,
+      "src": "artifacts/media/wake-hero-work2.mp4",
+      "poster": "artifacts/media/wake-hero-work2.jpg",
+      "reviewState": "human-reviewed",
+      "clipDurationSeconds": 24.021333,
+      "width": 1280,
+      "height": 720,
+      "videoCodec": "h264",
+      "pixelFormat": "yuv420p",
+      "audioCodec": "aac",
+      "fileSizeBytes": 15014786,
+      "sha256": "c0f751c2963daf9cbdbba75cbf1065d4a587860eeb404735dc4d03372ae621a4",
+      "posterFileSizeBytes": 227107,
+      "posterSha256": "17b2edfb41dbb9c3363ec509d695da4b5efdc257a0bd5b5e55756758be46caf5"
+    },
+    {
+      "id": "media-work3-comparison",
+      "role": "comparison",
+      "assetId": "6a6bb004c1ac59f5d1d0c0a8",
+      "replayStartSeconds": 1025,
+      "replayEndSeconds": 1050,
+      "focusSeconds": 1037,
+      "sourceVideoStartSeconds": 993.911,
+      "sourceVideoEndSeconds": 1018.911,
+      "cutSourceStartSeconds": 991.911,
+      "cutSourceEndSeconds": 1020.911,
+      "mediaStartSeconds": 2,
+      "mediaEndSeconds": 27,
+      "src": "artifacts/media/wake-comparison-work3.mp4",
+      "poster": "artifacts/media/wake-comparison-work3.jpg",
+      "reviewState": "human-reviewed",
+      "clipDurationSeconds": 29.021333,
+      "width": 1280,
+      "height": 720,
+      "videoCodec": "h264",
+      "pixelFormat": "yuv420p",
+      "audioCodec": "aac",
+      "fileSizeBytes": 19152073,
+      "sha256": "d6936dba1caccb7ca44155121cb565fe7104a12be417faa794f6a3500fad13f2",
+      "posterFileSizeBytes": 146955,
+      "posterSha256": "c0d2d4c2d007192f0bb46b46c6ee984bf0be4a3e203a68919176f00f83cef85c"
+    }
+  ],
+  "supplementalMedia": [
+    {
+      "id": "media-sideview-candidate-mechanism",
+      "role": "candidate-mechanism",
+      "assetId": "6a6baae023f9bfaddae553a8",
+      "timestampBasis": "clip-local",
+      "mediaStartSeconds": 0,
+      "mediaEndSeconds": 43.281683,
+      "src": "artifacts/media/wake-sideview-candidate-mechanism.mp4",
+      "poster": "artifacts/media/wake-sideview-candidate-mechanism.jpg",
+      "reviewState": "human-reviewed",
+      "clipDurationSeconds": 43.281683,
+      "width": 1280,
+      "height": 720,
+      "videoCodec": "h264",
+      "pixelFormat": "yuv420p",
+      "audioCodec": "aac",
+      "fileSizeBytes": 26051155,
+      "sha256": "22de1dd28bfecdbfefde113fbc4146aa589e46ea8c45a334f9024734334e2eca",
+      "posterFileSizeBytes": 95276,
+      "posterSha256": "0bf091256f67ea6dfa8b7d22eebc3f903bcf17a0176b6270b19fb222fb9d2e0a",
+      "limitations": [
+        "This source uses clip-local timestamps and is not mapped to workout-global Replay time.",
+        "It is supplemental candidate-mechanism context, not proof that a pattern occurred in either selected workout window."
+      ]
+    }
+  ],
+  "athleteEventMedia": [
+    {
+      "eventId": "goal-work4-split-target",
+      "role": "goal",
+      "statement": "Keep the split under 2:15",
+      "targetSplitSecondsPer500m": 135,
+      "assetId": "6a6bb004c1ac59f5d1d0c0a8",
+      "sourceVideoTimestamp": "21:25.000",
+      "sourceVideoTimeSeconds": 1285,
+      "replayTimestamp": "21:56.089",
+      "replayTimeSeconds": 1316.089,
+      "cutSourceStartSeconds": 1279,
+      "cutSourceEndSeconds": 1291,
+      "mediaFocusOffsetSeconds": 6,
+      "src": "artifacts/media/athlete-marks/wake-goal-work4-split-target.mp4",
+      "poster": "artifacts/media/athlete-marks/wake-goal-work4-split-target.jpg",
+      "clipDurationSeconds": 12.021333,
+      "width": 1280,
+      "height": 720,
+      "videoCodec": "h264",
+      "pixelFormat": "yuv420p",
+      "audioCodec": "aac",
+      "fileSizeBytes": 7762067,
+      "sha256": "9bed74497e76c2612f739edfaaaeef2d9e5c8e1af7e84343a65d2ff3ce0cbeb3",
+      "posterFileSizeBytes": 96799,
+      "posterSha256": "f15bef9f6b6e1ebc08b357a5b178e04565fa27f96c1cdb72e9203f3e3e9ee736",
+      "reviewState": "human-reviewed",
+      "provenance": {
+        "athleteVerified": true,
+        "transcriptionMode": "manual-athlete-verified",
+        "jockeyDetected": false,
+        "providerTranscriptionAvailable": false,
+        "sourceArtifact": "artifacts/twelvelabs/athlete-notes-bookmarks.json",
+        "decision": "coordination/DECISIONS.md#d-017--athlete-goal-and-flag-are-distinct-replay-events"
+      },
+      "limitations": [
+        "Jockey did not detect or transcribe this statement.",
+        "The canonical wording and timestamp retain athlete-verified manual provenance."
+      ]
+    },
+    {
+      "eventId": "bookmark-work3-rest-finger1",
+      "role": "flag",
+      "assetId": "6a6bb004c1ac59f5d1d0c0a8",
+      "sourceVideoTimestamp": "19:07.000",
+      "sourceVideoTimeSeconds": 1147,
+      "replayTimestamp": "19:38.089",
+      "replayTimeSeconds": 1178.089,
+      "cutSourceStartSeconds": 1143,
+      "cutSourceEndSeconds": 1152,
+      "mediaFocusOffsetSeconds": 4.7,
+      "src": "artifacts/media/athlete-marks/wake-flag-work3-rest-finger1.mp4",
+      "poster": "artifacts/media/athlete-marks/wake-flag-work3-rest-finger1.jpg",
+      "clipDurationSeconds": 9.021333,
+      "width": 1280,
+      "height": 720,
+      "videoCodec": "h264",
+      "pixelFormat": "yuv420p",
+      "audioCodec": "aac",
+      "fileSizeBytes": 5836208,
+      "sha256": "0691912e2c99ac2979fb3b3bb3a89298058de12009766f1b72b9bdce619fef1e",
+      "posterFileSizeBytes": 80340,
+      "posterSha256": "91d9897e4593e12834610e1c91912ca40ad4ca998214fe6a7424a772f78bd766",
+      "reviewState": "human-reviewed",
+      "provenance": {
+        "athleteVerified": true,
+        "gesture": "right-hand index finger raised",
+        "fingerCount": 1,
+        "jockeyDetected": false,
+        "sourceArtifact": "artifacts/twelvelabs/athlete-notes-bookmarks.json",
+        "decision": "coordination/DECISIONS.md#d-017--athlete-goal-and-flag-are-distinct-replay-events"
+      },
+      "limitations": [
+        "Jockey did not detect this gesture.",
+        "The event timestamp retains the athlete-reported whole-second mark; the selected poster is 0.7 seconds later within the reviewed gesture."
+      ]
+    }
+  ],
+  "insightMedia": [
+    {
+      "insightId": "insight-work2-progressive-build",
+      "reviewState": "human-reviewed",
+      "mediaItems": [
+        {
+          "id": "media-insight-work2-progressive-opening",
+          "role": "opening-context",
+          "assetId": "6a6bb004c1ac59f5d1d0c0a8",
+          "replayStartSeconds": 420,
+          "replayEndSeconds": 450,
+          "sourceVideoStartSeconds": 388.911,
+          "sourceVideoEndSeconds": 418.911,
+          "mediaStartSeconds": 0,
+          "mediaEndSeconds": 30,
+          "mediaFocusOffsetSeconds": 15,
+          "src": "artifacts/media/insights/wake-insight-work2-progressive-opening.mp4",
+          "poster": "artifacts/media/insights/wake-insight-work2-progressive-opening.jpg",
+          "clipDurationSeconds": 30.021333,
+          "width": 1280,
+          "height": 720,
+          "videoCodec": "h264",
+          "pixelFormat": "yuv420p",
+          "audioCodec": "aac",
+          "fileSizeBytes": 18175434,
+          "sha256": "378932a01d60d52b77ccf83eb168af75477508f17f98e50e10303ad2651b2eb5",
+          "posterFileSizeBytes": 58262,
+          "posterSha256": "7dbca824cfd4004ae5296267c92156294a07f86fc0b20eb2bc362b9ded32c8ef",
+          "reviewState": "human-reviewed"
+        },
+        {
+          "id": "media-insight-work2-progressive-closing",
+          "role": "closing-context",
+          "assetId": "6a6bb004c1ac59f5d1d0c0a8",
+          "replayStartSeconds": 630,
+          "replayEndSeconds": 660,
+          "sourceVideoStartSeconds": 598.911,
+          "sourceVideoEndSeconds": 628.911,
+          "mediaStartSeconds": 0,
+          "mediaEndSeconds": 30,
+          "mediaFocusOffsetSeconds": 15,
+          "src": "artifacts/media/insights/wake-insight-work2-progressive-closing.mp4",
+          "poster": "artifacts/media/insights/wake-insight-work2-progressive-closing.jpg",
+          "clipDurationSeconds": 30.021333,
+          "width": 1280,
+          "height": 720,
+          "videoCodec": "h264",
+          "pixelFormat": "yuv420p",
+          "audioCodec": "aac",
+          "fileSizeBytes": 18972121,
+          "sha256": "c4c8a47032bae431c6fba37971bbfd39fb22ca104636512bd65b209a7e16a7de",
+          "posterFileSizeBytes": 67606,
+          "posterSha256": "4d2ae448437f3478db37a343b26fc7b517f79a799a02d14feffdf7f6e4c72e00",
+          "reviewState": "human-reviewed"
+        }
+      ],
+      "limitations": [
+        "These clips provide synchronized visual context only.",
+        "The progressive-build classification comes from deterministic Concept2 minute averages; video does not prove the result or its cause."
+      ]
+    },
+    {
+      "insightId": "insight-work3-late-surge",
+      "reviewState": "human-reviewed",
+      "mediaItems": [
+        {
+          "id": "media-insight-work3-surge-baseline",
+          "role": "opening-baseline",
+          "assetId": "6a6bb004c1ac59f5d1d0c0a8",
+          "replayStartSeconds": 840,
+          "replayEndSeconds": 870,
+          "sourceVideoStartSeconds": 808.911,
+          "sourceVideoEndSeconds": 838.911,
+          "mediaStartSeconds": 0,
+          "mediaEndSeconds": 30,
+          "mediaFocusOffsetSeconds": 15,
+          "src": "artifacts/media/insights/wake-insight-work3-surge-baseline.mp4",
+          "poster": "artifacts/media/insights/wake-insight-work3-surge-baseline.jpg",
+          "clipDurationSeconds": 30.021333,
+          "width": 1280,
+          "height": 720,
+          "videoCodec": "h264",
+          "pixelFormat": "yuv420p",
+          "audioCodec": "aac",
+          "fileSizeBytes": 18637544,
+          "sha256": "2c8c564254bc06e85e0709dcfd90e52ce54b1a9c6630de303d9b3f1d1bcb4299",
+          "posterFileSizeBytes": 66599,
+          "posterSha256": "186b142913b29dbaf835a8e37d86e6064927bda501eaa4b5565d9fe201a01f48",
+          "reviewState": "human-reviewed"
+        },
+        {
+          "referenceType": "mediaMapping",
+          "mediaId": "media-work3-comparison",
+          "role": "late-window",
+          "reuse": true
+        }
+      ],
+      "limitations": [
+        "The reused late window covers Replay 1025–1050, not the complete fourth minute.",
+        "The late-surge conclusion comes from deterministic Concept2 telemetry; video does not prove the result or its cause."
+      ]
+    },
+    {
+      "insightId": "insight-work4-strongest-interval",
+      "reviewState": "human-reviewed",
+      "mediaItems": [
+        {
+          "id": "media-insight-work4-finish-context",
+          "role": "representative-finish-context",
+          "assetId": "6a6bb004c1ac59f5d1d0c0a8",
+          "replayStartSeconds": 1455,
+          "replayEndSeconds": 1485,
+          "sourceVideoStartSeconds": 1423.911,
+          "sourceVideoEndSeconds": 1453.911,
+          "mediaStartSeconds": 0,
+          "mediaEndSeconds": 30,
+          "mediaFocusOffsetSeconds": 15,
+          "src": "artifacts/media/insights/wake-insight-work4-finish-context.mp4",
+          "poster": "artifacts/media/insights/wake-insight-work4-finish-context.jpg",
+          "clipDurationSeconds": 30.021333,
+          "width": 1280,
+          "height": 720,
+          "videoCodec": "h264",
+          "pixelFormat": "yuv420p",
+          "audioCodec": "aac",
+          "fileSizeBytes": 19101189,
+          "sha256": "f841e745e6181e9498e5797edabc9d14e56f0911b4ab53f2639e4f9905ef6ab5",
+          "posterFileSizeBytes": 87550,
+          "posterSha256": "6b18c3c6ef7b0b3199584af46ea44825eb41b496c3d29ba2bb65d6e44184bebb",
+          "reviewState": "human-reviewed"
+        }
+      ],
+      "limitations": [
+        "This is representative visual context only.",
+        "The strongest-interval conclusion comes exclusively from Concept2 rankings and is not proved or explained by the video."
+      ]
+    },
+    {
+      "insightId": "insight-sub215-goal-achieved",
+      "reviewState": "human-reviewed",
+      "mediaItems": [
+        {
+          "referenceType": "athleteEventMedia",
+          "eventId": "goal-work4-split-target",
+          "role": "athlete-goal",
+          "reuse": true
+        }
+      ],
+      "limitations": [
+        "The clip preserves the athlete-verified Goal; target achievement is evaluated from Concept2 telemetry.",
+        "The media does not establish that the voice note caused the subsequent result."
+      ]
+    },
+    {
+      "insightId": "insight-similar-rate-different-output",
+      "reviewState": "human-reviewed",
+      "mediaItems": [
+        {
+          "referenceType": "mediaMapping",
+          "mediaId": "media-work2-hero",
+          "role": "lower-output-window",
+          "reuse": true
+        },
+        {
+          "referenceType": "mediaMapping",
+          "mediaId": "media-work3-comparison",
+          "role": "higher-output-window",
+          "reuse": true
+        }
+      ],
+      "limitations": [
+        "Pegasus left the visible explanation unresolved.",
+        "The clips do not prove a visual cause for the telemetry difference."
+      ]
+    }
+  ]
+}

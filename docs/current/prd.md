@@ -1,182 +1,187 @@
-<!-- Imported from https://docs.google.com/document/d/1JsW4-suSFqEXT2CAEtJtQZtbDK74042PZtzKox9eh_k/edit | Drive modified 2026-07-30T17:54:01.817Z -->
+# Wake Hackathon PRD
 
-WAKE — PRODUCT REQUIREMENTS DOCUMENT
+Status: Four-hour MVP
 
-Status: Hackathon MVP
 Primary platform: Desktop web
-Primary user: Concept2 athlete reviewing a completed workout
 
-1. PRODUCT SUMMARY
+Primary user: A Concept2 athlete reviewing a completed workout
 
-Wake accepts a workout video, Concept2 performance data, and optional heart-rate data. It produces an interactive Replay that synchronizes the workout’s structure, telemetry, meaningful events, coaching insights, evidence, interval comparison, and a next-session recommendation.
+## 1. Goal
 
-2. PROBLEM
+Ship and record one polished completed-workout Replay. The recorded path must work
+offline and demonstrate one sponsor-backed insight from telemetry and video through
+evidence, recurrence, and a next-session drill.
 
-Concept2 and fitness tools provide accurate measurements but leave athletes to interpret them. Video-analysis products often over-focus on isolated frames or questionable biomechanics. Athletes need a coherent explanation of how the workout evolved, where performance changed, and what to practice next.
+## 2. Golden Session
 
-3. MVP GOAL
+Source workout:
 
-Demonstrate one convincing completed workout review in which Wake:
-- reconstructs the whole session
-- identifies three to five meaningful events
-- explains one pivotal event with synchronized evidence
-- compares intervals using real Concept2 values
-- answers a follow-up question about recurrence using Jockey
-- produces one focused next-session recommendation
+- Date: July 30, 2026
+- Structure: `4 × (4:00 work / 3:00 recovery)`
+- Duration: 28:00
+- Source formats: Concept2 CSV, TCX, and FIT
+- Video: one or two short local clips mapped to Replay time
 
-4. INPUTS
+Canonical phases:
 
-Required:
-- one workout video
-- Concept2 CSV, TCX, FIT, or normalized fixture data
+| Phase | Session time |
+|---|---:|
+| Work 1 | 0:00–4:00 |
+| Recovery 1 | 4:00–7:00 |
+| Work 2 | 7:00–11:00 |
+| Recovery 2 | 11:00–14:00 |
+| Work 3 | 14:00–18:00 |
+| Recovery 3 | 18:00–21:00 |
+| Work 4 | 21:00–25:00 |
+| Recovery 4 | 25:00–28:00 |
 
-Optional:
-- heart-rate series
-- workout intent
-- additional video angles or technique clips
-- previous sessions
+The CSV resets its local time at each seven-minute block. The fixture builder must
+normalize all rows to the session clock before analysis or display.
 
-5. CORE EXPERIENCE
+The old 18:10 work-event claim is invalid because 18:10 is in Recovery 3. The final
+hero and recurrence windows must be chosen from actual work intervals and verified
+against available video.
 
-5.1 Session header
-Show workout name, date, duration, distance, machine, verification status, and share/expand actions. Keep metadata compact.
+## 3. Required Experience
 
-5.2 Replay
-The Replay is the primary surface. It must display:
-- workout phases and interval boundaries
-- synchronized pace, power, stroke rate, and optional heart rate
-- one shared playhead
-- event markers
-- coach-cue markers
-- selection highlighting
+### Opening frame
 
-Selecting any event or interval updates all synchronized content.
+Show:
 
-5.3 Insight panel
-The selected event displays:
-- one coach-style headline
-- a short explanation
-- two or three supporting metric deltas
-- confidence
-- a concise implication
+- session identity and reviewed status;
+- full 28-minute Replay;
+- work/recovery structure;
+- watts and stroke-rate tracks;
+- event markers;
+- selected coaching insight;
+- evidence summary;
+- compact video or poster;
+- interval comparison;
+- next-session action.
 
-Example: “You’re chasing the rate around 18:10. Rate rose while power fell, costing pace.”
+### Hero selection
 
-5.4 Evidence panel
-Show grouped evidence from telemetry, visual observation, and technique. Each item includes a short factual statement, source/provider, timestamp window, and optional thumbnail. Evidence expands on demand.
+Selecting the pivotal event must update:
 
-5.5 Video evidence
-Video remains secondary by default. It seeks to the selected moment and may be expanded to occupy more screen. Playback stays synchronized with the Replay.
+- shared playhead;
+- highlighted time window;
+- telemetry emphasis;
+- insight;
+- evidence;
+- containing interval;
+- mapped video or poster.
 
-5.6 Interval breakdown
-Show one row per work interval plus rest summary where useful. Include no more than six quantitative columns and one Wake-insight column. Selecting a row highlights its Replay range and opens its most important event.
+### Evidence
 
-5.7 Next session
-Show one focus statement and one drill. The recommendation must be traceable to the selected or recurring pattern.
+“Why Wake believes this” reveals:
 
-5.8 Ask Wake
-Provide a small follow-up surface powered by Jockey for corpus/session questions such as:
-- Where else does this pattern occur?
-- Did the same issue appear in another interval?
-- What changed after the athlete corrected it?
-- Does the side view support the same conclusion?
+1. authoritative Concept2 measurement;
+2. timestamped visual observation;
+3. supporting or limiting evidence;
+4. another event connected to the same pattern;
+5. the resulting drill.
 
-The answer must cite concrete video moments and should not reveal hidden chain-of-thought.
+Each item identifies its real provider and execution mode in expanded provenance.
 
-6. PERCEPTION AND REASONING REQUIREMENTS
+### Recurrence
 
-6.1 Pegasus path
-Pegasus produces structured, timestamped per-video observations. It is the dependable observation path for the primary video.
+Clicking the recurrence citation seeks the Replay and media to the second event.
+This replaces a generic chat surface for the critical path.
 
-6.2 Jockey path
-Jockey proposes pivotal moments, finds recurrence across videos or clips, supports multi-turn follow-ups, and returns cited structured findings. It should contribute genuine reasoning value rather than functioning as a decorative sponsor integration.
+The fixture may include a third Pegasus highlight as a positive or contrasting
+example. It is optional in the narration.
 
-6.3 Fusion
-Concept2 telemetry is authoritative for pace, power, rate, distance, and interval structure. Wake normalizes provider outputs, forms events, evaluates evidence, and writes coaching. Provider outputs are proposals, not unquestioned truth.
+### Sponsor provenance
 
-7. USER STORIES
+A compact “How this Replay was created” drawer explains:
 
-As an athlete, I can open a completed workout and understand its shape without reading a dense report.
+- TwelveLabs — video understanding;
+- Neo4j — evidence and recurrence relationships;
+- OpenAI — coaching synthesis;
+- AWS Strands — build-time orchestration;
+- reviewed, precomputed execution.
 
-As an athlete, I can select a meaningful event and see every modality seek to the same moment.
+### Next session
 
-As an athlete, I can understand why an insight is credible by expanding evidence.
+Show one focus, one drill, and one success criterion traceable to the selected or
+recurring pattern.
 
-As an athlete, I can compare intervals and see the coaching meaning of the differences.
+## 4. Sponsor Requirements
 
-As an athlete, I can ask where a pattern repeats and receive cited moments.
+Minimum credible implementation:
 
-As an athlete, I can leave with one actionable drill rather than a long checklist.
+- one real Pegasus 1.5 asynchronous full-video result pasted into the workspace and
+  validated;
+- two or three reviewed highlight segments mapped to Replay time;
+- one programmatic Jockey knowledge-store response with cited moments when
+  ingestion completes before cutoff;
+- one successful Neo4j explanation query and identical cached result;
+- one AWS Strands run using the OpenAI Responses provider through Amazon Bedrock
+  Mantle;
+- one build manifest recording real, cached, derived, and manual steps;
+- no live sponsor dependency during recording.
 
-8. ACCEPTANCE CRITERIA
+Jockey is the primary engineered TwelveLabs integration, but it is shown only when
+a real cited response is available. The project owner runs Pegasus manually and
+pastes its real structured result for import into the fixture.
 
-Replay
-- phase boundaries and interval structure match the source data
-- all visual layers use one normalized workout clock
-- selecting an event updates the playhead, insight, evidence, and video
+## 5. Data and Safety Requirements
 
-Insights
-- three to five curated events are available
-- every insight has at least two supporting evidence items
-- unsupported biomechanics are not stated as fact
+- Concept2 values remain authoritative.
+- Every timed object uses global elapsed seconds.
+- All visible deltas match the fixture and narration.
+- Manual content is labeled manual or reviewed.
+- Cached provider output must originate from a real provider run.
+- Video claims respect camera geometry.
+- No injury, physiology, force, or precise joint-angle claims.
+- No hidden reasoning or tool logs appear in the product.
 
-Interval breakdown
-- values match the provided Concept2 data or an explicitly labeled fixture
-- selected row synchronizes with the Replay
+## 6. Performance and Reliability
 
-Jockey
-- at least one demo action uses agentic reasoning across more than one moment or asset
-- response contains cited timestamps or moment references
-- a cached response is available if the live call fails
+- First useful render in under two seconds on the recording machine.
+- Production build supports direct route reload.
+- Recorded path works with network disabled.
+- Missing video degrades to a poster without breaking the Replay.
+- No loading spinner or model latency appears in the main path.
 
-Performance
-- the hero Replay loads without waiting for live analysis
-- core interactions feel immediate
-- no API latency is exposed during the main demo path
-
-9. HACKATHON SCOPE
+## 7. Scope
 
 Build:
-- one polished desktop Replay
-- one real or carefully normalized workout fixture
-- three to five events
-- one strong selected insight
-- interval table
-- expandable video
-- one Jockey follow-up interaction
-- one next-session drill
+
+- one desktop Replay route;
+- one normalized golden fixture;
+- watts and stroke-rate tracks;
+- two or three Pegasus highlight events, including one hero and one recurrence;
+- one evidence expansion;
+- one interval table;
+- one drill;
+- one provenance drawer;
+- local media mapping;
+- sponsor preprocessing artifacts and caches.
 
 Do not build:
-- mobile application
-- live coaching
-- user accounts beyond a visual shell
-- editing, sorting, or complex filtering
-- social feed
-- precise pose estimation
-- injury or medical guidance
-- generalized multi-sport support
 
-10. RELIABILITY AND FALLBACK
+- upload or processing UI;
+- authentication;
+- mobile navigation;
+- generalized ingestion;
+- generic chat;
+- full-session video delivery;
+- graph explorer;
+- GraphRAG, embeddings, or GDS;
+- live coaching;
+- cross-session history;
+- social, billing, settings, or planning workflows.
 
-The Replay must remain fully demonstrable if either Twelve Labs path is unavailable.
+## 8. Definition of Done
 
-Preferred live mode:
-Pegasus observations + Jockey reasoning + Concept2 telemetry.
+The project is done when:
 
-Fallback A:
-Pegasus observations + cached Jockey candidate events.
-
-Fallback B:
-Curated observations and events + real Concept2 telemetry.
-
-The user-facing product should not visibly change architecture between modes.
-
-11. SUCCESS CRITERIA
-
-A judge understands within ten seconds that Wake explains a complete workout rather than merely analyzing video.
-
-A judge can see one insight move coherently across timeline, telemetry, evidence, and video.
-
-The sponsor integration is substantive: Pegasus observes; Jockey investigates recurrence and reasons across the video corpus.
-
-The final action feels like coaching, not a model summary.
+1. The production Replay loads offline.
+2. The first frame communicates the product within ten seconds.
+3. Hero selection synchronizes all visible time-based surfaces.
+4. The evidence expansion contains truthful sponsor provenance.
+5. Recurrence seeks to a second event.
+6. A traceable drill completes the story.
+7. The provenance drawer explains all four sponsors.
+8. At least one complete narrated recording has been reviewed successfully.

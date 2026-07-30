@@ -1,0 +1,165 @@
+{
+  "authorship": {
+    "aiGenerated": false,
+    "author": "Wake coaching",
+    "bedrockGenerated": false,
+    "mode": "deterministic-human-reviewed"
+  },
+  "coolDown": {
+    "displayDuration": "5:00",
+    "durationSeconds": 300,
+    "instructions": "Row 5:00 easy.",
+    "intensity": "easy"
+  },
+  "equipment": "Concept2 RowErg",
+  "ergDataProgramming": {
+    "automaticTransfer": false,
+    "deliveryMode": "manual-copy-only",
+    "disclaimer": "Wake does not automatically transfer this workout to ErgData or a PM5.",
+    "instructions": [
+      "Open ErgData and choose Create Workout → Variable Intervals.",
+      "Add interval 1: 8:00 time, easy; include three 10-stroke builds.",
+      "Add interval 2: 4:00 time, Work 1, target 2:12–2:15/500m at 28 spm.",
+      "Add interval 3: 3:00 time, easy.",
+      "Add interval 4: 4:00 time, Work 2, target 2:09–2:12/500m at 28 spm.",
+      "Add interval 5: 3:00 time, easy.",
+      "Add interval 6: 4:00 time, Work 3, target 2:06–2:09/500m at 29 spm.",
+      "Add interval 7: 3:00 time, easy.",
+      "Add interval 8: 4:00 time, Work 4, target 2:03–2:06/500m at 30 spm.",
+      "Add interval 9: 3:00 time, easy.",
+      "Add interval 10: 5:00 time, easy cool-down.",
+      "Review all ten intervals, save the workout as “Build pressure, then rate,” and start it manually when ready."
+    ],
+    "path": "Create Workout → Variable Intervals"
+  },
+  "evidence": {
+    "citedInsightIds": [
+      "insight-work2-progressive-build",
+      "insight-work3-late-surge",
+      "insight-work4-strongest-interval",
+      "insight-sub215-goal-achieved",
+      "insight-similar-rate-different-output"
+    ],
+    "collectionId": "insight-collection-concept2-118993656-v1",
+    "sourcePath": "graph/cache/insight-collection.json"
+  },
+  "generationMode": "manual",
+  "limitations": [
+    "This is deterministic, human-reviewed Wake coaching, not AI-generated content.",
+    "Wake does not automatically transfer the workout to ErgData or a PM5.",
+    "Targets are evidence-grounded coaching instructions, not a guarantee of performance.",
+    "Stop or reduce intensity if technique deteriorates or the athlete feels unwell."
+  ],
+  "linkedInsightIds": [
+    "insight-similar-rate-different-output",
+    "insight-sub215-goal-achieved",
+    "insight-work2-progressive-build",
+    "insight-work3-late-surge",
+    "insight-work4-strongest-interval"
+  ],
+  "mainSet": {
+    "display": "4 × 4:00 work / 3:00 easy",
+    "intervals": [
+      {
+        "durationSeconds": 240,
+        "name": "Work 1",
+        "paceTarget": {
+          "display": "2:12–2:15/500m",
+          "fastestSecondsPer500m": 132,
+          "slowestSecondsPer500m": 135
+        },
+        "position": 1,
+        "strokeRateTargetSpm": 28
+      },
+      {
+        "durationSeconds": 240,
+        "name": "Work 2",
+        "paceTarget": {
+          "display": "2:09–2:12/500m",
+          "fastestSecondsPer500m": 129,
+          "slowestSecondsPer500m": 132
+        },
+        "position": 2,
+        "strokeRateTargetSpm": 28
+      },
+      {
+        "durationSeconds": 240,
+        "name": "Work 3",
+        "paceTarget": {
+          "display": "2:06–2:09/500m",
+          "fastestSecondsPer500m": 126,
+          "slowestSecondsPer500m": 129
+        },
+        "position": 3,
+        "strokeRateTargetSpm": 29
+      },
+      {
+        "durationSeconds": 240,
+        "name": "Work 4",
+        "paceTarget": {
+          "display": "2:03–2:06/500m",
+          "fastestSecondsPer500m": 123,
+          "slowestSecondsPer500m": 126
+        },
+        "position": 4,
+        "strokeRateTargetSpm": 30
+      }
+    ],
+    "recoveryIntensity": "easy",
+    "recoverySeconds": 180,
+    "rounds": 4,
+    "workSeconds": 240
+  },
+  "prescriptionId": "workout-build-pressure-then-rate-v1",
+  "reviewState": "human-reviewed",
+  "source": "neo4j",
+  "successCriteria": [
+    {
+      "comparator": "strictly-less-than",
+      "criterionId": "all-work-under-215",
+      "metric": "averagePaceSecondsPer500m",
+      "scope": "all-four-work-intervals",
+      "statement": "Every work interval averages strictly under 2:15/500m.",
+      "target": 135,
+      "unit": "seconds-per-500m"
+    },
+    {
+      "comparator": "work2-greater-than-work1",
+      "criterionId": "work2-more-watts-at-similar-rate",
+      "metric": "averageWatts",
+      "statement": "Work 2 produces higher average watts than Work 1 while both remain at approximately 28 spm.",
+      "strokeRateQualifier": "approximately",
+      "strokeRateTargetSpm": 28
+    },
+    {
+      "comparator": "nondecreasing",
+      "criterionId": "watts-nondecreasing",
+      "metric": "averageWatts",
+      "scope": "ordered-work-intervals",
+      "statement": "Average watts do not decrease across the four work intervals."
+    },
+    {
+      "criterionId": "work4-pace-with-rate-cap",
+      "paceComparator": "less-than-or-equal",
+      "paceMetric": "averagePaceSecondsPer500m",
+      "paceTargetSecondsPer500m": 126,
+      "scope": "work-4",
+      "statement": "Work 4 averages 2:06/500m or faster without exceeding 30.5 spm.",
+      "strokeRateCapSpm": 30.5,
+      "strokeRateComparator": "less-than-or-equal",
+      "strokeRateMetric": "averageStrokeRate"
+    }
+  ],
+  "title": "Build pressure, then rate",
+  "warmUp": {
+    "builds": {
+      "count": 3,
+      "strokesPerBuild": 10
+    },
+    "displayDuration": "8:00",
+    "durationSeconds": 480,
+    "instructions": "Row 8:00 easy, including three 10-stroke builds.",
+    "intensity": "easy"
+  },
+  "workoutId": "concept2-118993656"
+}

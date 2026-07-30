@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "reviewState": "media-unavailable-locally",
+  "sessionClock": {
+    "startUtc": "2026-07-30T13:35:00Z",
+    "endUtc": "2026-07-30T14:03:00Z",
+    "durationSeconds": 1680
+  },
+  "sources": [
+    {
+      "fileName": "PXL_20260730_133531089.mp4",
+      "driveFileId": "1-6rCEcDSkYnw-Syhvh9n20oGOANBwjeH",
+      "sizeBytes": 4262427659,
+      "driveMetadataVerified": true,
+      "localPath": null,
+      "role": "full-session-source",
+      "limitations": [
+        "Not present in the workspace.",
+        "Too large for the connected Drive download path."
+      ]
+    },
+    {
+      "fileName": "PXL_20260730_140719642.mp4",
+      "driveFileId": "1LXBswHz19Ji20eOVzddP1lHxb6siZd9q",
+      "sizeBytes": 109066678,
+      "driveMetadataVerified": true,
+      "localPath": null,
+      "role": "supplemental-source",
+      "limitations": [
+        "Not present in the workspace.",
+        "Exceeds the connected Drive download limit of 104857600 bytes."
+      ]
+    }
+  ],
+  "mediaMappings": [],
+  "mappingPolicy": "No Replay mapping is emitted until a local clip is visually reviewed and its clip-local offset is verified."
+}

@@ -1,0 +1,87 @@
+{
+  "investigation": "athlete-notes-bookmarks",
+  "timestamp": "2026-07-30T20:50Z",
+  "knowledge_store_id": "ks_019fb490-1e6c-7362-95c9-d61e14d6a835",
+  "target_item": "ksi_019fb4aa-4dce-7690-828f-c83868674a78",
+  "offset_formula": "workoutSeconds = videoSeconds + 31.089 (±0.7s)",
+  "passes": [
+    {
+      "id": "verbal-goal",
+      "type": "audio-transcription",
+      "target_window_video_local": "20:10–20:55",
+      "target_window_workout_global": "20:41–21:26",
+      "rationale": "Search for athlete stating goal to keep split under 2:15 before Work 4 start",
+      "method_1": {
+        "tool": "jockey_search",
+        "modality": "audio",
+        "query": "athlete speaking about split time or goal or two fifteen",
+        "top_hits_video_local_sec": [1521.2, 682.1, 1623.7, 1263.7, 1289.9],
+        "note": "None of the top hits fall cleanly in the target window 20:10–20:55"
+      },
+      "method_2": {
+        "tool": "jockey_query",
+        "session_id": "sess_019fb4f5-ad81-7c61-9262-89960c870aaf",
+        "window_queried": "20:50–21:35",
+        "result": {
+          "verdict": "unresolved",
+          "speech_detected": false,
+          "possible_utterance": "I'm just gonna keep this in.",
+          "possible_utterance_confidence": "low",
+          "matches_target_phrasing": false,
+          "note": "Audio-analysis tool failed on this file; result is metadata-based only"
+        }
+      },
+      "method_3": {
+        "tool": "jockey_query",
+        "session_id": "sess_019fb4f5-ad81-7c61-9262-89960c870aaf",
+        "windows_queried": ["25:10–25:40", "11:10–11:30"],
+        "result": {
+          "verdict": "unresolved",
+          "speech_detected": false,
+          "note": "No intelligible speech transcription in either window. Audio-analysis tool failure."
+        }
+      },
+      "final_verdict": "UNRESOLVED — Jockey cannot reliably transcribe speech from this recording. Audio-analysis tool fails; metadata layer does not contain transcriptions. One low-confidence possible utterance ('I'm just gonna keep this in') does not match the target 2:15 split goal."
+    },
+    {
+      "id": "gesture-bookmarks",
+      "type": "visual-gesture-detection",
+      "target": "Full recording — all rest/transition periods",
+      "method_1": {
+        "tool": "jockey_query",
+        "session_id": "sess_019fb4f0-8eab-7cc3-9b5a-76f18f6083b9",
+        "query_type": "finger-count gestures",
+        "result": {
+          "verdict": "unresolved",
+          "candidates_found": 0,
+          "non_matches": [
+            {"video_local": "11:06–11:25", "description": "Bottle sip + watch check, no gesture"},
+            {"video_local": "25:16–25:29", "description": "Water break, no gesture"}
+          ]
+        }
+      },
+      "method_2": {
+        "tool": "jockey_query",
+        "session_id": "sess_019fb4f0-8eab-7cc3-9b5a-76f18f6083b9",
+        "query_type": "any camera-directed acknowledgment",
+        "windows_checked": ["04:00–04:30", "11:00–11:30", "18:00–18:30", "25:00–25:30", "first 30s", "last 60s"],
+        "result": {
+          "verdict": "unresolved",
+          "candidates_found": 0,
+          "note": "No wave, thumbs-up, nod, point, peace sign, or finger-count gesture detected anywhere"
+        }
+      },
+      "final_verdict": "UNRESOLVED — No deliberate camera-directed gestures detected in the full recording. Either the athlete did not make them, or Jockey's visual analysis cannot distinguish subtle gestures from normal rest behavior at this resolution."
+    },
+    {
+      "id": "verification",
+      "type": "cross-check",
+      "result": {
+        "verbal_goal": "No candidates to verify — nothing detected",
+        "gesture_bookmarks": "No candidates to verify — nothing detected",
+        "false_positives_rejected": 0,
+        "reviewed_clips_generated": false
+      }
+    }
+  ]
+}

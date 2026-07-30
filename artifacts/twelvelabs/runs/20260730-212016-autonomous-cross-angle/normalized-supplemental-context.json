@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "provider": "twelvelabs-jockey",
+  "generationMode": "real-api",
+  "reviewMode": "accepted-supplemental-context",
+  "knowledgeStoreId": "ks_019fb490-1e6c-7362-95c9-d61e14d6a835",
+  "responseId": "resp_019fb4e6-42c4-7d31-8351-d8104c465ad5",
+  "sessionId": "sess_019fb4e6-42c0-7373-85f3-f25d560007ef",
+  "selectionAudit": {
+    "selectionsParameterSupplied": false,
+    "sourceOrItemHintSupplied": false,
+    "independentlySelectedKnowledgeStoreItemId": "ksi_019fb493-9535-7e00-905e-9e0e10563241",
+    "providerCitationReferenceId": "019fb493-9535-7e00-905e-9e0e10563241"
+  },
+  "timestampBasis": "clip-local",
+  "scope": "supplemental-context-only",
+  "directObservation": "In the independently selected low-angle clip, visible strokes show a leg-led drive, torso opening while the legs are still extending, and a later arm draw. Across the cited clip-local moments, Jockey also reported near-vertical shins at the catch, consistent apparent stroke length, a mostly level handle path with a slight recovery dip, and a brief finish pause before recovery.",
+  "coachingInterpretation": "Drive-phase sequencing and the finish pause are candidate patterns worth investigating when output differs at nearly equal stroke rate. This is a coaching hypothesis, not a demonstrated cause.",
+  "candidateMechanismStatus": "hypothesis-only",
+  "occurredInSelectedWorkoutWindows": "not-established",
+  "causalClaim": "rejected",
+  "citedMoments": [
+    {
+      "knowledgeStoreItemId": "ksi_019fb493-9535-7e00-905e-9e0e10563241",
+      "providerCitationReferenceId": "019fb493-9535-7e00-905e-9e0e10563241",
+      "startTime": "00:00",
+      "endTime": "00:13",
+      "timestampBasis": "clip-local",
+      "directObservation": "The drive starts with the legs; the torso begins swinging while the legs are still extending; the arms draw later to complete the stroke.",
+      "confidence": "medium",
+      "limitations": "This is a short low-angle clip without monitor data or a side-by-side view of the selected workout windows. Force application cannot be measured visually."
+    },
+    {
+      "knowledgeStoreItemId": "ksi_019fb493-9535-7e00-905e-9e0e10563241",
+      "providerCitationReferenceId": "019fb493-9535-7e00-905e-9e0e10563241",
+      "startTime": "00:13",
+      "endTime": "00:43",
+      "timestampBasis": "clip-local",
+      "directObservation": "Shins appear nearly vertical at the catch, apparent stroke length is consistent, the handle path is mostly level with a slight recovery dip, and a brief finish pause is visible before recovery.",
+      "confidence": "medium",
+      "limitations": "These are coarse visual cues from one angle. Exact catch geometry, chain speed, pressure profile, joint angles, seat velocity, and handle acceleration are not directly measurable."
+    }
+  ],
+  "limitations": [
+    "The chosen evidence is a separate 43-second low-angle clip, not either selected full-session workout window.",
+    "The analysis is qualitative visual review rather than force-curve or monitor measurement.",
+    "The evidence does not establish that the cited pattern occurred in the hero or comparison window.",
+    "The evidence does not establish that the cited pattern caused the approximately 58 W difference.",
+    "The pattern appeared broadly consistent within the supplemental clip, weakening any claim that it uniquely explains the output difference.",
+    "A single camera perspective limits biomechanical precision."
+  ],
+  "provenance": {
+    "requestPath": "artifacts/twelvelabs/runs/20260730-212016-autonomous-cross-angle/request.json",
+    "rawResponsePath": "artifacts/twelvelabs/runs/20260730-212016-autonomous-cross-angle/raw-response.json",
+    "structuredResultPath": "artifacts/twelvelabs/runs/20260730-212016-autonomous-cross-angle/structured-result.json"
+  }
+}

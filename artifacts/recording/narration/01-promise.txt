@@ -1,0 +1,1 @@
+Concept2 tells a rower what happened to pace, power, and rate. Wake reconstructs the whole performance on one clock, then turns the moments that matter into inspectable coaching. This completed Replay opens directly on the reviewed hero state and works without a network connection.

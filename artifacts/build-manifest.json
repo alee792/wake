@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-07-30T19:40:00Z",
+  "recordingMode": "offline",
+  "steps": [
+    {
+      "id": "twelvelabs-pegasus-clock-aligned-evidence",
+      "role": "Data and Jockey Intelligence Lieutenant",
+      "provider": "TwelveLabs",
+      "modelOrService": "Pegasus 1.5 Analyze API",
+      "executionMode": "real-api",
+      "inputPaths": [
+        "artifacts/twelvelabs/video-concept2-alignment.json",
+        "artifacts/twelvelabs/runs/"
+      ],
+      "outputPaths": [
+        "artifacts/twelvelabs/pegasus-normalized-evidence.json"
+      ],
+      "timestamp": "2026-07-30T20:50:00Z",
+      "contentHash": "sha256:9dde34d4534eb3e60a60e3f3c0de5694f25a2aaecfe97f15f92456f96ec63cda",
+      "humanReviewed": true
+    },
+    {
+      "id": "neo4j-explanation-query",
+      "role": "Neo4j Graph Lieutenant",
+      "provider": "Neo4j",
+      "modelOrService": "Neo4j Community 2026.06.0 local explanation query",
+      "executionMode": "derived",
+      "inputPaths": [
+        "graph/seed/golden-session.json",
+        "graph/cypher/explanation.cypher"
+      ],
+      "outputPaths": [
+        "graph/results/explanation-live.json",
+        "graph/cache/explanation-bundle.json"
+      ],
+      "timestamp": "2026-07-30T19:36:00Z",
+      "contentHash": "sha256:dac030b39d53c85aa55e5a7603de1b332001889049928a0073f33936f0e6a781",
+      "humanReviewed": true
+    },
+    {
+      "id": "openai-bedrock-mantle-attempt",
+      "role": "Strands and OpenAI Lieutenant",
+      "provider": "OpenAI",
+      "modelOrService": "openai.gpt-oss-120b through Amazon Bedrock Mantle",
+      "executionMode": "manual",
+      "inputPaths": [
+        "graph/cache/explanation-bundle.json"
+      ],
+      "outputPaths": [
+        "artifacts/strands-openai/failed-inference-attempt.json"
+      ],
+      "timestamp": "2026-07-30T19:38:00Z",
+      "contentHash": "sha256:bd09a6b1f7cd99c87ec58472e58fb0ed3c31b98196abfead337b5d529701876a",
+      "humanReviewed": false
+    },
+    {
+      "id": "strands-single-agent-implementation",
+      "role": "Strands and OpenAI Lieutenant",
+      "provider": "AWS",
+      "modelOrService": "AWS Strands Agents 1.50.2, one agent and one deterministic tool",
+      "executionMode": "derived",
+      "inputPaths": [
+        "graph/cache/explanation-bundle.json"
+      ],
+      "outputPaths": [
+        "pipeline/strands_openai/run.py",
+        "artifacts/strands-openai/failed-inference-attempt.json"
+      ],
+      "timestamp": "2026-07-30T19:38:00Z",
+      "contentHash": "sha256:8d9870118aa10739daaf3365ffca8c6ab7b19cacf4a9152c4aadc6e42a7d9ed2",
+      "humanReviewed": false
+    },
+    {
+      "id": "manual-coaching-fallback",
+      "role": "Strands and OpenAI Lieutenant",
+      "provider": "Wake",
+      "modelOrService": "manual evidence-bound coaching fallback",
+      "executionMode": "manual",
+      "inputPaths": [
+        "graph/cache/explanation-bundle.json"
+      ],
+      "outputPaths": [
+        "artifacts/strands-openai/coach-output.manual.json",
+        "artifacts/strands-openai/coach-output.manual.validation.json"
+      ],
+      "timestamp": "2026-07-30T19:40:00Z",
+      "contentHash": "sha256:2fa61ca010eefea6774156757fc59c74905cfe0c258694108450db74c87aa687",
+      "humanReviewed": false
+    }
+  ]
+}

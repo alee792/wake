@@ -1,0 +1,81 @@
+{
+  "curated_results": {
+    "verbal_goals": [
+      {
+        "id": "goal-work4-split-target",
+        "type": "goal",
+        "statement": "Keep the split under 2:15",
+        "targetSplitSeconds": 135,
+        "attachedTo": "Work 4",
+        "videoLocalTimestamp": "21:25",
+        "videoLocalSeconds": 1285,
+        "workoutGlobalSeconds": 1316.089,
+        "confidence": "manual-verified",
+        "reviewStatus": "human-reviewed",
+        "note": "Reviewed canonical time is video-local 21:25.000 / workout-global 21:56.089. The statement is preserved as athlete-verified manual transcription because Jockey and local system transcription were unavailable."
+      }
+    ],
+    "gesture_bookmarks": [
+      {
+        "id": "bookmark-work3-rest-finger1",
+        "type": "bookmark",
+        "fingerCount": 1,
+        "hand": "right",
+        "gesture": "index finger raised",
+        "videoLocalTimestamp": "19:07",
+        "workoutGlobalSeconds": 1178.089,
+        "confidence": "manual-verified",
+        "reviewStatus": "manually-flagged-by-athlete",
+        "note": "Jockey visual analysis did not detect; timestamp manually confirmed by athlete"
+      }
+    ]
+  },
+  "investigation_summary": {
+    "total_passes": 3,
+    "resolved": 0,
+    "unresolved": 2,
+    "verification_candidates": 0
+  },
+  "findings": {
+    "verbal_goal": {
+      "verdict": "unresolved",
+      "target": "Athlete statement about keeping split under 2:15 before Work 4",
+      "target_window_video_local": "20:10–20:55",
+      "target_window_workout_global": "20:41–21:26",
+      "offset": "workoutSeconds = videoSeconds + 31.089 (±0.7s)",
+      "possible_utterance": {
+        "text": "I'm just gonna keep this in.",
+        "confidence": "low",
+        "matches_target": false,
+        "video_local_approx": "20:50–21:35",
+        "note": "Metadata-derived, not confirmed via direct audio analysis"
+      },
+      "limitations": [
+        "Jockey audio-analysis tool failed repeatedly on this file",
+        "No transcription available in metadata layer",
+        "Cannot confirm or deny speech occurred"
+      ]
+    },
+    "gesture_bookmarks": {
+      "verdict": "unresolved",
+      "candidates_found": 0,
+      "rest_periods_scanned": ["~04:00", "~11:06–11:25", "~18:00", "~25:16–25:29"],
+      "start_end_scanned": true,
+      "limitations": [
+        "No deliberate gestures detected anywhere in recording",
+        "Cannot distinguish whether athlete didn't gesture or Jockey can't detect subtle gestures",
+        "Front-on angle may compress hand/finger detail"
+      ]
+    }
+  },
+  "source": {
+    "knowledge_store_id": "ks_019fb490-1e6c-7362-95c9-d61e14d6a835",
+    "item_id": "ksi_019fb4aa-4dce-7690-828f-c83868674a78",
+    "asset_id": "6a6bb004c1ac59f5d1d0c0a8",
+    "sessions": [
+      "sess_019fb4f0-8eab-7cc3-9b5a-76f18f6083b9",
+      "sess_019fb4f5-ad81-7c61-9262-89960c870aaf"
+    ],
+    "raw_archive": "artifacts/twelvelabs/runs/20260730-athlete-notes-bookmarks/request-and-responses.json"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "databaseId": "125e2ba1",
+  "schemaBefore": {
+    "nodeCount": 34,
+    "relationshipCount": 46,
+    "constraintCount": 13
+  },
+  "seedRuns": [
+    {
+      "run": 1,
+      "nodesCreated": 1,
+      "relationshipsCreated": 6,
+      "labelsAdded": 1,
+      "propertiesSet": 14
+    },
+    {
+      "run": 2,
+      "nodesCreated": 0,
+      "relationshipsCreated": 0,
+      "labelsAdded": 0,
+      "propertiesSet": 13
+    }
+  ],
+  "schemaAfter": {
+    "nodeCount": 35,
+    "relationshipCount": 52,
+    "constraintCount": 14,
+    "workoutPrescriptionCount": 1,
+    "forWorkoutCount": 1,
+    "supportedByCount": 5,
+    "forbiddenProviderAttributionCount": 0,
+    "newConstraintName": "workout_prescription_id_unique"
+  },
+  "frozenArtifactSha256": {
+    "graph/cache/explanation-bundle.json": "4fe2e783fd0978dfdbb2c3156a6d68db51c2f674046c87fdeb40fe3cda187375",
+    "graph/cache/ask-wake-context.json": "3fa55c5fbcbe5f0b46faf15e0130c97e0e5cbf67451611bab7d68326609638ba",
+    "graph/results/insight-collection-aura.json": "3eca242459b1eeb52ae9a867c44391b9b09ace9da54f22b03faf14a95e83cc81",
+    "graph/cache/insight-collection.json": "8f880e59cdd6989238f1c50d14b28faddc5d5cb1f8b1b867fbdb2108595185d0"
+  },
+  "outputPaths": {
+    "live": "graph/results/workout-prescription-aura.json",
+    "cache": "graph/cache/workout-prescription.json"
+  },
+  "validation": {
+    "liveQueryMatchedCapture": true,
+    "cacheDiffersOnlyAtSource": true,
+    "citationsMatchAuraRelationships": true,
+    "numericTargetsValidated": true,
+    "manualAuthorshipValidated": true,
+    "automaticTransferRejected": true
+  }
+}

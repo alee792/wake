@@ -4,8 +4,33 @@ Source exports supplied by the athlete on July 30, 2026. All files are kept
 unchanged so the Concept2 adapter can be tested against multiple representations
 of the same workout.
 
-The TCX identifies the activity at `2026-07-30T13:35:00Z`. The stroke-level CSV
-contains 761 records and ends at 404.2 seconds and 1,443.8 meters.
+The TCX identifies the activity at `2026-07-30T13:35:00Z` and describes eight
+alternating laps:
+
+| Phase | Session time |
+|---|---:|
+| Work 1 | 0:00–4:00 |
+| Recovery 1 | 4:00–7:00 |
+| Work 2 | 7:00–11:00 |
+| Recovery 2 | 11:00–14:00 |
+| Work 3 | 14:00–18:00 |
+| Recovery 3 | 18:00–21:00 |
+| Work 4 | 21:00–25:00 |
+| Recovery 4 | 25:00–28:00 |
+
+The stroke-level CSV contains 761 records across four seven-minute blocks. Its
+`Time (seconds)` and distance fields reset at the start of each block. The four
+block endpoints are:
+
+| Block | Local end | Distance at end |
+|---|---:|---:|
+| 1 | 420.7 s | 1,520.2 m |
+| 2 | 396.9 s | 1,445.5 m |
+| 3 | 419.1 s | 1,521.4 m |
+| 4 | 404.2 s | 1,443.8 m |
+
+Consumers must normalize each block onto the global 0:00–28:00 session clock.
+The final block endpoint is not the full workout duration.
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |

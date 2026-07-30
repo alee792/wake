@@ -1,0 +1,521 @@
+{
+  "citedSourceIds": [
+    "concept2-118993656",
+    "insight-rate-without-power",
+    "ask-wake-output-gap-cross-angle",
+    "goal-work4-split-target"
+  ],
+  "citedSourcePaths": [
+    "artifacts/data/concept2-normalized.json",
+    "artifacts/twelvelabs/athlete-notes-bookmarks.json",
+    "artifacts/media/replay-media-manifest.json",
+    "graph/cache/explanation-bundle.json",
+    "graph/cache/ask-wake-context.json"
+  ],
+  "collectionId": "insight-collection-concept2-118993656-v1",
+  "derivationVersion": "d018-v1",
+  "generationMode": "derived",
+  "insights": [
+    {
+      "associatedEvents": [],
+      "associatedSegments": [
+        {
+          "role": "primary",
+          "segmentId": "work-2"
+        }
+      ],
+      "category": "interval-progression",
+      "citedSourceIds": [
+        "concept2-118993656"
+      ],
+      "citedSourcePaths": [
+        "artifacts/data/concept2-normalized.json"
+      ],
+      "confidence": 1,
+      "derivation": {
+        "acceptanceRule": "Accept progressive build only when each minute averageWatts is strictly greater than the previous minute.",
+        "intervalBounds": "inclusive-start-exclusive-end",
+        "method": "arithmetic mean of telemetry samples per minute window"
+      },
+      "endSeconds": 660,
+      "explanation": "Across four inclusive-start/exclusive-end minute windows, average power rose from 150.4 to 159.6 to 160.9 to 171.7 W. Every minute exceeded the previous minute, supporting a deterministic progressive-build classification.",
+      "focusSeconds": 630,
+      "generationMode": "derived",
+      "headline": "Work 2 built power every minute",
+      "insightId": "insight-work2-progressive-build",
+      "limitations": [
+        "Minute means summarize recorded Concept2 samples and do not identify a visual or causal mechanism."
+      ],
+      "metrics": {
+        "minuteToMinuteWattsDelta": [
+          9.2,
+          1.3,
+          10.8
+        ],
+        "minuteWindows": [
+          {
+            "averagePaceSecondsPer500m": 133.1,
+            "averageStrokeRate": 27,
+            "averageWatts": 150.4,
+            "endSeconds": 480,
+            "minute": 1,
+            "sampleCount": 30,
+            "startSeconds": 420
+          },
+          {
+            "averagePaceSecondsPer500m": 130,
+            "averageStrokeRate": 28.5,
+            "averageWatts": 159.6,
+            "endSeconds": 540,
+            "minute": 2,
+            "sampleCount": 28,
+            "startSeconds": 480
+          },
+          {
+            "averagePaceSecondsPer500m": 129.6,
+            "averageStrokeRate": 29.1,
+            "averageWatts": 160.9,
+            "endSeconds": 600,
+            "minute": 3,
+            "sampleCount": 29,
+            "startSeconds": 540
+          },
+          {
+            "averagePaceSecondsPer500m": 126.9,
+            "averageStrokeRate": 30.2,
+            "averageWatts": 171.7,
+            "endSeconds": 660,
+            "minute": 4,
+            "sampleCount": 30,
+            "startSeconds": 600
+          }
+        ],
+        "wattsStrictlyIncreasedEveryMinute": true
+      },
+      "reviewState": "human-reviewed",
+      "startSeconds": 420
+    },
+    {
+      "associatedEvents": [
+        {
+          "eventId": "candidate-work-3",
+          "role": "overlapping-reviewed-window"
+        }
+      ],
+      "associatedSegments": [
+        {
+          "role": "primary",
+          "segmentId": "work-3"
+        }
+      ],
+      "category": "late-interval-surge",
+      "citedSourceIds": [
+        "concept2-118993656"
+      ],
+      "citedSourcePaths": [
+        "artifacts/data/concept2-normalized.json"
+      ],
+      "confidence": 1,
+      "derivation": {
+        "intervalBounds": "inclusive-start-exclusive-end",
+        "mechanismInference": "none",
+        "method": "arithmetic mean of telemetry samples in Work 3 minute 1 and minute 4"
+      },
+      "endSeconds": 1080,
+      "explanation": "Work 3 minute 1 averaged 138.8 W at 26.5 spm, while minute 4 averaged 210.7 W at 30.5 spm: a 71.9 W and 4.0 spm increase. This describes telemetry only and does not assign a visual or causal mechanism.",
+      "focusSeconds": 1050,
+      "generationMode": "derived",
+      "headline": "Work 3 finished with a large output surge",
+      "insightId": "insight-work3-late-surge",
+      "limitations": [
+        "The calculation establishes an output/rate change but not why it occurred.",
+        "No visual mechanism is inferred."
+      ],
+      "metrics": {
+        "minute1": {
+          "averagePaceSecondsPer500m": 130.2,
+          "averageStrokeRate": 26.5,
+          "averageWatts": 138.8,
+          "endSeconds": 900,
+          "sampleCount": 29,
+          "startSeconds": 840
+        },
+        "minute4": {
+          "averagePaceSecondsPer500m": 118.6,
+          "averageStrokeRate": 30.5,
+          "averageWatts": 210.7,
+          "endSeconds": 1080,
+          "sampleCount": 31,
+          "startSeconds": 1020
+        },
+        "strokeRateDelta": 4,
+        "wattsDelta": 71.9
+      },
+      "reviewState": "human-reviewed",
+      "startSeconds": 840
+    },
+    {
+      "associatedEvents": [],
+      "associatedSegments": [
+        {
+          "role": "primary",
+          "segmentId": "work-4"
+        }
+      ],
+      "category": "interval-ranking",
+      "citedSourceIds": [
+        "concept2-118993656"
+      ],
+      "citedSourcePaths": [
+        "artifacts/data/concept2-normalized.json"
+      ],
+      "confidence": 1,
+      "derivation": {
+        "acceptanceRule": "Call a metric strongest only when Work 4 rank equals 1 for that metric.",
+        "method": "recomputed arithmetic telemetry means plus normalized Concept2 interval distance",
+        "rankingRules": {
+          "averagePaceSecondsPer500m": "ascending (lower is faster)",
+          "averageStrokeRate": "descending",
+          "averageWatts": "descending",
+          "distanceMeters": "descending"
+        }
+      },
+      "endSeconds": 1500,
+      "explanation": "Against all four work intervals, Work 4 ranked first for average watts (179.3 W), fastest average pace (125.4 s/500m), distance (962 m), and average stroke rate (30.2 spm). “Strongest” is limited to these measured first-place metrics.",
+      "focusSeconds": 1380,
+      "generationMode": "derived",
+      "headline": "Work 4 ranked strongest across all four interval metrics",
+      "insightId": "insight-work4-strongest-interval",
+      "limitations": [
+        "“Strongest” applies only to the four requested telemetry metrics and does not imply a visual or causal explanation.",
+        "Distance is the normalized Concept2 interval total; other interval metrics are independently recomputed from samples."
+      ],
+      "metrics": {
+        "comparedIntervals": [
+          {
+            "averagePaceSecondsPer500m": 126.4,
+            "averageStrokeRate": 28.6,
+            "averageWatts": 175.3,
+            "distanceMeters": 953,
+            "endSeconds": 240,
+            "intervalId": "work-1",
+            "sampleCount": 113,
+            "startSeconds": 0
+          },
+          {
+            "averagePaceSecondsPer500m": 129.9,
+            "averageStrokeRate": 28.7,
+            "averageWatts": 160.7,
+            "distanceMeters": 932,
+            "endSeconds": 660,
+            "intervalId": "work-2",
+            "sampleCount": 117,
+            "startSeconds": 420
+          },
+          {
+            "averagePaceSecondsPer500m": 125.7,
+            "averageStrokeRate": 28.6,
+            "averageWatts": 173.2,
+            "distanceMeters": 952,
+            "endSeconds": 1080,
+            "intervalId": "work-3",
+            "sampleCount": 117,
+            "startSeconds": 840
+          },
+          {
+            "averagePaceSecondsPer500m": 125.4,
+            "averageStrokeRate": 30.2,
+            "averageWatts": 179.3,
+            "distanceMeters": 962,
+            "endSeconds": 1500,
+            "intervalId": "work-4",
+            "sampleCount": 123,
+            "startSeconds": 1260
+          }
+        ],
+        "firstPlaceMetrics": [
+          "averageWatts",
+          "averagePaceSecondsPer500m",
+          "distanceMeters",
+          "averageStrokeRate"
+        ],
+        "rankings": {
+          "averagePaceSecondsPer500m": [
+            {
+              "intervalId": "work-4",
+              "rank": 1,
+              "value": 125.4
+            },
+            {
+              "intervalId": "work-3",
+              "rank": 2,
+              "value": 125.7
+            },
+            {
+              "intervalId": "work-1",
+              "rank": 3,
+              "value": 126.4
+            },
+            {
+              "intervalId": "work-2",
+              "rank": 4,
+              "value": 129.9
+            }
+          ],
+          "averageStrokeRate": [
+            {
+              "intervalId": "work-4",
+              "rank": 1,
+              "value": 30.2
+            },
+            {
+              "intervalId": "work-2",
+              "rank": 2,
+              "value": 28.7
+            },
+            {
+              "intervalId": "work-1",
+              "rank": 3,
+              "value": 28.6
+            },
+            {
+              "intervalId": "work-3",
+              "rank": 3,
+              "value": 28.6
+            }
+          ],
+          "averageWatts": [
+            {
+              "intervalId": "work-4",
+              "rank": 1,
+              "value": 179.3
+            },
+            {
+              "intervalId": "work-1",
+              "rank": 2,
+              "value": 175.3
+            },
+            {
+              "intervalId": "work-3",
+              "rank": 3,
+              "value": 173.2
+            },
+            {
+              "intervalId": "work-2",
+              "rank": 4,
+              "value": 160.7
+            }
+          ],
+          "distanceMeters": [
+            {
+              "intervalId": "work-4",
+              "rank": 1,
+              "value": 962
+            },
+            {
+              "intervalId": "work-1",
+              "rank": 2,
+              "value": 953
+            },
+            {
+              "intervalId": "work-3",
+              "rank": 3,
+              "value": 952
+            },
+            {
+              "intervalId": "work-2",
+              "rank": 4,
+              "value": 932
+            }
+          ]
+        },
+        "work4": {
+          "averagePaceSecondsPer500m": 125.4,
+          "averageStrokeRate": 30.2,
+          "averageWatts": 179.3,
+          "distanceMeters": 962,
+          "endSeconds": 1500,
+          "intervalId": "work-4",
+          "sampleCount": 123,
+          "startSeconds": 1260
+        },
+        "work4Ranks": {
+          "averagePaceSecondsPer500m": 1,
+          "averageStrokeRate": 1,
+          "averageWatts": 1,
+          "distanceMeters": 1
+        }
+      },
+      "reviewState": "human-reviewed",
+      "startSeconds": 1260
+    },
+    {
+      "associatedEvents": [
+        {
+          "athleteVerified": true,
+          "eventId": "goal-work4-split-target",
+          "eventType": "Goal",
+          "jockeyDetected": false,
+          "role": "athlete-authored-trigger",
+          "videoLocalSeconds": 1285,
+          "workoutGlobalSeconds": 1316.089
+        }
+      ],
+      "associatedSegments": [
+        {
+          "role": "evaluation-window",
+          "segmentId": "work-4"
+        }
+      ],
+      "category": "goal-evaluation",
+      "citedSourceIds": [
+        "concept2-118993656",
+        "goal-work4-split-target",
+        "goal-work4-split-target",
+        "9bed74497e76c2612f739edfaaaeef2d9e5c8e1af7e84343a65d2ff3ce0cbeb3"
+      ],
+      "citedSourcePaths": [
+        "artifacts/data/concept2-normalized.json",
+        "artifacts/twelvelabs/athlete-notes-bookmarks.json",
+        "artifacts/media/replay-media-manifest.json"
+      ],
+      "confidence": 1,
+      "derivation": {
+        "causalClaim": "rejected",
+        "intervalBounds": "inclusive-start-exclusive-end",
+        "method": "sample filter plus step-hold time weighting from canonical Goal time through Work 4 end",
+        "temporalClaim": "achievement-followed-voice-note"
+      },
+      "endSeconds": 1500,
+      "explanation": "After the athlete-verified Goal at workout 21:56.089, all 95 recorded samples through Work 4 end were strictly below 135 s/500m. Average pace was 123.9 s/500m, and the time-weighted under-target share was 100%. Achievement followed the voice note; the graph does not claim the note caused it.",
+      "focusSeconds": 1316.089,
+      "generationMode": "derived",
+      "headline": "The athlete held sub-2:15 pace after the Goal",
+      "insightId": "insight-sub215-goal-achieved",
+      "limitations": [
+        "The Goal wording and timestamp are athlete-verified manual provenance; Jockey did not detect or transcribe it.",
+        "The result establishes temporal order and target attainment, not that the voice note caused the performance.",
+        "Time weighting uses a documented step-hold convention at the evaluation boundaries."
+      ],
+      "metrics": {
+        "allSamplesUnderTarget": true,
+        "averagePaceSecondsPer500m": 123.9,
+        "averageStrokeRate": 30.8,
+        "averageWatts": 185.3,
+        "bestPaceSecondsPer500m": 113.4,
+        "evaluationEndSeconds": 1500,
+        "evaluationStartSeconds": 1316.089,
+        "sampleCount": 95,
+        "sampleShareUnderTarget": 1,
+        "samplesUnderTarget": 95,
+        "targetComparator": "strictly-less-than",
+        "targetPaceSecondsPer500m": 135,
+        "timeWeighted": {
+          "boundaryConvention": "Step-hold telemetry: the latest sample before the Goal covers the partial boundary interval; each later sample holds until the next sample or Work 4 end.",
+          "boundarySampleGlobalSeconds": 1314.4,
+          "evaluatedDurationSeconds": 183.911,
+          "longestContinuousRunSeconds": 183.911,
+          "underTargetDurationSeconds": 183.911,
+          "underTargetShare": 1
+        },
+        "worstPaceSecondsPer500m": 133.1
+      },
+      "reviewState": "human-reviewed",
+      "startSeconds": 1316.089
+    },
+    {
+      "associatedEvents": [
+        {
+          "eventId": "candidate-work-2",
+          "role": "hero-window"
+        },
+        {
+          "eventId": "candidate-work-3",
+          "role": "comparison-window"
+        }
+      ],
+      "associatedSegments": [
+        {
+          "role": "lower-output-window",
+          "segmentId": "work-2"
+        },
+        {
+          "role": "higher-output-window",
+          "segmentId": "work-3"
+        }
+      ],
+      "category": "cross-window-comparison",
+      "citedSourceIds": [
+        "candidate-work-2-concept2",
+        "candidate-work-3-concept2",
+        "pegasus-interval-2-vs-3-visual-unresolved",
+        "jockey-autonomous-cross-angle-candidate-mechanism"
+      ],
+      "citedSourcePaths": [
+        "graph/cache/explanation-bundle.json",
+        "graph/cache/ask-wake-context.json",
+        "artifacts/twelvelabs/runs/20260730-133540-aligned-interval-2-vs-3-6a6bb59cc1ac59f5d1d119b7/result.json",
+        "artifacts/twelvelabs/video-concept2-alignment.json"
+      ],
+      "confidence": 0.75,
+      "derivation": {
+        "comparisonClassification": "comparison-not-recurrence",
+        "mechanismInference": "hypothesis-only",
+        "method": "frozen D-014 Concept2 comparison with frozen D-014 Pegasus limitation and D-015 supplemental boundaries"
+      },
+      "endSeconds": 1050,
+      "explanation": "The selected Work 2 window averaged 157.3 W at 29.8 spm versus 215.3 W at 30.4 spm in Work 3. Pegasus left the visible explanation unresolved. Jockey’s separate side-view observation remains a clip-local, hypothesis-only mechanism candidate whose occurrence in these windows is not established and whose causal claim is rejected.",
+      "focusSeconds": 1037,
+      "generationMode": "derived",
+      "headline": "Similar rate produced very different output",
+      "insightId": "insight-similar-rate-different-output",
+      "limitations": [
+        "The comparison also uses the Interval 3 workout-global window from 1025 to 1050 seconds.",
+        "The provider classified the finding as low-confidence and unresolved.",
+        "The fixed frontal video cannot measure force or explain the telemetry difference.",
+        "The Jockey side-view source is a separate clip with clip-local timestamps.",
+        "The side-view pattern is not established in either selected Concept2 window and is not established as the cause of the 58 W difference."
+      ],
+      "metrics": {
+        "jockey": {
+          "causalClaim": "rejected",
+          "hypothesisOnly": true,
+          "occurredInSelectedWorkoutWindows": "not-established",
+          "supplementalObservationId": "jockey-autonomous-cross-angle-candidate-mechanism",
+          "timestampBasis": "clip-local"
+        },
+        "pegasus": {
+          "conclusion": "visual evidence unresolved",
+          "evidenceId": "pegasus-interval-2-vs-3-visual-unresolved"
+        },
+        "strokeRateDifference": 0.6,
+        "wattsDifference": 58,
+        "work2": {
+          "averageStrokeRate": 29.8,
+          "averageWatts": 157.3,
+          "endSeconds": 545,
+          "evidenceId": "candidate-work-2-concept2",
+          "startSeconds": 525
+        },
+        "work3": {
+          "averageStrokeRate": 30.4,
+          "averageWatts": 215.3,
+          "endSeconds": 1050,
+          "evidenceId": "candidate-work-3-concept2",
+          "startSeconds": 1025
+        }
+      },
+      "reviewState": "calibrated-video-reviewed-unresolved",
+      "startSeconds": 525
+    }
+  ],
+  "limitations": [
+    "The collection is deterministic and evidence-bound; it does not infer visual causes.",
+    "D-014 ExplanationBundle and D-015 Ask Wake context are cited but not modified.",
+    "Athlete-authored marks retain athlete-verified manual provenance and are not attributed to Jockey."
+  ],
+  "reviewState": "human-reviewed",
+  "source": "cached-neo4j",
+  "title": "Wake reviewed workout insights",
+  "workoutId": "concept2-118993656"
+}

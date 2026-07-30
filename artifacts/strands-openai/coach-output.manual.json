@@ -1,0 +1,12 @@
+{
+  "headline": "More rate did not buy more power.",
+  "explanation": "In the selected window, mean stroke rate rose from 28.4 to 29.8 spm while mean power fell from 165.5 to 157.3 W. Clock-aligned Pegasus review found no reliable visible explanation, so Wake treats recovery timing as a coaching hypothesis rather than a diagnosis.",
+  "cue": "Protect the recovery sequence before adding rate.",
+  "drill": "Row a short segment at the current rate with hands away, body over, then slide. Add one stroke per minute only while watts remain at or above the starting average.",
+  "successCriterion": "Power remains at or above the starting average after the rate increase while the recovery stays controlled.",
+  "citedObservationIds": [
+    "candidate-work-2-concept2",
+    "pegasus-interval-2-vs-3-visual-unresolved"
+  ],
+  "limitation": "Pegasus did not resolve a visible cause from the fixed frontal view. Recovery timing is a Wake coaching hypothesis; pressure, connection, wrist position, and causal mechanics were not measured."
+}

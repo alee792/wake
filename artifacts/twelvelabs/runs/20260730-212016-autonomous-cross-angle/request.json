@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "1.0",
+  "provider": "twelvelabs-jockey",
+  "knowledgeStoreId": "ks_019fb490-1e6c-7362-95c9-d61e14d6a835",
+  "createdAt": "2026-07-30T21:20:16.904776+00:00",
+  "completedAt": "2026-07-30T21:21:01.134896+00:00",
+  "request": {
+    "knowledge_store_id": "ks_019fb490-1e6c-7362-95c9-d61e14d6a835",
+    "instructions": "Review the complete knowledge store as a rowing-video evidence investigator. Cite only directly visible content, preserve source-local timestamps, distinguish observation from interpretation, and explicitly preserve uncertainty.",
+    "input": [
+      {
+        "type": "message",
+        "role": "user",
+        "content": "The primary full-session camera could not resolve a reliable visible mechanism for the approximately 58 W output difference at nearly equal stroke rate. Search the available footage and angles for the most informative additional visual evidence. Choose the source yourself. Identify any cited, directly visible rowing pattern that provides a candidate mechanism worth investigating. Separate direct observation from coaching interpretation, preserve source-local timestamps, and state whether the finding proves the mechanism occurred in the selected workout windows."
+      }
+    ],
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "name": "wake_cross_angle_investigation",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "type": "string"
+            },
+            "selected_item_id": {
+              "type": "string"
+            },
+            "direct_observation": {
+              "type": "string"
+            },
+            "coaching_interpretation": {
+              "type": "string"
+            },
+            "candidate_mechanism": {
+              "type": "string"
+            },
+            "proves_mechanism_in_selected_workout_windows": {
+              "type": "boolean"
+            },
+            "cited_moments": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "item_id": {
+                    "type": "string"
+                  },
+                  "start_time": {
+                    "type": "string"
+                  },
+                  "end_time": {
+                    "type": "string"
+                  },
+                  "direct_observation": {
+                    "type": "string"
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "high",
+                      "medium",
+                      "low"
+                    ]
+                  },
+                  "limitations": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "item_id",
+                  "start_time",
+                  "end_time",
+                  "direct_observation",
+                  "confidence",
+                  "limitations"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "limitations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "answer",
+            "selected_item_id",
+            "direct_observation",
+            "coaching_interpretation",
+            "candidate_mechanism",
+            "proves_mechanism_in_selected_workout_windows",
+            "cited_moments",
+            "limitations"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "selectionPolicy": {
+    "selectionsParameterSupplied": false,
+    "sourceOrItemHintSupplied": false
+  }
+}

@@ -1,0 +1,1 @@
+Wake ends with one focused next-session action: hold pressure before building rate. Repeat a short work segment at the current rate, then add one stroke per minute only while watts remain at or above the starting average. The success criterion is concrete: power stays at or above that starting average after the increase.

@@ -1,0 +1,31 @@
+CYPHER 25
+CREATE CONSTRAINT workout_id_unique IF NOT EXISTS
+FOR (n:Workout) REQUIRE n.workoutId IS UNIQUE;
+
+CYPHER 25
+CREATE CONSTRAINT segment_id_unique IF NOT EXISTS
+FOR (n:Segment) REQUIRE n.segmentId IS UNIQUE;
+
+CYPHER 25
+CREATE CONSTRAINT event_id_unique IF NOT EXISTS
+FOR (n:Event) REQUIRE n.eventId IS UNIQUE;
+
+CYPHER 25
+CREATE CONSTRAINT observation_id_unique IF NOT EXISTS
+FOR (n:Observation) REQUIRE n.observationId IS UNIQUE;
+
+CYPHER 25
+CREATE CONSTRAINT provider_id_unique IF NOT EXISTS
+FOR (n:Provider) REQUIRE n.providerId IS UNIQUE;
+
+CYPHER 25
+CREATE CONSTRAINT insight_id_unique IF NOT EXISTS
+FOR (n:Insight) REQUIRE n.insightId IS UNIQUE;
+
+CYPHER 25
+CREATE CONSTRAINT pattern_id_unique IF NOT EXISTS
+FOR (n:Pattern) REQUIRE n.patternId IS UNIQUE;
+
+CYPHER 25
+CREATE CONSTRAINT drill_id_unique IF NOT EXISTS
+FOR (n:Drill) REQUIRE n.drillId IS UNIQUE;

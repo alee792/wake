@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "bundlePath": "graph/cache/explanation-bundle.json",
+  "coachOutputPath": "artifacts/strands-openai/coach-output.manual.json",
+  "citedObservationIds": [
+    "candidate-work-2-concept2",
+    "pegasus-interval-2-vs-3-visual-unresolved"
+  ],
+  "numericClaims": [
+    {
+      "field": "explanation",
+      "token": "28.4",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "29.8 spm",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "165.5",
+      "status": "matched"
+    },
+    {
+      "field": "explanation",
+      "token": "157.3 w",
+      "status": "matched"
+    },
+    {
+      "field": "drill",
+      "token": "one",
+      "status": "matched"
+    }
+  ]
+}

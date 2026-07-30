@@ -1,250 +1,196 @@
-<!-- Imported from https://docs.google.com/document/d/1sX3wNANytg3r1oWoib2Lh6L4eazd7fA93cBnzB702K8/edit | Drive modified 2026-07-30T17:56:14.091Z -->
+# Wake Recorded Demo Script
 
-WAKE — DEMO SCRIPT
+Status: Canonical recording path
 
-Purpose
-This document defines the exact hackathon demo flow. The demo should make the finished artifact feel inevitable, not expose processing complexity.
+Target length: 2:30–3:00
 
-Demo thesis
-Wake turns an ordinary rowing workout into a synchronized coaching review. It shows what changed, why it mattered, the evidence behind the claim, and what to do next.
+Rule: Show the completed Replay. Do not show uploads, processing, provider latency,
+terminals, database consoles, or agent logs.
 
-Target length
-3–4 minutes.
+## 1. Freeze Before Recording
 
-Opening state
-Open directly on a completed Replay. Do not begin with upload, indexing, or agent execution. The first frame should show the full workout timeline, a selected pivotal moment, the coaching insight, supporting evidence, and the interval breakdown.
+Replace these placeholders from the final verified fixture:
 
-0:00–0:25 — Frame the problem
+| Placeholder | Source |
+|---|---|
+| `<HERO_TIME>` | Hero event focus time |
+| `<HERO_RANGE>` | Hero start–end |
+| `<RATE_DELTA>` | Reproduced Concept2 change |
+| `<WATTS_DELTA>` | Reproduced Concept2 change |
+| `<RECURRENCE_TIME>` | Second connected event |
+| `<HEADLINE>` | Reviewed coaching headline |
+| `<DRILL>` | Reviewed next-session drill |
+
+Do not improvise numbers during recording.
+
+The primary screenshot and opening frame should match
+[End-State Reference](end-state-reference.md).
+
+## 2. Pre-Recording Setup
+
+- Run the production build.
+- Disable or disconnect the network.
+- Open the completed Replay route directly.
+- Preselect a calm baseline or the final hero state.
+- Confirm hero, recurrence, evidence, interval, and provenance interactions.
+- Seek media to a clear frame.
+- Use the target recording viewport at 100% browser zoom.
+- Hide notifications and unrelated applications.
+
+## 3. Script
+
+### 0:00–0:20 — Promise
+
+On screen: Complete Replay.
+
 Narration:
-“Rowers already have video and Concept2 data, but reviewing them means scrubbing through footage and interpreting charts yourself. Wake reconstructs the workout and turns it into coaching.”
+
+“Concept2 tells a rower what happened to pace, power, and rate. Video shows the
+movement. Wake connects both across the whole workout and turns the moments that
+mattered into coaching.”
 
 Show:
-- Full-session Replay
-- Workout phases
-- Concept2 telemetry
-- Timestamped events and coach cues
 
-0:25–1:15 — Reveal the key insight
-Select the highlighted event near 18:10.
-Narration:
-“Wake identifies the moments that changed the workout. Here, rate rises, but power falls. The coach summarizes it directly: ‘You’re chasing the rate.’”
+- 28-minute workout;
+- work and recovery phases;
+- telemetry;
+- event markers;
+- selected insight.
 
-Interaction:
-- Event selection moves the playhead
-- Insight receives the single expressive focus glow
-- Relevant telemetry window brightens
-- Video seeks to the same moment
-
-Avoid explaining model internals yet.
-
-1:15–1:55 — Expand evidence
-Open the evidence panel.
-Narration:
-“The conclusion is inspectable. Concept2 is authoritative for rate and power. Video adds visible timing and technique observations. Every claim carries timestamps, provenance, and confidence.”
-
-Show:
-- Telemetry evidence
-- Visual observation
-- Technique observation
-- Confidence and source labels
-
-1:55–2:25 — Show workout-level understanding
-Select Interval 2 in the Interval Breakdown.
-Narration:
-“Wake does not treat this as an isolated frame. It compares the pattern across the workout. This interval held the same cadence with less power, while the final interval converted the higher rate into output.”
-
-Interaction:
-- Selected row highlights its range in the Replay
-- Insight panel updates or remains anchored to the pivotal event
-
-2:25–2:55 — Convert insight into action
-Reveal the Next Session card.
-Narration:
-“The review ends with one focused action: hold pressure before building rate, with a short drill tied to the observed pattern.”
-
-Show:
-- One recommendation
-- One drill
-- No generic training plan
-
-2:55–3:25 — Explain the agentic architecture
-Narration:
-“Pegasus produces structured, timestamped observations from the uploaded workout. Jockey independently investigates the session, tests broader questions, and returns cited findings. Wake reconciles both with authoritative Concept2 telemetry into one shared performance model.”
-
-Show a compact architecture view only if available:
-Video → Pegasus observations
-Video or indexed workout corpus → Jockey cited investigation
-Concept2 + optional HR → authoritative measurements
-All paths → shared events → coach → Replay
-
-3:25–3:40 — Close
-Narration:
-“The Replay is the product. Wake helps the athlete see what mattered and leave with something specific to change.”
-
-Hackathon wow moments
-1. Clicking an event synchronizes timeline, insight, evidence, and video.
-2. The interface visually focuses attention without exposing AI theatrics.
-3. Jockey contributes a cited investigation that goes beyond a fixed prompt.
-4. The review ends in a personalized action.
-
-Failure-safe demo plan
-- Use a precomputed golden session.
-- Cache Pegasus and Jockey outputs.
-- Keep deterministic fixture JSON available.
-- Do not depend on live processing during the main presentation.
-- A separate optional button may show the generated evidence provenance.
-
-Do not demo
-- Upload latency
-- Agent logs
-- Chain of thought
-- Pose skeletons
-- Medical or injury claims
-- Unsupported joint-angle precision
-- Mobile screens
-- Settings, billing, or account management
-
-Definition of success
-Within ten seconds, a judge understands that Wake is a coaching product organized around time, insight, and evidence—not a generic sports dashboard or video analyzer.
-WAKE — HACKATHON DEMO SCRIPT
-
-Target length: 3–4 minutes
-Demo rule: Show the finished coaching experience first. Explain the agent architecture only after the value is obvious.
-
-PRE-DEMO SETUP
-
-- Open directly to the completed “Morning Row” Replay.
-- Use the reviewed fixture so the page is fully loaded.
-- Preselect no event; let the workout shape be visible.
-- Keep a cached Jockey response available behind the follow-up interaction.
-- Confirm video, event seeking, and interval selection work offline.
-
-0:00–0:20 — THE PROMISE
-
-On screen: Full Replay with interval phases, telemetry, events, and coach cues.
+### 0:20–0:45 — Whole-Workout Understanding
 
 Narration:
-“Most workout tools give you a result and a pile of charts. Wake reconstructs the whole performance and turns the moments that mattered into coaching.”
 
-Do not explain providers yet. Let the judge recognize that this is a coherent workout, not a video player.
+“This was four four-minute work intervals with three minutes of recovery. Wake
+normalizes the Concept2 data and video onto one session clock, then organizes the
+review around a small number of meaningful events.”
 
-0:20–0:50 — THE WORKOUT AS A WHOLE
+Point to the complete Replay shape. Do not explain sponsors yet.
 
-Point to:
-- interval structure
-- synchronized pace, power, rate, and heart rate
-- event markers
-- coach cues
+### 0:45–1:15 — Pivotal Moment
 
-Narration:
-“This was a variable-interval Concept2 workout. The machine data gives us the performance truth. Wake aligns video and model observations to the same workout clock, then organizes the session around a small number of meaningful events.”
+Action: Select the hero marker at `<HERO_TIME>`.
 
-0:50–1:25 — SELECT THE PIVOTAL EVENT
+Expected response:
 
-Click the amber event near 18:10.
-
-Expected behavior:
-- playhead glides to 18:10
-- Interval 2 becomes subtly illuminated
-- insight gains the attentional glow
-- evidence and video seek together
+- playhead moves;
+- containing work interval highlights;
+- selected window brightens;
+- insight changes;
+- evidence updates;
+- media seeks or swaps.
 
 Narration:
-“Here’s the pivotal moment. Wake’s coaching conclusion is simple: ‘You’re chasing the rate.’ From 18:10 to 18:36, stroke rate increases while power drops, and pace gets worse.”
+
+“Here is the pivotal moment. `<HEADLINE>` During `<HERO_RANGE>`, stroke rate
+changed by `<RATE_DELTA>` while power changed by `<WATTS_DELTA>`.”
 
 Pause briefly so the synchronized movement registers.
 
-1:25–1:55 — PROVE IT
+### 1:15–1:50 — Why Wake Believes This
 
-Point to the evidence panel and compact video.
-
-Narration:
-“The top layer sounds like a coach. The evidence is there when you want it. Concept2 confirms the rate and power change. The video contributes visible timing evidence, but it does not pretend to measure biomechanics the camera cannot see.”
-
-Optionally click “Show all evidence” or expand the video for two seconds, then collapse it. This proves video is available without making low-quality footage the hero.
-
-1:55–2:20 — COMPARE INTERVALS
-
-Click the affected interval in the Interval Breakdown.
+Action: Expand “Why Wake believes this.”
 
 Narration:
-“The table preserves the metrics Concept2 athletes already use, but Wake adds the interpretation. Here the same rate produced less power. Later, output recovered, and the final interval was the strongest finish.”
 
-The selected row should highlight the matching Replay range. Do not introduce a second chart.
+“The coaching stays concise, but the evidence is inspectable. Concept2 is the
+authority for the numerical change. Pegasus analyzed the complete workout and
+identified this timestamped candidate, and Wake selected it because the visual
+change aligns with the telemetry. Wake also preserves limitations instead of
+pretending the camera can measure what it cannot see.”
 
-2:20–2:55 — JOCKEY MOMENT
+Show:
 
-Open the small “Ask Wake” follow-up and use the prepared question:
-“Where else does this rate-chasing pattern occur?”
+- Concept2 evidence;
+- TwelveLabs evidence when genuinely available;
+- provider and execution mode;
+- limitation or counterevidence.
 
-Expected response:
-- concise answer
-- one or more cited moments
-- optional reference to the side-view clip
-- no visible chain-of-thought
+### 1:50–2:10 — Recurrence
+
+Action: Click the recurrence citation at `<RECURRENCE_TIME>`.
 
 Narration:
-“This is where we use Twelve Labs Jockey as an actual video agent. Pegasus gives Wake dependable timestamped observations from each video. Jockey investigates across the workout and the side-view clip, finds recurrence, and returns cited moments. Wake then checks those findings against the telemetry before coaching.”
 
-Suggested answer:
-“The pattern begins briefly late in Interval 1 and returns more clearly at 18:10 in Interval 2. The side view shows the recovery becoming more hurried during the stronger recurrence.”
+“Neo4j connects this event to another occurrence of the same pattern. Clicking the
+citation—returned by a Jockey investigation over the video knowledge store—takes us
+directly to that earlier moment. This is a workout-level finding rather than an
+isolated frame.”
 
-If the live call is fast, let it complete. Otherwise return the cached result with the same UI.
+Let Replay and media seek. Then return to the hero event if needed.
 
-2:55–3:20 — ACTION
+### 2:10–2:30 — Action
 
 Point to Next Session.
 
 Narration:
-“Wake ends with one thing to do—not twenty observations. Hold pressure before building rate. The recommended drill is three sets of ten strokes where rate only rises after power stabilizes.”
 
-Click “Add to my plan” only if it is implemented cleanly. Otherwise leave it visual.
+“Wake ends with one focused action: `<DRILL>`. The recommendation is tied to this
+athlete’s repeated pattern, not a generic training plan.”
 
-3:20–3:45 — ARCHITECTURE CLOSE
+### 2:30–2:50 — Sponsor Provenance
+
+Action: Open “How this Replay was created.”
 
 Narration:
-“Underneath, specialist providers contribute measurements and observations to one shared performance model. Events become insights, and insights become coaching. For this demo the Replay is precomputed for reliability, but the architecture supports both deterministic Pegasus analysis and agentic Jockey investigation.”
 
-Finish on the complete Replay, not an architecture diagram.
+“The reviewed Replay is precomputed for reliability. TwelveLabs understands the
+selected video windows: Pegasus performs the full-video scan and Jockey
+investigates recurrence across the knowledge store. Neo4j connects evidence,
+events, recurrence, and the drill. An OpenAI model running through Amazon Bedrock
+synthesizes the retrieved evidence into coaching, and AWS Strands orchestrates that
+build-time workflow.”
 
-KEY LINES TO REMEMBER
+Show the compact provenance chain. Do not show logs.
 
-“Wake reconstructs the whole performance.”
-“The Replay is the product.”
-“Concept2 is the performance truth; video adds context.”
-“Pegasus observes. Jockey investigates. Wake coaches.”
-“Insight first. Evidence on demand.”
+### 2:50–3:00 — Close
 
-WHAT NOT TO SAY
+Action: Close provenance and finish on the complete Replay.
 
-Avoid:
-- “Our multimodal agents achieved consensus.”
-- “The AI detected bad form.”
-- “This model diagnoses your rowing mechanics.”
-- lengthy sponsor descriptions before the product moment
-- apologies for cached or precomputed data
+Narration:
 
-JOCKEY FALLBACK
+“The Replay is the product. Wake shows the athlete what mattered, why it mattered,
+and what to change next.”
 
-If Jockey is unavailable:
-- click the same question
-- return the cached cited response
-- describe it as a previously completed agent investigation, not as a live call
-- continue immediately to the next-session recommendation
+## 4. Lines to Remember
 
-GENERAL FALLBACK
+- “Wake reconstructs the whole performance.”
+- “Concept2 is the numerical truth; video adds visible context.”
+- “Insight first. Evidence on demand.”
+- “The Replay is the product.”
 
-If video fails, the Replay and evidence remain convincing.
-If chart interaction fails, select the event from the insight list.
-If seeking fails, narrate from the already selected 18:10 state.
-If network fails, every essential part of the core demo must still work.
+## 5. Do Not Say
 
-DEFINITION OF A WINNING DEMO
+- “The agents reached consensus.”
+- “The graph proves the athlete has bad form.”
+- “This is live” when the result is cached or precomputed.
+- “Jockey found this” without a real Jockey artifact.
+- Any metric not frozen in the fixture.
+- Any biomechanical, medical, or causal claim unsupported by the evidence.
 
-Within ten seconds, judges understand that Wake interprets a complete workout.
+## 6. Recording Fallbacks
 
-Within ninety seconds, they see one insight synchronize telemetry, evidence, and video.
+| Failure | Response |
+|---|---|
+| Video does not play | Use the poster and continue |
+| Hero marker misses | Select hero from the insight or event list |
+| Recurrence seek fails | Show the cached cited time in expanded evidence |
+| Provenance drawer fails | Narrate the four-role chain from the completed Replay |
+| First take fails | Review immediately and record a second take |
 
-Before the close, they see Jockey provide cited agentic value across moments or assets.
+Keep two still-image backups:
 
-The final screen leaves them with a concrete coaching action.
+1. complete opening frame;
+2. expanded evidence and provenance.
+
+## 7. Success Test
+
+The recording succeeds when a judge sees:
+
+1. the complete workout;
+2. one synchronized pivotal moment;
+3. inspectable evidence;
+4. recurrence across the workout;
+5. one actionable drill;
+6. a truthful four-sponsor architecture;
+7. the completed Replay as the final frame.

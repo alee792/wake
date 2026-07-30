@@ -1,112 +1,112 @@
-<!-- Imported from https://docs.google.com/document/d/1J5bBlh3L2Oxpcgiu0ZGiu3hTuAhxf4vegaFfjYa5NOA/edit | Drive modified 2026-07-30T17:53:07.039Z -->
-
-WAKE — PRODUCT VISION
+# Wake Product Vision
 
 Status: Canonical product direction
+
 Platform: Desktop web for the hackathon
 
-NORTH STAR
+## North Star
 
 Wake reconstructs a performance over time and turns it into coaching.
 
-An athlete uploads a workout video and Concept2 data. Wake organizes the session into a synchronized Replay, identifies the moments that mattered, explains why they mattered, and gives the athlete a focused action for the next session.
+An athlete records a rowing workout and exports Concept2 data. Wake turns those
+inputs into a synchronized Replay that shows what changed, why it mattered, and
+what to practice next.
 
-Wake is not a video-analysis dashboard. It is not a collection of AI detections. It is the experience of reviewing a workout with an exceptionally attentive coach.
+The product is not a video analyzer, metric dashboard, or agent console. It should
+feel like reviewing the session with an attentive coach.
 
-PRODUCT THESIS
+## Product Thesis
 
-Most training tools either record results or expose raw metrics. The athlete is left to interpret charts, remember what happened, and decide what to change. Wake closes that gap.
+Concept2 measures performance accurately, but the athlete must interpret the
+charts. Video preserves context, but reviewing an entire session is slow and
+subjective. Wake connects both on one clock and elevates only the moments worth
+coaching.
 
-Continuous workout evidence becomes:
-Measurements → Observations → Events → Interpretations → Coaching.
+The transformation is:
 
-The primary product artifact is the Replay: a synchronized, navigable understanding of the whole workout, combining telemetry, meaningful events, coach cues, evidence, and optional video.
+```text
+Measurements → observations → events → insights → coaching action
+```
 
-CORE PRINCIPLES
+The primary artifact is the Replay: a navigable view of the complete workout with
+telemetry, events, concise coaching, inspectable evidence, synchronized media, and
+one next-session action.
 
-1. Coaching first
-The default surface speaks like a coach. Technical provenance and model evidence are available on demand, but the athlete first sees a clear statement such as “You’re chasing the rate here.”
+## Product Principles
 
-2. Time first
-Performance unfolds over time. Every observation, event, insight, video moment, and metric is anchored to the same clock.
+### Coaching first
 
-3. Events first
-Wake elevates a small number of pivotal moments rather than flooding the athlete with detections. Events are the bridge between raw evidence and coaching.
+Lead with a direct statement such as “You added rate without preserving power.”
+Provider names and technical provenance appear only when the athlete or judge asks
+why.
 
-4. Insight before evidence
-Tell the athlete what mattered, then show why. Evidence should build trust without forcing the user to perform the analysis.
+### Time first
 
-5. One shared performance understanding
-Video, Concept2 telemetry, heart rate, audio, and agent outputs contribute to one evolving model of the session. The coach reasons over that shared understanding rather than over disconnected modality outputs.
+Every phase, metric, observation, event, clip, and cue uses one session clock.
 
-6. Progressive coaching depth
-A normal front-facing phone recording should produce useful rhythm, timing, broad symmetry, and event coaching. A guided side recording can unlock deeper sequencing and slide-timing analysis. The product should become more technically specific only when capture quality supports it.
+### Events, not detections
 
-7. Video is evidence, not the centerpiece
-Consumer footage may be visually poor while still analytically useful. The Replay and insight remain primary. Video is compact by default and expandable by the athlete.
+Wake selects a small number of meaningful windows. Raw observations support events;
+they are not the interface.
 
-8. Technology disappears
-Users should experience coaching, not agents. Wake does not foreground model names, chains of thought, consensus mechanics, or sponsor plumbing.
+### Insight before evidence
 
-THE REPLAY
+Present:
 
-Replay is Wake’s primary interaction surface. It contains:
-- workout phases and intervals
-- synchronized pace, power, stroke rate, and optional heart rate
-- timestamped events
-- coach cues
-- a shared playhead
-- the selected insight and its evidence
-- expandable synchronized video
-- interval comparison
-- a next-session action
+```text
+Insight → explanation → evidence → action
+```
+
+### Evidence with boundaries
+
+Concept2 is authoritative for pace, watts, stroke rate, distance, and interval
+structure. Video supports only claims visible from the recording. Wake does not
+infer invisible forces, physiology, injury, or precise joint mechanics.
+
+### Selective action
+
+The review ends with one focused cue or drill tied to the observed session—not a
+generic training plan.
+
+### Technology on demand
+
+The athlete experiences one coach. Judges can expand provenance to see how
+TwelveLabs, Neo4j, OpenAI, and AWS Strands contributed.
+
+## The Replay
 
 The Replay answers four questions:
-- Where am I in the workout?
-- What changed?
-- Why did it matter?
-- What should I do next?
 
-PRODUCT VOCABULARY
+1. Where am I in the workout?
+2. What changed?
+3. Why did it matter?
+4. What should I do next?
 
-Replay — the synchronized view of the workout and Wake’s primary product artifact.
-Observation — a factual, timestamped finding from telemetry, video, audio, or another provider.
-Event — a meaningful time window formed from one or more observations.
-Insight — the coaching interpretation of an event.
-Evidence — the observations and measurements supporting an insight.
-Recommendation — the action the athlete should take in a future session.
+It contains:
 
-USER EXPERIENCE
+- workout phases and intervals;
+- synchronized watts, pace, rate, and optional heart rate;
+- event and coach-cue markers;
+- one shared playhead;
+- selected insight and evidence;
+- compact synchronized video;
+- interval comparison;
+- one next-session recommendation.
 
-The athlete opens a completed session and immediately sees the workout’s shape. A small number of event markers signal where Wake found something meaningful. Selecting an event seeks every synchronized layer to the same moment. The insight becomes the focal point, the relevant telemetry brightens, and the video seeks to supporting evidence. The athlete can compare intervals and finish with one specific drill or intention for the next workout.
+## Hackathon Thesis
 
-The experience should feel calm by default and decisive when something matters.
+The winning artifact is the finished Replay, not the processing pipeline.
+Precomputed sponsor outputs and manually reviewed fixtures are acceptable when
+their provenance is honest and the resulting product demonstrates a coherent
+architecture.
 
-SUPPORTED CLAIMS
+The recording must prove:
 
-Wake should confidently coach patterns visible in the available evidence, including:
-- rate rising without corresponding power
-- pace or power decay across intervals
-- rhythm instability and pauses
-- recovery shortening or rushing when visibly supported
-- broad seat-handle sequencing from an adequate side view
-- repeated patterns across moments or sessions
+- Wake understands the session as a whole.
+- One pivotal moment is grounded in real evidence.
+- A repeated pattern can be inspected and revisited.
+- The evidence becomes a specific coaching action.
 
-Wake should not claim precise joint angles, injury diagnosis, muscle recruitment, force attribution, or invisible biomechanics.
-
-ROWING FIRST, NOT ROWING BOUND
-
-Rowing is the first domain because it combines continuous movement, high-quality machine telemetry, repeatable technique, and a strong coaching culture. The architecture should generalize to other time-based performance domains, but the hackathon product should remain unapologetically focused on rowing.
-
-HACKATHON THESIS
-
-The winning artifact is the finished Replay, not a processing console. Precomputed observations, curated events, and fixture data are acceptable when they demonstrate a coherent architecture that could run robustly with more time and resources.
-
-The demo should prove three things:
-- Wake understands the workout as a whole.
-- Wake connects a pivotal moment to grounded evidence.
-- Wake turns that understanding into useful coaching.
-
-NORTH-STAR STATEMENT
+## North-Star Statement
 
 Wake reveals the shape of a performance—and shows the athlete what to change next.
