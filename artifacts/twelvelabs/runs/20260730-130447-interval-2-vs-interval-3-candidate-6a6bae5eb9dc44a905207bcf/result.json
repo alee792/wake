@@ -1,0 +1,99 @@
+{
+  "provider": "twelvelabs-pegasus",
+  "generationMode": "real-api",
+  "model": "pegasus1.5",
+  "assetId": null,
+  "taskId": "6a6bae5eb9dc44a905207bcf",
+  "generationId": "2555e9ce-a29d-47ef-afd2-c85643a64415",
+  "finishReason": "stop",
+  "capturedAt": "2026-07-30T20:07:31.211812+00:00",
+  "result": {
+    "analysis_summary": "The fixed frontal video shows highly consistent rowing mechanics between the two telemetry-selected intervals. Despite a substantial difference in power output (157 W vs 215 W) and split times, no directly visible differences in recovery duration, hands-away timing, body preparation, seat-handle sequencing, forward reach, stroke length, or stroke-to-stroke rhythm can be observed. The visual evidence does not explain the telemetry discrepancy.",
+    "findings": [
+      {
+        "comparison": "Interval 3 shows similar recovery duration to Interval 2.",
+        "comparison_window": "Interval 2 (525-545) vs Interval 3 (1025-1050)",
+        "confidence": "low",
+        "counterevidence": "No visible change in recovery speed or posture.",
+        "direct_observation": "Recovery phase appears smooth and controlled in both intervals.",
+        "end_seconds": 545,
+        "interpretation_support": "unresolved",
+        "limitations": "Fixed frontal camera angle limits observation of side mechanics.",
+        "start_seconds": 525,
+        "title": "Recovery Duration"
+      },
+      {
+        "comparison": "Hands-away timing is similar in both intervals.",
+        "comparison_window": "Interval 2 (525-545) vs Interval 3 (1025-1050)",
+        "confidence": "low",
+        "counterevidence": "No visible difference in timing between strokes.",
+        "direct_observation": "Hands are away from the handle for a brief period in both intervals.",
+        "end_seconds": 545,
+        "interpretation_support": "unresolved",
+        "limitations": "Fixed frontal camera angle limits observation of handle movement.",
+        "start_seconds": 525,
+        "title": "Hands-Away Timing"
+      },
+      {
+        "comparison": "Body preparation is consistent in both intervals.",
+        "comparison_window": "Interval 2 (525-545) vs Interval 3 (1025-1050)",
+        "confidence": "low",
+        "counterevidence": "No visible change in posture or preparation.",
+        "direct_observation": "Rower maintains a stable posture with a slight forward lean before the drive.",
+        "end_seconds": 545,
+        "interpretation_support": "unresolved",
+        "limitations": "Fixed frontal camera angle limits observation of body mechanics.",
+        "start_seconds": 525,
+        "title": "Body Preparation"
+      },
+      {
+        "comparison": "Seat-handle sequencing is coordinated in both intervals.",
+        "comparison_window": "Interval 2 (525-545) vs Interval 3 (1025-1050)",
+        "confidence": "low",
+        "counterevidence": "No visible difference in seat or handle movement.",
+        "direct_observation": "Seat moves smoothly and handle is pulled back in a coordinated manner.",
+        "end_seconds": 545,
+        "interpretation_support": "unresolved",
+        "limitations": "Fixed frontal camera angle limits observation of seat and handle mechanics.",
+        "start_seconds": 525,
+        "title": "Seat-Handle Sequencing"
+      },
+      {
+        "comparison": "Forward reach is consistent in both intervals.",
+        "comparison_window": "Interval 2 (525-545) vs Interval 3 (1025-1050)",
+        "confidence": "low",
+        "counterevidence": "No visible difference in arm extension.",
+        "direct_observation": "Rower extends arms fully before the drive in both intervals.",
+        "end_seconds": 545,
+        "interpretation_support": "unresolved",
+        "limitations": "Fixed frontal camera angle limits observation of arm extension.",
+        "start_seconds": 525,
+        "title": "Forward Reach"
+      },
+      {
+        "comparison": "Stroke length appears consistent in both intervals.",
+        "comparison_window": "Interval 2 (525-545) vs Interval 3 (1025-1050)",
+        "confidence": "low",
+        "counterevidence": "No visible difference in stroke length.",
+        "direct_observation": "Stroke length appears consistent with a steady rhythm.",
+        "end_seconds": 545,
+        "interpretation_support": "unresolved",
+        "limitations": "Fixed frontal camera angle limits observation of stroke length.",
+        "start_seconds": 525,
+        "title": "Stroke Length"
+      },
+      {
+        "comparison": "Stroke-to-stroke rhythm is steady in both intervals.",
+        "comparison_window": "Interval 2 (525-545) vs Interval 3 (1025-1050)",
+        "confidence": "low",
+        "counterevidence": "No visible difference in rhythm.",
+        "direct_observation": "Rhythm is steady with each stroke following the previous one in a predictable pattern.",
+        "end_seconds": 545,
+        "interpretation_support": "unresolved",
+        "limitations": "Fixed frontal camera angle limits observation of stroke rhythm.",
+        "start_seconds": 525,
+        "title": "Stroke-to-Stroke Rhythm"
+      }
+    ]
+  }
+}

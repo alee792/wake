@@ -1,0 +1,85 @@
+{
+  "taskId": "6a6bae5eb9dc44a905207bcf",
+  "assetId": "6a6b961bb9dc44a9051ef6f3",
+  "profile": "custom",
+  "prompt": "Compare two telemetry-selected windows in the complete source video:\n\n- Interval 2, source seconds 525-545 (08:45-09:05): approximately 157 W,\n  29.8 strokes/minute, and 2:10.6/500 m.\n- Interval 3, source seconds 1025-1050 (17:05-17:30): approximately 215 W,\n  30.4 strokes/minute, and 1:57.7/500 m.\n\nConcept2 telemetry is authoritative. The stroke rates are similar, but output\ndiffers substantially. Determine whether any directly visible rowing pattern\ndistinguishes the two windows.\n\nCompare recovery duration, hands-away timing, body preparation, seat-handle\nsequencing, forward reach, stroke length as visibly observable, and\nstroke-to-stroke rhythm. Do not infer force, muscle engagement, physiology,\nfatigue, or intent.\n\nReturn findings with exact source-video seconds, direct observations,\ncounterevidence, confidence, and camera limitations. State \"unresolved\" if the\nfixed frontal video cannot explain the telemetry difference. Do not manufacture\na mechanical explanation.\n",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "analysis_summary": {
+        "type": "string"
+      },
+      "findings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "start_seconds": {
+              "type": "number"
+            },
+            "end_seconds": {
+              "type": "number"
+            },
+            "comparison_window": {
+              "type": "string"
+            },
+            "direct_observation": {
+              "type": "string"
+            },
+            "comparison": {
+              "type": "string"
+            },
+            "interpretation_support": {
+              "type": "string",
+              "enum": [
+                "supports",
+                "weakens",
+                "unresolved"
+              ]
+            },
+            "counterevidence": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            },
+            "limitations": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "start_seconds",
+            "end_seconds",
+            "comparison_window",
+            "direct_observation",
+            "comparison",
+            "interpretation_support",
+            "counterevidence",
+            "confidence",
+            "limitations"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "analysis_summary",
+      "findings"
+    ],
+    "additionalProperties": false
+  },
+  "temperature": 0.2,
+  "maxTokens": 3000,
+  "startTime": null,
+  "endTime": null,
+  "createdAt": "2026-07-30T20:04:47.015010+00:00"
+}

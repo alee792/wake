@@ -1,0 +1,20 @@
+Compare two telemetry-selected windows in the complete source video:
+
+- Interval 2, source seconds 525-545 (08:45-09:05): approximately 157 W,
+  29.8 strokes/minute, and 2:10.6/500 m.
+- Interval 3, source seconds 1025-1050 (17:05-17:30): approximately 215 W,
+  30.4 strokes/minute, and 1:57.7/500 m.
+
+Concept2 telemetry is authoritative. The stroke rates are similar, but output
+differs substantially. Determine whether any directly visible rowing pattern
+distinguishes the two windows.
+
+Compare recovery duration, hands-away timing, body preparation, seat-handle
+sequencing, forward reach, stroke length as visibly observable, and
+stroke-to-stroke rhythm. Do not infer force, muscle engagement, physiology,
+fatigue, or intent.
+
+Return findings with exact source-video seconds, direct observations,
+counterevidence, confidence, and camera limitations. State "unresolved" if the
+fixed frontal video cannot explain the telemetry difference. Do not manufacture
+a mechanical explanation.

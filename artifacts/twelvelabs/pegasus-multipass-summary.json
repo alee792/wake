@@ -6,7 +6,7 @@
   "assetId": "6a6b961bb9dc44a9051ef6f3",
   "strategy": {
     "structuralPasses": 1,
-    "focusedPasses": 3,
+    "focusedPasses": 4,
     "reason": "Use one full-video phase index, then spend separate requests on narrow comparison and recurrence questions."
   },
   "runs": [
@@ -29,6 +29,11 @@
       "taskId": "6a6bacd0c1ac59f5d1d08d3d",
       "role": "work restart comparison",
       "resultPath": "artifacts/twelvelabs/runs/20260730-125808-work-restart-comparison-6a6bacd0c1ac59f5d1d08d3d/result.json"
+    },
+    {
+      "taskId": "6a6bae5eb9dc44a905207bcf",
+      "role": "Interval 2 versus Interval 3 telemetry-selected window comparison",
+      "resultPath": "artifacts/twelvelabs/runs/20260730-130447-interval-2-vs-interval-3-candidate-6a6bae5eb9dc44a905207bcf/result.json"
     }
   ],
   "candidateInsights": [
@@ -61,6 +66,16 @@
       "confidence": "high",
       "status": "timeline-marker",
       "reviewNote": "Useful synchronization evidence; probably not a primary coaching insight."
+    },
+    {
+      "title": "Similar-looking strokes produced very different output",
+      "sourceStartSeconds": 525,
+      "sourceEndSeconds": 1050,
+      "telemetryContext": "Interval 2 candidate window averaged about 157 W at 29.8 spm; Interval 3 candidate window averaged about 215 W at 30.4 spm.",
+      "directObservation": "Pegasus reported no reliable visible difference across recovery duration, hands-away timing, body preparation, sequencing, reach, stroke length, or rhythm.",
+      "confidence": "medium",
+      "status": "candidate",
+      "reviewNote": "Represent the visual explanation as unresolved. The telemetry difference is authoritative."
     }
   ],
   "rejectedClaims": [
