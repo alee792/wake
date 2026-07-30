@@ -47,3 +47,5 @@ The dashboard's submission command is `./submit_project.sh`.
 
 - [Wake — Hackathon](https://drive.google.com/drive/folders/1SiUoV7_L8o03bRBtyBmjiiq5qKnkzbT7)
   — source folder containing the canonical docs and golden session assets.
+- [Imported brainstorming documents](docs/drive/README.md) — local Markdown
+  and Word copies of the three canonical Google Docs.
