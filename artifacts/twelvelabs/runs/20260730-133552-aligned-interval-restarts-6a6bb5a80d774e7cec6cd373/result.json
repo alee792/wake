@@ -1,0 +1,63 @@
+{
+  "provider": "twelvelabs-pegasus",
+  "generationMode": "real-api",
+  "model": "pegasus1.5",
+  "assetId": null,
+  "taskId": "6a6bb5a80d774e7cec6cd373",
+  "generationId": "84418b4f-51c5-40df-add0-f8db43a5dfe3",
+  "finishReason": "stop",
+  "capturedAt": "2026-07-30T20:39:49.391936+00:00",
+  "result": {
+    "analysis_summary": "Comparison of the first 30 seconds of four Concept2 workout intervals based on calibrated Pegasus source-video windows. Interval 1 has limited coverage due to video start delay. Intervals 2-4 show consistent stroke mechanics with decreasing recovery timing.",
+    "findings": [
+      {
+        "comparison": "Interval 1 vs Intervals 2-4",
+        "comparison_window": "Source-video 0.0-28.911",
+        "confidence": "medium",
+        "counterevidence": "None observed",
+        "direct_observation": "Video begins 31.089 seconds into the workout, missing the first 30 seconds of the interval. Available footage shows steady rhythm with recovery timing of approximately 1.5 seconds.",
+        "end_seconds": 28.911,
+        "interpretation_support": "supports",
+        "limitations": "First 30 seconds of Interval 1 are not visible due to video start delay.",
+        "start_seconds": 0.0,
+        "title": "Interval 1 Coverage Limitation"
+      },
+      {
+        "comparison": "Interval 2 vs Intervals 3-4",
+        "comparison_window": "Source-video 388.911-418.911",
+        "confidence": "high",
+        "counterevidence": "None observed",
+        "direct_observation": "Recovery timing is approximately 1.4 seconds, with hands-away timing occurring around 0.4 seconds after the catch. Body preparation involves a slight lean forward before the drive.",
+        "end_seconds": 418.911,
+        "interpretation_support": "supports",
+        "limitations": "None",
+        "start_seconds": 388.911,
+        "title": "Interval 2 Stroke Mechanics"
+      },
+      {
+        "comparison": "Interval 3 vs Interval 4",
+        "comparison_window": "Source-video 808.911-838.911",
+        "confidence": "high",
+        "counterevidence": "None observed",
+        "direct_observation": "Recovery timing is approximately 1.3 seconds, with hands-away timing occurring around 0.3 seconds after the catch. Body preparation involves a slight lean forward before the drive.",
+        "end_seconds": 838.911,
+        "interpretation_support": "supports",
+        "limitations": "None",
+        "start_seconds": 808.911,
+        "title": "Interval 3 Stroke Mechanics"
+      },
+      {
+        "comparison": "Interval 4 vs Previous Intervals",
+        "comparison_window": "Source-video 1228.911-1258.911",
+        "confidence": "high",
+        "counterevidence": "None observed",
+        "direct_observation": "Recovery timing is approximately 1.2 seconds, with hands-away timing occurring around 0.2 seconds after the catch. Body preparation involves a slight lean forward before the drive.",
+        "end_seconds": 1258.911,
+        "interpretation_support": "supports",
+        "limitations": "None",
+        "start_seconds": 1228.911,
+        "title": "Interval 4 Stroke Mechanics"
+      }
+    ]
+  }
+}

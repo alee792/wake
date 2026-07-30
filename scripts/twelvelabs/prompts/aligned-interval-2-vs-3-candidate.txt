@@ -1,0 +1,21 @@
+Compare two Concept2 telemetry-selected windows using their calibrated Pegasus
+source-video times.
+
+The video begins 31.089 seconds after the Concept2 workout clock.
+
+- Concept2 Interval 2 at workout seconds 525-545 maps to source-video seconds
+  493.911-513.911. Telemetry: approximately 157 W and 29.8 spm.
+- Concept2 Interval 3 at workout seconds 1025-1050 maps to source-video seconds
+  993.911-1018.911. Telemetry: approximately 215 W and 30.4 spm.
+
+Concept2 telemetry is authoritative. Determine whether any directly visible
+rowing pattern distinguishes the two source-video windows.
+
+Compare recovery duration, hands-away timing, body preparation, seat-handle
+sequencing, forward reach, visibly observable stroke length, and rhythm. Do not
+infer force, muscle engagement, physiology, fatigue, or intent.
+
+All start_seconds and end_seconds must use Pegasus source-video seconds. Return
+precise findings, counterevidence, confidence, and camera limitations. State
+exactly "visual evidence unresolved" if the fixed frontal video cannot explain
+the telemetry difference. Do not manufacture a mechanical explanation.

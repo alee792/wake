@@ -1,0 +1,26 @@
+Compare Concept2 Interval 2 with Interval 4 using the calibrated source-video
+windows below.
+
+The video begins 31.089 seconds after the Concept2 workout clock. All inspection
+times in this request are Pegasus source-video seconds.
+
+Concept2 telemetry is authoritative:
+
+- Interval 2: 932 meters, approximately 161 W and 28.7 spm.
+- Interval 4: 962 meters, approximately 179 W and 30.2 spm.
+
+Compare equivalent source-video portions:
+
+- Opening: 388.911-448.911 versus 1228.911-1288.911
+- Middle: 478.911-538.911 versus 1318.911-1378.911
+- Finish: 568.911-628.911 versus 1408.911-1468.911
+
+Examine recovery timing, hands-away timing, body preparation, seat-handle
+sequencing, forward reach, and stroke-to-stroke rhythm. Do not infer power,
+force, fatigue, physiology, or intent from video.
+
+Return a small number of high-value factual findings. All start_seconds and
+end_seconds must use Pegasus source-video seconds. Include counterevidence and
+say whether visual evidence supports, weakens, or cannot resolve a proposed
+difference. If the camera cannot resolve a difference, state exactly "visual
+evidence unresolved." Do not claim identical mechanics.

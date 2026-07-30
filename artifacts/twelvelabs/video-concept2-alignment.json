@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "status": "calibrated-from-source-clocks",
+  "concept2StartUtc": "2026-07-30T13:35:00.000Z",
+  "videoStartUtc": "2026-07-30T13:35:31.089Z",
+  "videoStartSource": "Filename PXL_20260730_133531089.mp4",
+  "independentVideoStartEstimateUtc": "2026-07-30T13:35:31.746Z",
+  "independentEstimateSource": "Container creation time 14:03:47Z minus 1695.254022-second video duration",
+  "videoToConcept2OffsetSeconds": 31.089,
+  "estimatedUncertaintySeconds": 0.7,
+  "mapping": {
+    "concept2SecondsFromVideoSeconds": "videoSeconds + 31.089",
+    "videoSecondsFromConcept2Seconds": "concept2Seconds - 31.089"
+  },
+  "coverage": {
+    "videoDurationSeconds": 1695.254022,
+    "concept2DurationSeconds": 1680,
+    "concept2AtVideoStartSeconds": 31.089,
+    "videoAtConcept2EndSeconds": 1648.911
+  },
+  "anchors": [
+    {
+      "name": "Hydration during Recovery 2",
+      "videoStartSeconds": 668,
+      "videoEndSeconds": 676,
+      "concept2StartSeconds": 699.089,
+      "concept2EndSeconds": 707.089
+    },
+    {
+      "name": "Hydration during Recovery 4",
+      "videoStartSeconds": 1517,
+      "videoEndSeconds": 1527,
+      "concept2StartSeconds": 1548.089,
+      "concept2EndSeconds": 1558.089
+    },
+    {
+      "name": "Interval 3 start",
+      "concept2Seconds": 840,
+      "videoSeconds": 808.911
+    }
+  ],
+  "rules": [
+    "Provider raw results preserve Pegasus video-local seconds unchanged.",
+    "Wake ProviderObservation startSeconds/endSeconds use Concept2 workout-global seconds.",
+    "Every normalized video observation cites this alignment artifact.",
+    "Do not compare a Concept2 window with a Pegasus window until the mapping has been applied."
+  ]
+}

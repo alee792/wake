@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0",
+  "subject": "Interval 3 restart stroke count",
+  "alignmentPath": "artifacts/twelvelabs/video-concept2-alignment.json",
+  "sourceAssetId": "6a6b961bb9dc44a9051ef6f3",
+  "concept2IntervalStartSeconds": 840,
+  "calibratedVideoIntervalStartSeconds": 808.911,
+  "sourceVideoWindowSeconds": {
+    "start": 800,
+    "end": 835
+  },
+  "reviewedAt": "2026-07-30T13:40:00-07:00",
+  "checks": {
+    "calibratedPegasusPassTaskId": "6a6bb5a80d774e7cec6cd373",
+    "sourceVideoInspected": true,
+    "providerReturnedExactStrokeCount": false,
+    "providerReturnedObjectiveSettlingCriterion": false
+  },
+  "outcome": {
+    "exactStrokeCountVerified": false,
+    "decision": "Reject the exact four-or-five-stroke count.",
+    "acceptedRemainder": "Preserve only that the calibrated visual review did not establish an objective restart count.",
+    "reason": "The earlier count came from an unaligned pass. The corrected pass returned approximate timing descriptions but no defined settling criterion or exact count."
+  }
+}

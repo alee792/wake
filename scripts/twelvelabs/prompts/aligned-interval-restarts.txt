@@ -1,0 +1,21 @@
+Compare the first 30 Concept2 workout seconds of all four intervals using the
+calibrated Pegasus source-video windows.
+
+The video begins 31.089 seconds after the Concept2 workout clock:
+
+- Interval 1: the video starts after the interval begins; inspect available
+  source-video seconds 0-28.911 and report this coverage limitation.
+- Interval 2: source-video seconds 388.911-418.911.
+- Interval 3: source-video seconds 808.911-838.911.
+- Interval 4: source-video seconds 1228.911-1258.911.
+
+For each available interval opening, describe directly visible recovery timing,
+hands-away timing, body preparation, seat-handle sequencing, forward reach, and
+stroke-to-stroke rhythm.
+
+Do not use an undefined term such as "settled." If reporting a stroke count,
+define the visible criterion first and cite the exact source-video window where
+the criterion is met. Otherwise state that an exact count is unresolved.
+
+All start_seconds and end_seconds must use Pegasus source-video seconds. Do not
+infer force, muscle engagement, physiology, fatigue, or intent.

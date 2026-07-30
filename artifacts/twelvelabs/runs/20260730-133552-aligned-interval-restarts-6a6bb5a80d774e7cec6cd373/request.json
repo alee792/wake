@@ -1,0 +1,85 @@
+{
+  "taskId": "6a6bb5a80d774e7cec6cd373",
+  "assetId": "6a6b961bb9dc44a9051ef6f3",
+  "profile": "custom",
+  "prompt": "Compare the first 30 Concept2 workout seconds of all four intervals using the\ncalibrated Pegasus source-video windows.\n\nThe video begins 31.089 seconds after the Concept2 workout clock:\n\n- Interval 1: the video starts after the interval begins; inspect available\n  source-video seconds 0-28.911 and report this coverage limitation.\n- Interval 2: source-video seconds 388.911-418.911.\n- Interval 3: source-video seconds 808.911-838.911.\n- Interval 4: source-video seconds 1228.911-1258.911.\n\nFor each available interval opening, describe directly visible recovery timing,\nhands-away timing, body preparation, seat-handle sequencing, forward reach, and\nstroke-to-stroke rhythm.\n\nDo not use an undefined term such as \"settled.\" If reporting a stroke count,\ndefine the visible criterion first and cite the exact source-video window where\nthe criterion is met. Otherwise state that an exact count is unresolved.\n\nAll start_seconds and end_seconds must use Pegasus source-video seconds. Do not\ninfer force, muscle engagement, physiology, fatigue, or intent.\n",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "analysis_summary": {
+        "type": "string"
+      },
+      "findings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "start_seconds": {
+              "type": "number"
+            },
+            "end_seconds": {
+              "type": "number"
+            },
+            "comparison_window": {
+              "type": "string"
+            },
+            "direct_observation": {
+              "type": "string"
+            },
+            "comparison": {
+              "type": "string"
+            },
+            "interpretation_support": {
+              "type": "string",
+              "enum": [
+                "supports",
+                "weakens",
+                "unresolved"
+              ]
+            },
+            "counterevidence": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            },
+            "limitations": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "start_seconds",
+            "end_seconds",
+            "comparison_window",
+            "direct_observation",
+            "comparison",
+            "interpretation_support",
+            "counterevidence",
+            "confidence",
+            "limitations"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "analysis_summary",
+      "findings"
+    ],
+    "additionalProperties": false
+  },
+  "temperature": 0.2,
+  "maxTokens": 3500,
+  "startTime": null,
+  "endTime": null,
+  "createdAt": "2026-07-30T20:35:52.500169+00:00"
+}

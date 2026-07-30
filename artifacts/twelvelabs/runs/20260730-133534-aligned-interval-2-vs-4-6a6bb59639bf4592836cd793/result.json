@@ -1,0 +1,99 @@
+{
+  "provider": "twelvelabs-pegasus",
+  "generationMode": "real-api",
+  "model": "pegasus1.5",
+  "assetId": null,
+  "taskId": "6a6bb59639bf4592836cd793",
+  "generationId": "9606fd42-f833-40e2-ba94-921297368d30",
+  "finishReason": "stop",
+  "capturedAt": "2026-07-30T20:39:57.649625+00:00",
+  "result": {
+    "analysis_summary": "Visual evidence does not support a clear difference in stroke mechanics or rhythm between the specified portions of Interval 2 and Interval 4.",
+    "findings": [
+      {
+        "comparison": "Hands-away timing relative to leg drive is consistent in both intervals.",
+        "comparison_window": "Opening: 388.911-448.911 vs 1228.911-1288.911",
+        "confidence": "high",
+        "counterevidence": "None observed.",
+        "direct_observation": "Hands leave the chest at the same point in the leg extension cycle in both clips.",
+        "end_seconds": 448.911,
+        "interpretation_support": "supports",
+        "limitations": "Camera angle limits detailed biomechanical analysis.",
+        "start_seconds": 388.911,
+        "title": "Hands-Away Timing"
+      },
+      {
+        "comparison": "Seat-handle sequencing is visually consistent across both intervals.",
+        "comparison_window": "Middle: 478.911-538.911 vs 1318.911-1378.911",
+        "confidence": "high",
+        "counterevidence": "None observed.",
+        "direct_observation": "Recovery initiated by arm extension, followed by body swing and leg compression in both clips.",
+        "end_seconds": 538.911,
+        "interpretation_support": "supports",
+        "limitations": "Camera angle limits detailed biomechanical analysis.",
+        "start_seconds": 478.911,
+        "title": "Seat-Handle Sequencing"
+      },
+      {
+        "comparison": "Forward reach at the catch is visually similar in both intervals.",
+        "comparison_window": "Finish: 568.911-628.911 vs 1408.911-1468.911",
+        "confidence": "high",
+        "counterevidence": "None observed.",
+        "direct_observation": "Shins vertical and arms fully extended in both intervals.",
+        "end_seconds": 628.911,
+        "interpretation_support": "supports",
+        "limitations": "Camera angle limits detailed biomechanical analysis.",
+        "start_seconds": 568.911,
+        "title": "Forward Reach"
+      },
+      {
+        "comparison": "Stroke-to-stroke rhythm appears steady and consistent in both intervals.",
+        "comparison_window": "Opening, Middle, and Finish segments",
+        "confidence": "high",
+        "counterevidence": "None observed.",
+        "direct_observation": "Time between strokes is consistent within each segment, with no obvious visual difference between intervals.",
+        "end_seconds": 1468.911,
+        "interpretation_support": "supports",
+        "limitations": "Camera angle limits detailed biomechanical analysis.",
+        "start_seconds": 388.911,
+        "title": "Stroke-to-Stroke Rhythm"
+      },
+      {
+        "comparison": "Recovery timing and body preparation are consistent in both intervals.",
+        "comparison_window": "Opening, Middle, and Finish segments",
+        "confidence": "high",
+        "counterevidence": "None observed.",
+        "direct_observation": "Recovery phase takes similar time, and body posture is consistent in both intervals.",
+        "end_seconds": 1468.911,
+        "interpretation_support": "supports",
+        "limitations": "Camera angle limits detailed biomechanical analysis.",
+        "start_seconds": 388.911,
+        "title": "Recovery Timing and Body Preparation"
+      },
+      {
+        "comparison": "Visual evidence cannot resolve differences in power or force.",
+        "comparison_window": "All segments",
+        "confidence": "high",
+        "counterevidence": "Telemetry data indicates a difference in watts, but this is not visually apparent.",
+        "direct_observation": "No visual difference in stroke mechanics related to power or force.",
+        "end_seconds": 1468.911,
+        "interpretation_support": "unresolved",
+        "limitations": "Camera angle limits detailed biomechanical analysis.",
+        "start_seconds": 388.911,
+        "title": "Power and Force"
+      },
+      {
+        "comparison": "No visual evidence of fatigue or physiological changes between intervals.",
+        "comparison_window": "All segments",
+        "confidence": "high",
+        "counterevidence": "None observed.",
+        "direct_observation": "Rower's form remains consistent throughout both intervals.",
+        "end_seconds": 1468.911,
+        "interpretation_support": "supports",
+        "limitations": "Camera angle limits detailed biomechanical analysis.",
+        "start_seconds": 388.911,
+        "title": "Fatigue and Physiology"
+      }
+    ]
+  }
+}

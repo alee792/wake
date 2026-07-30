@@ -1,0 +1,85 @@
+{
+  "taskId": "6a6bb59cc1ac59f5d1d119b7",
+  "assetId": "6a6b961bb9dc44a9051ef6f3",
+  "profile": "custom",
+  "prompt": "Compare two Concept2 telemetry-selected windows using their calibrated Pegasus\nsource-video times.\n\nThe video begins 31.089 seconds after the Concept2 workout clock.\n\n- Concept2 Interval 2 at workout seconds 525-545 maps to source-video seconds\n  493.911-513.911. Telemetry: approximately 157 W and 29.8 spm.\n- Concept2 Interval 3 at workout seconds 1025-1050 maps to source-video seconds\n  993.911-1018.911. Telemetry: approximately 215 W and 30.4 spm.\n\nConcept2 telemetry is authoritative. Determine whether any directly visible\nrowing pattern distinguishes the two source-video windows.\n\nCompare recovery duration, hands-away timing, body preparation, seat-handle\nsequencing, forward reach, visibly observable stroke length, and rhythm. Do not\ninfer force, muscle engagement, physiology, fatigue, or intent.\n\nAll start_seconds and end_seconds must use Pegasus source-video seconds. Return\nprecise findings, counterevidence, confidence, and camera limitations. State\nexactly \"visual evidence unresolved\" if the fixed frontal video cannot explain\nthe telemetry difference. Do not manufacture a mechanical explanation.\n",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "analysis_summary": {
+        "type": "string"
+      },
+      "findings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "start_seconds": {
+              "type": "number"
+            },
+            "end_seconds": {
+              "type": "number"
+            },
+            "comparison_window": {
+              "type": "string"
+            },
+            "direct_observation": {
+              "type": "string"
+            },
+            "comparison": {
+              "type": "string"
+            },
+            "interpretation_support": {
+              "type": "string",
+              "enum": [
+                "supports",
+                "weakens",
+                "unresolved"
+              ]
+            },
+            "counterevidence": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            },
+            "limitations": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "start_seconds",
+            "end_seconds",
+            "comparison_window",
+            "direct_observation",
+            "comparison",
+            "interpretation_support",
+            "counterevidence",
+            "confidence",
+            "limitations"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "analysis_summary",
+      "findings"
+    ],
+    "additionalProperties": false
+  },
+  "temperature": 0.2,
+  "maxTokens": 3000,
+  "startTime": null,
+  "endTime": null,
+  "createdAt": "2026-07-30T20:35:40.699761+00:00"
+}

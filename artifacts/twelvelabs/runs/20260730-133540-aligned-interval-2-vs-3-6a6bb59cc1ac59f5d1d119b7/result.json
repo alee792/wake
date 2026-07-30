@@ -1,0 +1,27 @@
+{
+  "provider": "twelvelabs-pegasus",
+  "generationMode": "real-api",
+  "model": "pegasus1.5",
+  "assetId": null,
+  "taskId": "6a6bb59cc1ac59f5d1d119b7",
+  "generationId": "1dd04299-c959-4683-88ad-ab2c87a1d8ff",
+  "finishReason": "stop",
+  "capturedAt": "2026-07-30T20:39:47.414177+00:00",
+  "result": {
+    "analysis_summary": "Visual evidence unresolved. The fixed frontal camera angle lacks the necessary perspective to accurately measure or compare the specific biomechanical variables requested, such as recovery duration, hands-away timing, body preparation, seat-handle sequencing, forward reach, visibly observable stroke length, and rhythm. While the rower's stroke rhythm appears visually consistent between the two windows, the video cannot support a definitive comparison of the subtle differences in technique that would account for the telemetry's reported increase in power and stroke rate.",
+    "findings": [
+      {
+        "comparison": "Interval 2 (493.911-513.911s) vs Interval 3 (993.911-1018.911s)",
+        "comparison_window": "Interval 2: 493.911-513.911s, Interval 3: 993.911-1018.911s",
+        "confidence": "low",
+        "counterevidence": "The fixed frontal camera angle provides a consistent view of the rower's upper body and the handle's path, but it lacks the necessary perspective to accurately measure or compare the specific biomechanical variables requested.",
+        "direct_observation": "The rower's stroke rhythm appears visually consistent between the two windows.",
+        "end_seconds": 1018.911,
+        "interpretation_support": "unresolved",
+        "limitations": "The camera is positioned too close and too low to capture the full range of motion of the legs and feet, which are critical for determining recovery duration, seat-handle sequencing, and forward reach.",
+        "start_seconds": 493.911,
+        "title": "Comparison of Rowing Patterns"
+      }
+    ]
+  }
+}
